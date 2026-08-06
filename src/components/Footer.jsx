@@ -26,7 +26,7 @@ export default function Footer() {
 
                     {/* Column 2 - Quick Links */}
                     <div>
-                        <h3 className="text-xl font-semibold text-orange-500 mb-5">
+                        <h3 className="text-xl font-semibold text-[#ff8904] mb-5">
                             Quick Links
                         </h3>
 
@@ -65,7 +65,7 @@ export default function Footer() {
 
                     {/* Column 4 - Services */}
                     <div>
-                        <h3 className="text-xl font-semibold text-orange-500 mb-5">
+                        <h3 className="text-xl font-semibold text-[#ff8904] mb-5">
                             Our Services
                         </h3>
 
@@ -112,21 +112,21 @@ export default function Footer() {
 
                     {/* Column 3 - Contact */}
                     <div>
-                        <h3 className="text-xl font-semibold text-orange-500 mb-5">
+                        <h3 className="text-xl font-semibold text-[#ff8904] mb-5">
                             Contact Us
                         </h3>
 
                         <ul className="space-y-4 text-sm">
 
                             <li className="flex items-start gap-3">
-                                <MapPin className="w-5 h-5 text-orange-500 mt-1" />
+                                <MapPin className="w-5 h-5 text-[#ff8904] mt-1" />
                                 <span>
                                     Office No. 101, Pune, Maharashtra, India
                                 </span>
                             </li>
 
                             <li className="flex items-center gap-3">
-                                <Phone className="w-5 h-5 text-orange-500" />
+                                <Phone className="w-5 h-5 text-[#ff8904]" />
                                 <a
                                     href="tel:+919876543210"
                                     className="hover:text-orange-400"
@@ -136,7 +136,7 @@ export default function Footer() {
                             </li>
 
                             <li className="flex items-center gap-3">
-                                <Mail className="w-5 h-5 text-orange-500" />
+                                <Mail className="w-5 h-5 text-[#ff8904]" />
                                 <a
                                     href="mailto:help@swetayantech.in"
                                     className="hover:text-orange-400"

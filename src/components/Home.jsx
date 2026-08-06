@@ -182,7 +182,7 @@ function RecoveryScanner() {
   return (
     <div className="relative w-full aspect-square">
       <Img
-        src="https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=900&q=80&auto=format&fit=crop"
+        src="WhatsApp Image 2026-08-04 at 1.32.36 PM.jpeg"
         alt="Open hard drive in the recovery lab"
         className="absolute inset-0 w-full h-full object-cover rounded-3xl animate-kenburns"
       />
@@ -201,13 +201,13 @@ function RecoveryScanner() {
           <span className="text-orange-400">RECOVERABLE</span>
         </div>
         <div className="h-1.5 rounded-full bg-neutral-800 overflow-hidden">
-          <div className="h-full bg-orange-500 animate-fillbar rounded-full" />
+          <div className="h-full bg-orange-400 animate-fillbar rounded-full" />
         </div>
       </div>
 
       {/* floating badge */}
       <div className="absolute -top-5 -left-5 hidden sm:flex items-center gap-2 bg-white rounded-xl px-4 py-3 shadow-2xl animate-float-slow">
-        <div className="w-9 h-9 rounded-full bg-orange-500 flex items-center justify-center shrink-0">
+        <div className="w-9 h-9 rounded-full bg-orange-400 flex items-center justify-center shrink-0">
           <ShieldCheck className="w-5 h-5 text-white" />
         </div>
         <div className="leading-tight">
@@ -244,36 +244,32 @@ function Hero() {
       <div className="max-w-7xl mx-auto px-5 py-16 md:py-24 grid md:grid-cols-2 gap-14 items-center relative">
         <div>
           <div
-            className={`inline-flex items-center gap-2 font-mono text-xs text-orange-400 border border-orange-500/30 bg-orange-500/10 rounded-full px-3 py-1 mb-6 transition-all duration-700 ${
-              mounted ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
-            }`}
+            className={`inline-flex items-center gap-2 font-mono text-xs text-orange-400 border border-orange-400/30 bg-orange-400/10 rounded-full px-3 py-1 mb-6 transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+              }`}
           >
             <AlertTriangle className="w-3.5 h-3.5" /> No fix, no fee — on every recovery job
           </div>
           <h1
-            className={`font-display font-bold text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight transition-all duration-700 delay-100 ${
-              mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}
+            className={`font-display font-bold text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight transition-all duration-700 delay-100 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              }`}
           >
             Your drive failed.
             <br />
-            Your data <span className="text-orange-500">didn't</span>.
+            Your data <span className="text-[#ff8904]">didn't</span>.
           </h1>
           <p
-            className={`font-body text-neutral-400 text-lg mt-6 max-w-md leading-relaxed transition-all duration-700 delay-200 ${
-              mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}
+            className={`font-body text-neutral-400 text-lg mt-6 max-w-md leading-relaxed transition-all duration-700 delay-200 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              }`}
           >
             Crashed hard drives, dead laptops, corrupted RAID arrays — we bring
             them back. Free diagnosis, transparent pricing, and a lab-grade
             process behind every recovery and repair.
           </p>
           <div
-            className={`flex flex-wrap gap-3 mt-8 transition-all duration-700 delay-300 ${
-              mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}
+            className={`flex flex-wrap gap-3 mt-8 transition-all duration-700 delay-300 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              }`}
           >
-            <a href="#contact" className="bg-orange-500 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
+            <a href="#contact" className="bg-orange-400 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
               Start Free Diagnosis <ArrowRight className="w-4 h-4" />
             </a>
             <a href="#services" className="border border-neutral-700 hover:border-orange-400 hover:text-orange-400 font-body font-semibold px-6 py-3 rounded-md transition-colors">
@@ -300,7 +296,7 @@ function ServiceCard({ image, icon: Icon, title, tagline, items, accent, delay }
   return (
     <Reveal delay={delay}>
       <div className="group bg-white border border-neutral-200 rounded-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300">
-        <div className="relative h-44 overflow-hidden">
+        <div className="relative h-80 overflow-hidden">
           <Img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
           <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/10 to-transparent" />
           <div className={`absolute bottom-4 left-5 w-11 h-11 rounded-lg flex items-center justify-center shadow-lg ${accent}`}>
@@ -341,11 +337,11 @@ function Services() {
         </Reveal>
         <div className="grid md:grid-cols-2 gap-6">
           <ServiceCard
-            image="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?w=800&q=80&auto=format&fit=crop"
+            image="WhatsApp Image 2026-08-04 at 1.29.10 PM.jpeg"
             icon={HardDrive}
             title="Data Recovery"
             tagline="From clicking hard drives to formatted SSDs."
-            accent="bg-orange-500"
+            accent="bg-orange-400"
             delay={0}
             items={[
               "Hard disk & SSD recovery (physical + logical)",
@@ -356,7 +352,7 @@ function Services() {
             ]}
           />
           <ServiceCard
-            image="https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=800&q=80&auto=format&fit=crop"
+            image="ChatGPT Image Aug 5, 2026, 11_59_30 AM.png"
             icon={Laptop}
             title="Laptop Repair"
             tagline="All brands, all generations, honest quotes."
@@ -399,7 +395,7 @@ function Process() {
           {steps.map((s, i) => (
             <Reveal key={s.title} delay={i * 120}>
               <div className="relative group">
-                <div className="w-12 h-12 rounded-full bg-neutral-950 text-white flex items-center justify-center font-mono text-sm relative z-10 mb-5 group-hover:bg-orange-500 group-hover:scale-110 transition-all duration-300">
+                <div className="w-12 h-12 rounded-full bg-neutral-950 text-white flex items-center justify-center font-mono text-sm relative z-10 mb-5 group-hover:bg-orange-400 group-hover:scale-110 transition-all duration-300">
                   0{i + 1}
                 </div>
                 <s.icon className="w-5 h-5 text-orange-500 mb-2" />
@@ -474,9 +470,9 @@ function Brands() {
 
 function Testimonials() {
   const reviews = [
-    { name: "Ritika Sharma", role: "Freelance Photographer", quote: "My external drive with two years of client shoots stopped mounting overnight. Swetayan recovered every single folder within three days.", stars: 5, img: "https://i.pravatar.cc/100?img=47" },
-    { name: "Arvind Mehta", role: "Small Business Owner", quote: "Our office NAS crashed with all our billing records. They rebuilt the RAID and handed everything back verified and organised.", stars: 5, img: "https://i.pravatar.cc/100?img=12" },
-    { name: "Priya Nair", role: "College Student", quote: "Spilled water on my laptop right before finals. They cleaned it, replaced the keyboard, and had it back to me in two days.", stars: 5, img: "https://i.pravatar.cc/100?img=32" },
+    { name: "Ritika Sharma", role: "Freelance Photographer", quote: "My external drive with two years of client shoots stopped mounting overnight. Swetayan recovered every single folder within three days.", stars: 5, img: "usericon.png" },
+    { name: "Arvind Mehta", role: "Small Business Owner", quote: "Our office NAS crashed with all our billing records. They rebuilt the RAID and handed everything back verified and organised.", stars: 5, img: "usericon.png" },
+    { name: "Priya Nair", role: "College Student", quote: "Spilled water on my laptop right before finals. They cleaned it, replaced the keyboard, and had it back to me in two days.", stars: 5, img: "usericon.png" },
   ];
   return (
     <section id="reviews" className="bg-white py-20">
@@ -518,7 +514,7 @@ function Testimonials() {
 
 function CTABanner() {
   return (
-    <section className="bg-orange-500 py-14 relative overflow-hidden">
+    <section className="bg-orange-400 py-14 relative overflow-hidden">
       <div className="absolute -right-10 -top-10 w-64 h-64 bg-white/10 rounded-full blur-2xl animate-glow" />
       <Reveal>
         <div className="max-w-7xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-6 relative">
@@ -598,7 +594,7 @@ function Contact() {
                   <option>Not sure — need advice</option>
                 </select>
                 <textarea required rows={4} placeholder="Briefly describe what happened to your device" className="w-full border border-neutral-300 rounded-md px-3.5 py-2.5 font-body text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none transition-shadow" />
-                <button type="submit" className="w-full bg-orange-500 hover:bg-orange-400 hover:scale-[1.02] text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2">
+                <button type="submit" className="w-full bg-orange-400 hover:bg-orange-300 hover:scale-[1.02] text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2">
                   Request Free Diagnosis <Send className="w-4 h-4" />
                 </button>
               </form>
@@ -616,7 +612,7 @@ function FloatingContact() {
   return (
     <a
       href="tel:+919876543210"
-      className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-orange-500 hover:bg-orange-400 text-neutral-950 flex items-center justify-center shadow-2xl animate-ring transition-colors"
+      className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-orange-400 hover:bg-orange-300 text-neutral-950 flex items-center justify-center shadow-2xl animate-ring transition-colors"
       aria-label="Call Swetayan Technologies"
     >
       <MessageCircle className="w-6 h-6" />
@@ -628,8 +624,8 @@ export default function SwetayanTechnologiesWebsite() {
   return (
     <div className="font-body bg-white min-h-screen">
       <style>{FONT_STYLES}</style>
-      
-    
+
+
       <Hero />
       <Services />
       <Process />
@@ -638,7 +634,7 @@ export default function SwetayanTechnologiesWebsite() {
       <Testimonials />
       <CTABanner />
       <Contact />
-      
+
       <FloatingContact />
     </div>
   );
