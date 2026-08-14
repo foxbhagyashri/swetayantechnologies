@@ -12,7 +12,7 @@ export default function Footer() {
                     {/* Column 1 - Logo */}
                     <div>
                         <img
-                            src="/swetayan-tech.png"
+                            src="/ChatGPT Image Aug 8, 2026, 10_21_03 AM.png"
                             alt="Swetayan Technologies"
                             className="w-56 bg-white rounded-md p-2"
                         />

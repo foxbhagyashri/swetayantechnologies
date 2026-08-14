@@ -31,9 +31,9 @@ import {
 
 const FONT_STYLES = `
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
-  .font-display { font-family: 'Space Grotesk', sans-serif; }
-  .font-body { font-family: 'Inter', sans-serif; }
-  .font-mono { font-family: 'IBM Plex Mono', monospace; }
+  .font-display { font-family: 'Arial'; }
+  .font-body { font-family: 'Arial'; }
+  .font-mono { font-family: 'Arial'; }
 
   @keyframes glow-pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 0.7; } }
   .animate-glow { animation: glow-pulse 3.5s ease-in-out infinite; }
@@ -259,12 +259,12 @@ function Intro() {
 
 function MediaSupported() {
     const media = [
-        { img: "https://images.unsplash.com/photo-1591405351990-4726e331f141?w=500&q=70&auto=format&fit=crop", label: "USB flash / pen drives" },
-        { img: "https://images.unsplash.com/photo-1531492746076-161ba9bcb065?w=500&q=70&auto=format&fit=crop", label: "SD & microSD cards" },
-        { img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=70&auto=format&fit=crop", label: "CompactFlash (CF) cards" },
-        { img: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=500&q=70&auto=format&fit=crop", label: "External flash drives" },
-        { img: "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=500&q=70&auto=format&fit=crop", label: "Camera & drone cards" },
-        { img: "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=500&q=70&auto=format&fit=crop", label: "Action-cam memory cards" },
+        { img: "/ChatGPT Image Aug 10, 2026, 11_06_55 AM.png", label: "USB flash / pen drives" },
+        { img: "/ChatGPT Image Aug 10, 2026, 11_08_26 AM.png", label: "SD & microSD cards" },
+        { img: "/ChatGPT Image Aug 10, 2026, 11_09_54 AM.png", label: "CompactFlash (CF) cards" },
+        { img: "/174df0ff-46ef-4ffb-a3e2-bebfe30bc739.png", label: "External flash drives" },
+        { img: "/ChatGPT Image Aug 10, 2026, 11_14_43 AM.png", label: "Camera & drone cards" },
+        { img: "/ChatGPT Image Aug 10, 2026, 11_21_09 AM.png", label: "Action-cam memory cards" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">
@@ -276,8 +276,8 @@ function MediaSupported() {
                     {media.map((d, i) => (
                         <Reveal key={d.label} delay={i * 70}>
                             <div className="flex flex-col items-center text-center gap-3">
-                                <div className="w-full aspect-square rounded-xl overflow-hidden border border-neutral-200">
-                                    <Img src={d.img} alt={d.label} className="w-full h-full object-cover" />
+                                <div className="rounded-xl overflow-hidden border border-neutral-200">
+                                    <Img src={d.img} alt={d.label} className="w-full h-auto" />
                                 </div>
                                 <span className="font-body text-xs text-neutral-500">{d.label}</span>
                             </div>

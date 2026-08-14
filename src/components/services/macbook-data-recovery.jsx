@@ -31,9 +31,9 @@ import {
 
 const FONT_STYLES = `
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
-  .font-display { font-family: 'Space Grotesk', sans-serif; }
-  .font-body { font-family: 'Inter', sans-serif; }
-  .font-mono { font-family: 'IBM Plex Mono', monospace; }
+  .font-display { font-family: 'Arial'; }
+  .font-body { font-family: 'Arial'; }
+  .font-mono { font-family: 'Arial'; }
 
   @keyframes glow-pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 0.7; } }
   .animate-glow { animation: glow-pulse 3.5s ease-in-out infinite; }
@@ -258,12 +258,12 @@ function Intro() {
 
 function MacsSupported() {
     const items = [
-        { img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=70&auto=format&fit=crop", label: "MacBook Air" },
-        { img: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=500&q=70&auto=format&fit=crop", label: "MacBook Pro" },
-        { img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&q=70&auto=format&fit=crop", label: "Intel-based MacBooks" },
-        { img: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=500&q=70&auto=format&fit=crop", label: "Apple Silicon (M-series)" },
-        { img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=70&auto=format&fit=crop", label: "T2-chip Macs" },
-        { img: "https://images.unsplash.com/photo-1591405351990-4726e331f141?w=500&q=70&auto=format&fit=crop", label: "APFS-formatted drives" },
+        { img: "/ChatGPT Image Aug 8, 2026, 12_37_10 PM.png", label: "MacBook Air" },
+        { img: "/ChatGPT Image Aug 8, 2026, 12_38_37 PM.png", label: "MacBook Pro" },
+        { img: "/ChatGPT Image Aug 8, 2026, 12_41_47 PM.png", label: "Intel-based MacBooks" },
+        { img: "/ChatGPT Image Aug 8, 2026, 12_43_16 PM.png", label: "Apple Silicon (M-series)" },
+        { img: "/ChatGPT Image Aug 8, 2026, 12_44_53 PM.png", label: "T2-chip Macs" },
+        { img: "/ChatGPT Image Aug 8, 2026, 12_46_24 PM.png", label: "APFS-formatted drives" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">
@@ -275,8 +275,8 @@ function MacsSupported() {
                     {items.map((d, i) => (
                         <Reveal key={d.label} delay={i * 70}>
                             <div className="flex flex-col items-center text-center gap-3">
-                                <div className="w-full aspect-square rounded-xl overflow-hidden border border-neutral-200">
-                                    <Img src={d.img} alt={d.label} className="w-full h-full object-cover" />
+                                <div className=" rounded-xl overflow-hidden border border-neutral-200">
+                                    <Img src={d.img} alt={d.label} className="w-full h-auto" />
                                 </div>
                                 <span className="font-body text-xs text-neutral-500">{d.label}</span>
                             </div>

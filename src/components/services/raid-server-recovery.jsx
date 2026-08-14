@@ -33,9 +33,9 @@ import {
 
 const FONT_STYLES = `
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
-  .font-display { font-family: 'Space Grotesk', sans-serif; }
-  .font-body { font-family: 'Inter', sans-serif; }
-  .font-mono { font-family: 'IBM Plex Mono', monospace; }
+  .font-display { font-family: 'Arial'; }
+  .font-body { font-family: 'Arial'; }
+  .font-mono { font-family: 'Arial'; }
 
   @keyframes glow-pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 0.7; } }
   .animate-glow { animation: glow-pulse 3.5s ease-in-out infinite; }

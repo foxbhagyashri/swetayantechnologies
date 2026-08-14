@@ -15,20 +15,23 @@ import {
     PackageCheck,
     Wrench,
     AlertTriangle,
-    Server,
-    HardDrive,
-    Network,
-    ShieldOff,
-    RotateCcw,
-    KeyRound,
+    Laptop,
+    Battery,
+    Plug,
+    CircuitBoard,
+    MonitorX,
+    Droplets,
+    Thermometer,
+    Power,
 } from "lucide-react";
 
 /* ---------------------------------------------------------
-   Swetayan Technologies — NAS Data Recovery
+   Swetayan Technologies — Laptop Not Turning On
+   Repair Service
    Reuses the exact design tokens, motion language and brand
-   mark from the Home / About / Services / MacBook / CCTV
-   pages (Space Grotesk + Inter + IBM Plex Mono, orange-500
-   accent, neutral-950 chrome).
+   mark from the Home / About / Services / Data Recovery /
+   Virus Removal pages (Space Grotesk + Inter + IBM Plex Mono,
+   orange-500 accent, neutral-950 chrome).
 --------------------------------------------------------- */
 
 const FONT_STYLES = `
@@ -107,7 +110,7 @@ function Img({ src, alt, className }) {
     if (failed) {
         return (
             <div className={`${className} bg-gradient-to-br from-neutral-800 to-neutral-950 flex items-center justify-center`}>
-                <Server className="w-10 h-10 text-neutral-600" />
+                <Laptop className="w-10 h-10 text-neutral-600" />
             </div>
         );
     }
@@ -132,8 +135,8 @@ function Breadcrumb({ trail, title, subtitle }) {
     return (
         <section className="relative bg-neutral-950 text-white overflow-hidden">
             <Img
-                src="https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=1600&q=70&auto=format&fit=crop"
-                alt="NAS array of drives during diagnostics"
+                src="https://images.unsplash.com/photo-1517059224940-d4af9eec41b7?w=1600&q=70&auto=format&fit=crop"
+                alt="Technician diagnosing a laptop that will not power on"
                 className="absolute inset-0 w-full h-full object-cover opacity-20"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-neutral-950 via-neutral-950/95 to-neutral-950/80" />
@@ -143,7 +146,7 @@ function Breadcrumb({ trail, title, subtitle }) {
                     <span className="relative flex h-2 w-2">
                         <span className="animate-pulse-dot absolute inline-flex h-full w-full rounded-full bg-orange-500" />
                     </span>
-                    <span className="font-mono text-[11px] tracking-[0.2em] text-orange-400">CLEAN-ROOM-STANDARD LAB</span>
+                    <span className="font-mono text-[11px] tracking-[0.2em] text-orange-400">CERTIFIED HARDWARE TECHNICIANS</span>
                 </div>
                 <h1 className="font-display font-bold text-3xl sm:text-4xl tracking-tight">{title}</h1>
                 {subtitle && <p className="font-body text-neutral-400 mt-2 max-w-xl">{subtitle}</p>}
@@ -172,16 +175,16 @@ function Breadcrumb({ trail, title, subtitle }) {
 
 function CTABanner() {
     return (
-        <section className="bg-[#ff8904] py-14 relative overflow-hidden">
+        <section className="bg-orange-500 py-14 relative overflow-hidden">
             <div className="absolute -right-10 -top-10 w-64 h-64 bg-white/10 rounded-full blur-2xl animate-glow" />
             <Reveal>
                 <div className="max-w-7xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-6 relative">
                     <div>
                         <h3 className="font-display font-bold text-2xl sm:text-3xl text-neutral-950 tracking-tight">
-                            NAS showing "degraded", "crashed", or won't come back online?
+                            Laptop completely dead — no lights, no fan, nothing?
                         </h3>
                         <p className="font-body text-neutral-900/80 mt-2">
-                            Don't attempt a RAID rebuild or reinitialize the volume first — get a free diagnosis before anything else touches the disks.
+                            Don't assume the worst — get a free power diagnosis before you decide anything.
                         </p>
                     </div>
                     <a href="#contact" className="bg-neutral-950 hover:bg-neutral-800 hover:scale-105 text-white font-body font-semibold px-6 py-3 rounded-md whitespace-nowrap transition-all flex items-center gap-2">
@@ -198,30 +201,28 @@ function CTABanner() {
 function Intro() {
     const [ref, inView] = useInView(0.4);
     const stats = [
-        { value: 15, suffix: "+", label: "Years recovering NAS data" },
-        { value: 3400, suffix: "+", label: "NAS/RAID jobs recovered" },
-        { value: 93, suffix: "%", label: "Success rate" },
-        { value: 48, suffix: "hr", label: "Typical diagnosis time" },
+        { value: 16, suffix: "+", label: "Years in IT services" },
+        { value: 14500, suffix: "+", label: "Dead laptops revived" },
+        { value: 94, suffix: "%", label: "Fixed without motherboard swap" },
+        { value: 48, suffix: "hr", label: "Typical turnaround" },
     ];
     return (
         <section className="bg-white py-20">
             <div className="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-14 items-center">
                 <Reveal>
-                    <span className="font-mono text-xs tracking-[0.2em] text-orange-600">NAS DATA RECOVERY</span>
+                    <span className="font-mono text-xs tracking-[0.2em] text-orange-600">POWER-ON FAILURE REPAIR</span>
                     <h2 className="font-display font-bold text-3xl sm:text-4xl text-neutral-900 mt-3 tracking-tight leading-tight">
-                        Degraded arrays, failed rebuilds, or a dead controller — we still get your data back.
+                        Laptop won't turn on? We find out why — before we touch a single screw.
                     </h2>
                     <p className="font-body text-neutral-600 mt-5 leading-relaxed">
-                        NAS storage isn't a single drive — it's a RAID array striped or
-                        mirrored across multiple disks, running on file systems like
-                        Btrfs, ext4, or ZFS, managed by firmware that varies by brand.
-                        That makes a failed or degraded NAS harder to recover from with
-                        generic tools, but not impossible in the right hands. We work
-                        with Synology, QNAP, WD My Cloud, Netgear ReadyNAS, and other
-                        multi-bay systems — through multi-drive failure, failed rebuilds,
-                        firmware corruption, and ransomware-encrypted volumes. We
-                        diagnose first, quote honestly, and only charge the recovery fee
-                        once your data is actually back.
+                        A laptop that won't power on isn't always a dead motherboard.
+                        It's often a failed charger, a swollen battery, a tripped
+                        power circuit, or a loose connection from a knock or drop. We
+                        run a structured power diagnosis to isolate the real cause
+                        first, then repair only what's actually broken. Because we're
+                        a data recovery lab first, every repair is done with your
+                        files protected — nothing is wiped or replaced without your
+                        approval.
                     </p>
                     <div className="flex flex-wrap gap-3 mt-8">
                         <a href="#contact" className="bg-orange-500 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
@@ -232,8 +233,8 @@ function Intro() {
                 <Reveal delay={150}>
                     <div className="rounded-2xl overflow-hidden mb-6 border border-neutral-200">
                         <Img
-                            src="/ChatGPT Image Aug 6, 2026, 10_52_00 AM.png"
-                            alt="NAS enclosure with drive bays open during inspection"
+                            src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=70&auto=format&fit=crop"
+                            alt="Technician testing a laptop power board on the bench"
                             className="w-full h-80 object-cover"
                         />
                     </div>
@@ -257,29 +258,29 @@ function Intro() {
     );
 }
 
-/* ---------- systems / RAID types we recover ---------- */
+/* ---------- symptoms we diagnose ---------- */
 
-function SystemsSupported() {
+function BrandsSupported() {
     const items = [
-        { img: "/ChatGPT Image Aug 10, 2026, 12_38_47 PM.png", label: "Synology NAS" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_41_42 PM.png", label: "QNAP NAS" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_52_21 PM.png", label: "WD My Cloud" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_43_07 PM.png", label: "Netgear ReadyNAS" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_44_41 PM.png", label: "RAID 0/1/5/6/10" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_46_23 PM.png", label: "Btrfs / ext4 / ZFS" },
+        { img: "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=500&q=70&auto=format&fit=crop", label: "No Lights At All" },
+        { img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&q=70&auto=format&fit=crop", label: "Fan Spins, No Display" },
+        { img: "https://images.unsplash.com/photo-1588200908342-23b585c03e26?w=500&q=70&auto=format&fit=crop", label: "Charging Light, Won't Boot" },
+        { img: "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=500&q=70&auto=format&fit=crop", label: "Turns Off Randomly" },
+        { img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500&q=70&auto=format&fit=crop", label: "Beeping / Blinking Codes" },
+        { img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=70&auto=format&fit=crop", label: "After a Drop or Spill" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">
             <div className="max-w-7xl mx-auto px-5">
                 <Reveal>
-                    <p className="font-mono text-xs tracking-[0.2em] text-neutral-400 text-center mb-8">SYSTEMS WE RECOVER FROM</p>
+                    <p className="font-mono text-xs tracking-[0.2em] text-neutral-400 text-center mb-8">SYMPTOMS WE DIAGNOSE</p>
                 </Reveal>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
                     {items.map((d, i) => (
                         <Reveal key={d.label} delay={i * 70}>
                             <div className="flex flex-col items-center text-center gap-3">
-                                <div className=" rounded-xl overflow-hidden border border-neutral-200">
-                                    <Img src={d.img} alt={d.label} className="w-full h-auto" />
+                                <div className="w-full aspect-square rounded-xl overflow-hidden border border-neutral-200">
+                                    <Img src={d.img} alt={d.label} className="w-full h-full object-cover" />
                                 </div>
                                 <span className="font-body text-xs text-neutral-500">{d.label}</span>
                             </div>
@@ -291,45 +292,45 @@ function SystemsSupported() {
     );
 }
 
-/* ---------- NAS failure cases (detailed) ---------- */
+/* ---------- repair cases (detailed) ---------- */
 
-function RecoveryCases() {
+function RepairCases() {
     const cases = [
         {
-            icon: Server,
-            title: "Degraded & Failed RAID Arrays",
-            desc: "One dropped disk puts the array in a fragile state, and pushing it further can turn a recoverable fault into total loss.",
-            points: ["Degraded RAID 5/6 arrays", "Multiple simultaneous disk failures", "Array showing 'crashed' or 'offline'"],
+            icon: Plug,
+            title: "Charger, Port & Adapter Failure",
+            desc: "Dead or damaged charging ports, frayed cables, and failed adapters that never let the laptop wake up.",
+            points: ["Charging port repair/replacement", "Adapter & cable output testing", "DC jack resoldering"],
         },
         {
-            icon: RotateCcw,
-            title: "Failed Rebuilds & Migrations",
-            desc: "A rebuild or volume migration that fails partway through often leaves the file system in an inconsistent state.",
-            points: ["Rebuild failed or stalled mid-way", "Failed volume expansion/migration", "Wrong disk rebuilt into the array"],
+            icon: Battery,
+            title: "Battery & Power Circuit Issues",
+            desc: "Drained, swollen, or failed batteries and the power-delivery circuits that sit between charger and board.",
+            points: ["Battery health testing", "Swollen battery safe replacement", "Power circuit continuity checks"],
         },
         {
-            icon: HardDrive,
-            title: "Individual Drive Failure",
-            desc: "Bad sectors, clicking drives, or a disk that's dropped out of the array entirely — assessed at the drive level first.",
-            points: ["Clicking or grinding member disks", "Bad sectors on one or more drives", "Drive not recognized by the NAS"],
+            icon: CircuitBoard,
+            title: "Motherboard & Power IC Repair",
+            desc: "Component-level repair of the power management IC, fuses, and short circuits on the logic board.",
+            points: ["Short-circuit tracing", "Power IC / MOSFET replacement", "Micro-soldering on the board"],
         },
         {
-            icon: ShieldOff,
-            title: "Ransomware & Encrypted Volumes",
-            desc: "NAS boxes exposed to the internet are common ransomware targets — we assess what's recoverable without paying a ransom.",
-            points: ["Ransomware-encrypted shares", "Renamed or locked file extensions", "Compromised admin accounts"],
+            icon: MonitorX,
+            title: "Powers On, No Display",
+            desc: "The laptop boots and fans spin, but the screen stays black — often RAM, GPU, or display cable related.",
+            points: ["RAM reseat & slot testing", "GPU / display cable diagnosis", "External monitor test boot"],
         },
         {
-            icon: KeyRound,
-            title: "Corrupted Firmware & Boot Failures",
-            desc: "A failed firmware update or power event can leave the NAS unable to boot even though the array itself is intact.",
-            points: ["NAS stuck in recovery/BIOS mode", "Failed DSM/QTS firmware update", "Corrupted system partition"],
+            icon: Droplets,
+            title: "Liquid Spill & Corrosion Damage",
+            desc: "Boards affected by spills or moisture, cleaned and inspected before any power is reapplied.",
+            points: ["Full board ultrasonic cleaning", "Corrosion & short inspection", "Safe re-power testing"],
         },
         {
-            icon: AlertTriangle,
-            title: "Accidental Deletion & Volume Loss",
-            desc: "A deleted volume, reformatted array, or removed shared folder doesn't always mean the underlying data is gone.",
-            points: ["Accidentally deleted volumes", "Reformatted RAID array", "Deleted shared folders/snapshots"],
+            icon: Thermometer,
+            title: "Overheating Shutdown Repair",
+            desc: "Laptops that power on and then cut out from heat — usually thermal paste, fans, or vents.",
+            points: ["Thermal paste replacement", "Fan & heatsink cleaning", "Vent & airflow inspection"],
         },
     ];
     return (
@@ -337,9 +338,9 @@ function RecoveryCases() {
             <div className="max-w-7xl mx-auto px-5">
                 <Reveal>
                     <div className="max-w-2xl mb-14">
-                        <span className="font-mono text-xs tracking-[0.2em] text-orange-600">NAS ISSUES WE HANDLE</span>
+                        <span className="font-mono text-xs tracking-[0.2em] text-orange-600">WHAT WE HANDLE</span>
                         <h2 className="font-display font-bold text-3xl sm:text-4xl text-neutral-900 mt-3 tracking-tight">
-                            Every kind of NAS failure, one lab.
+                            Every reason a laptop won't power on, one visit.
                         </h2>
                     </div>
                 </Reveal>
@@ -374,19 +375,19 @@ function RecoveryCases() {
 function LabGallery() {
     const shots = [
         {
-            img: "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=900&q=70&auto=format&fit=crop",
-            title: "Array mapping",
-            desc: "We map the RAID configuration and drive order exactly as it was before any rebuild is attempted.",
+            img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=900&q=70&auto=format&fit=crop",
+            title: "Power path diagnosis",
+            desc: "Charger, battery, and power circuit are tested in sequence to isolate exactly where the failure sits.",
         },
         {
-            img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=70&auto=format&fit=crop",
-            title: "Disk-by-disk imaging",
-            desc: "Every member disk is imaged individually first, so the original array is never modified directly.",
+            img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900&q=70&auto=format&fit=crop",
+            title: "Board-level repair",
+            desc: "Faulty components are traced and replaced under magnification, without disturbing your data.",
         },
         {
-            img: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=900&q=70&auto=format&fit=crop",
-            title: "Virtual array reconstruction",
-            desc: "The array is rebuilt virtually from the disk images to extract shares, snapshots, and files intact.",
+            img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=70&auto=format&fit=crop",
+            title: "Burn-in testing",
+            desc: "Every repaired laptop is run through repeated power cycles before it's handed back to you.",
         },
     ];
     return (
@@ -396,7 +397,7 @@ function LabGallery() {
                     <div className="max-w-2xl mb-14">
                         <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
                         <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
-                            What happens to your NAS.
+                            What happens to your laptop.
                         </h2>
                     </div>
                 </Reveal>
@@ -422,11 +423,11 @@ function LabGallery() {
 
 function Process() {
     const steps = [
-        { icon: ScanSearch, title: "Free Diagnosis", desc: "We inspect the NAS and array to identify whether the fault is logical, drive-level, or controller-level." },
-        { icon: FileCheck2, title: "Honest Quote", desc: "You get a clear price and timeline before any recovery work begins." },
-        { icon: Wrench, title: "Recovery", desc: "Our engineers recover the data using the method the fault actually calls for." },
-        { icon: ShieldCheck, title: "Verification", desc: "Recovered shares and files are checked and verified before handover." },
-        { icon: PackageCheck, title: "Secure Delivery", desc: "Your data is returned on a drive of your choice, securely." },
+        { icon: ScanSearch, title: "Free Diagnosis", desc: "We isolate whether it's the charger, battery, power circuit, or board causing the failure." },
+        { icon: FileCheck2, title: "Honest Quote", desc: "You get a clear price and timeline before any part is opened, repaired, or replaced." },
+        { icon: Wrench, title: "Component Repair", desc: "We repair or replace only the failed part — not the whole board unless it's truly needed." },
+        { icon: Power, title: "Power Cycle Testing", desc: "The laptop is powered on and off repeatedly to confirm the fault is fully resolved." },
+        { icon: PackageCheck, title: "Ready to Collect", desc: "Your laptop is returned powering on reliably, with your data intact." },
     ];
     return (
         <section className="bg-white py-20">
@@ -465,16 +466,16 @@ function Process() {
 
 function DoDont() {
     const donts = [
-        "Click 'Repair' or start a RAID rebuild without knowing which disk actually failed",
-        "Reinitialize the volume or reinstall the OS/firmware before checking for recoverable data",
-        "Swap disk order or slots while troubleshooting a degraded array",
-        "Keep power-cycling a NAS that's clicking, overheating, or failing to mount",
+        "Keep pressing the power button repeatedly or holding it down for long periods",
+        "Try a charger or adapter that isn't rated for your laptop, \"just to test it\"",
+        "Open the laptop yourself if you smell burning or see a swollen battery",
+        "Keep charging a laptop with a swollen, hot, or leaking battery",
     ];
     const dos = [
-        "Power down the NAS as soon as you notice a degraded, crashed, or offline array",
-        "Label each disk with its bay number before removing anything",
-        "Note down any error codes or messages shown on the NAS dashboard",
-        "Bring or ship all member disks together, along with the NAS model",
+        "Note exactly what happened right before it stopped turning on",
+        "Check if the charging light comes on at all, and note its colour",
+        "Try a different power outlet, but not a different, unrated charger",
+        "Bring or ship the laptop to us with its original charger",
     ];
     return (
         <section className="bg-neutral-950 py-20">
@@ -530,10 +531,10 @@ function DoDont() {
 
 function Guarantees() {
     const items = [
-        { icon: Lock, title: "No Data, No Charge", desc: "If we can't recover it, you don't pay the recovery fee." },
-        { icon: Clock, title: "24–48 Hour Diagnosis", desc: "Most NAS units are assessed within one to two working days." },
-        { icon: ShieldCheck, title: "Clean-Room-Standard Handling", desc: "Every disk is opened and handled under controlled conditions." },
-        { icon: Zap, title: "Confidential by Default", desc: "Your files are never viewed beyond what recovery requires." },
+        { icon: Lock, title: "Data Kept Intact", desc: "Power repairs are done at the board and component level without touching your storage drive." },
+        { icon: Clock, title: "24–48 Hour Turnaround", desc: "Most power diagnoses and repairs are completed within one to two working days." },
+        { icon: ShieldCheck, title: "Genuine Parts", desc: "Every battery, charger, and board component we fit is genuine or manufacturer-grade." },
+        { icon: Zap, title: "Warranty on Repair", desc: "Every power repair we complete is backed by a service warranty." },
     ];
     return (
         <section className="bg-neutral-50 py-14">
@@ -577,11 +578,11 @@ function FAQItem({ q, a, defaultOpen = false }) {
 
 function FAQ() {
     const faqs = [
-        { q: "One of my RAID drives failed — can you still recover the array?", a: "In most redundant RAID levels (5, 6, 10), yes — a single failed disk usually leaves enough data across the remaining drives to reconstruct the array. The key is stopping and not attempting a rebuild before diagnosis." },
-        { q: "My NAS shows 'crashed' or 'degraded' — is my data gone?", a: "Not necessarily. Those states usually mean the array has lost redundancy, not that the data is destroyed. In most cases the remaining disks still hold enough to reconstruct the volume." },
-        { q: "Can you recover data from a ransomware-encrypted NAS?", a: "We can assess what's recoverable, including deleted snapshots or previous versions that may not have been touched by the encryption, without requiring you to pay a ransom." },
-        { q: "I accidentally deleted a shared folder or reformatted a volume — can it be recovered?", a: "Often, yes. Deleted volumes and folders aren't usually wiped immediately at the storage level. Power down the NAS and avoid writing new data to stop it from being overwritten." },
-        { q: "What happens if my data can't be recovered?", a: "You only pay for the diagnosis, not the recovery fee. We'll always tell you upfront if a NAS or array isn't recoverable rather than attempting work we don't expect to succeed." },
+        { q: "My laptop shows no lights at all — is it dead?", a: "Not necessarily. A completely dark laptop is often a failed charger, adapter, or DC jack rather than a dead board. We test the full power path before assuming the worst." },
+        { q: "Will fixing the power issue erase my data?", a: "No. Power repairs happen on the charging circuit, battery, or motherboard components — your storage drive is untouched unless a separate issue affects it." },
+        { q: "The fan spins but the screen stays black — what's wrong?", a: "That usually points to RAM, the display cable, or the GPU rather than the power system itself. We test each in turn with an external monitor to confirm." },
+        { q: "Is a swollen battery dangerous?", a: "Yes — stop charging it immediately and avoid pressing on the case. Bring it in as soon as you can and we'll remove and replace it safely." },
+        { q: "How long does a power repair take?", a: "Most charger, port, and battery repairs are completed within 24 to 48 hours. Board-level micro-soldering repairs can take a little longer depending on parts availability." },
     ];
     return (
         <section className="bg-white py-20">
@@ -607,23 +608,23 @@ function FAQ() {
     );
 }
 
-export default function NASDataRecoveryPage() {
+export default function LaptopNotTurningOnRepairServicePage() {
     return (
         <div className="font-body bg-white min-h-screen">
             <style>{FONT_STYLES}</style>
 
             <Breadcrumb
-                title="NAS Data Recovery"
-                subtitle="Degraded arrays, failed rebuilds, ransomware, or a dead controller — recovered honestly and handled with care."
+                title="Laptop Not Turning On — Repair Service"
+                subtitle="No lights, no fan, no display, or random shutdowns — diagnosed and repaired at the component level, with your data kept intact."
                 trail={[
                     { label: "Home", href: "#" },
                     { label: "Services", href: "#services" },
-                    { label: "NAS Data Recovery", href: "#nas-data-recovery" },
+                    { label: "Laptop Not Turning On", href: "#laptop-power-repair-service" },
                 ]}
             />
             <Intro />
-            <SystemsSupported />
-            <RecoveryCases />
+            <BrandsSupported />
+            <RepairCases />
             <LabGallery />
             <Process />
             <DoDont />

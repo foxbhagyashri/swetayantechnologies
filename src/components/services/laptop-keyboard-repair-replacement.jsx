@@ -15,20 +15,23 @@ import {
     PackageCheck,
     Wrench,
     AlertTriangle,
-    Server,
-    HardDrive,
-    Network,
-    ShieldOff,
-    RotateCcw,
+    Laptop,
+    Keyboard,
     KeyRound,
+    Droplets,
+    Layers,
+    Lightbulb,
+    Cable,
+    MousePointer2,
 } from "lucide-react";
 
 /* ---------------------------------------------------------
-   Swetayan Technologies — NAS Data Recovery
+   Swetayan Technologies — Laptop Keyboard Repair &
+   Replacement Service
    Reuses the exact design tokens, motion language and brand
-   mark from the Home / About / Services / MacBook / CCTV
-   pages (Space Grotesk + Inter + IBM Plex Mono, orange-500
-   accent, neutral-950 chrome).
+   mark from the Home / About / Services / Data Recovery pages
+   (Space Grotesk + Inter + IBM Plex Mono, orange-500 accent,
+   neutral-950 chrome).
 --------------------------------------------------------- */
 
 const FONT_STYLES = `
@@ -107,7 +110,7 @@ function Img({ src, alt, className }) {
     if (failed) {
         return (
             <div className={`${className} bg-gradient-to-br from-neutral-800 to-neutral-950 flex items-center justify-center`}>
-                <Server className="w-10 h-10 text-neutral-600" />
+                <Laptop className="w-10 h-10 text-neutral-600" />
             </div>
         );
     }
@@ -118,8 +121,8 @@ function Img({ src, alt, className }) {
 
 function FloatingContact() {
     return (
-        <a
-            href="tel:+919876543210"
+
+        <a href="tel:+919876543210"
             className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-orange-500 hover:bg-orange-400 text-neutral-950 flex items-center justify-center shadow-2xl animate-ring transition-colors"
             aria-label="Call Swetayan Technologies"
         >
@@ -132,8 +135,8 @@ function Breadcrumb({ trail, title, subtitle }) {
     return (
         <section className="relative bg-neutral-950 text-white overflow-hidden">
             <Img
-                src="https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=1600&q=70&auto=format&fit=crop"
-                alt="NAS array of drives during diagnostics"
+                src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=1600&q=70&auto=format&fit=crop"
+                alt="Close-up of a laptop keyboard during repair"
                 className="absolute inset-0 w-full h-full object-cover opacity-20"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-neutral-950 via-neutral-950/95 to-neutral-950/80" />
@@ -143,7 +146,7 @@ function Breadcrumb({ trail, title, subtitle }) {
                     <span className="relative flex h-2 w-2">
                         <span className="animate-pulse-dot absolute inline-flex h-full w-full rounded-full bg-orange-500" />
                     </span>
-                    <span className="font-mono text-[11px] tracking-[0.2em] text-orange-400">CLEAN-ROOM-STANDARD LAB</span>
+                    <span className="font-mono text-[11px] tracking-[0.2em] text-orange-400">CERTIFIED REPAIR TECHNICIANS</span>
                 </div>
                 <h1 className="font-display font-bold text-3xl sm:text-4xl tracking-tight">{title}</h1>
                 {subtitle && <p className="font-body text-neutral-400 mt-2 max-w-xl">{subtitle}</p>}
@@ -172,20 +175,20 @@ function Breadcrumb({ trail, title, subtitle }) {
 
 function CTABanner() {
     return (
-        <section className="bg-[#ff8904] py-14 relative overflow-hidden">
+        <section className="bg-orange-500 py-14 relative overflow-hidden">
             <div className="absolute -right-10 -top-10 w-64 h-64 bg-white/10 rounded-full blur-2xl animate-glow" />
             <Reveal>
                 <div className="max-w-7xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-6 relative">
                     <div>
                         <h3 className="font-display font-bold text-2xl sm:text-3xl text-neutral-950 tracking-tight">
-                            NAS showing "degraded", "crashed", or won't come back online?
+                            Keys sticking, missing, or not registering at all?
                         </h3>
                         <p className="font-body text-neutral-900/80 mt-2">
-                            Don't attempt a RAID rebuild or reinitialize the volume first — get a free diagnosis before anything else touches the disks.
+                            Don't type around a broken keyboard — get a free inspection before you decide anything.
                         </p>
                     </div>
                     <a href="#contact" className="bg-neutral-950 hover:bg-neutral-800 hover:scale-105 text-white font-body font-semibold px-6 py-3 rounded-md whitespace-nowrap transition-all flex items-center gap-2">
-                        Get Free Diagnosis <ArrowRight className="w-4 h-4" />
+                        Get Free Inspection <ArrowRight className="w-4 h-4" />
                     </a>
                 </div>
             </Reveal>
@@ -198,42 +201,43 @@ function CTABanner() {
 function Intro() {
     const [ref, inView] = useInView(0.4);
     const stats = [
-        { value: 15, suffix: "+", label: "Years recovering NAS data" },
-        { value: 3400, suffix: "+", label: "NAS/RAID jobs recovered" },
-        { value: 93, suffix: "%", label: "Success rate" },
-        { value: 48, suffix: "hr", label: "Typical diagnosis time" },
+        { value: 16, suffix: "+", label: "Years repairing laptops" },
+        { value: 12000, suffix: "+", label: "Keyboards repaired" },
+        { value: 96, suffix: "%", label: "First-visit fix rate" },
+        { value: 24, suffix: "hr", label: "Typical turnaround" },
     ];
     return (
         <section className="bg-white py-20">
             <div className="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-14 items-center">
                 <Reveal>
-                    <span className="font-mono text-xs tracking-[0.2em] text-orange-600">NAS DATA RECOVERY</span>
+                    <span className="font-mono text-xs tracking-[0.2em] text-orange-600">KEYBOARD REPAIR SERVICE</span>
                     <h2 className="font-display font-bold text-3xl sm:text-4xl text-neutral-900 mt-3 tracking-tight leading-tight">
-                        Degraded arrays, failed rebuilds, or a dead controller — we still get your data back.
+                        Sticky keys, missing caps, or a keyboard that's stopped responding — fixed properly, without opening up the rest of the laptop.
                     </h2>
                     <p className="font-body text-neutral-600 mt-5 leading-relaxed">
-                        NAS storage isn't a single drive — it's a RAID array striped or
-                        mirrored across multiple disks, running on file systems like
-                        Btrfs, ext4, or ZFS, managed by firmware that varies by brand.
-                        That makes a failed or degraded NAS harder to recover from with
-                        generic tools, but not impossible in the right hands. We work
-                        with Synology, QNAP, WD My Cloud, Netgear ReadyNAS, and other
-                        multi-bay systems — through multi-drive failure, failed rebuilds,
-                        firmware corruption, and ransomware-encrypted volumes. We
-                        diagnose first, quote honestly, and only charge the recovery fee
-                        once your data is actually back.
+                        A faulty keyboard is one of the most common laptop complaints —
+                        and one of the easiest to get wrong if it's not handled
+                        carefully. We diagnose whether the fault is a single key, a
+                        damaged ribbon cable, spill residue under the keys, or a full
+                        keyboard assembly failure, and repair only what's actually
+                        needed. Because we're a data recovery lab first, every keyboard
+                        job is handled with the same care around your files — the drive
+                        is never touched during a keyboard repair. We work on all major
+                        laptop brands, from everyday consumer machines to business
+                        ultrabooks and gaming laptops, and quote honestly before any
+                        work begins.
                     </p>
                     <div className="flex flex-wrap gap-3 mt-8">
                         <a href="#contact" className="bg-orange-500 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
-                            Book a Free Diagnosis <ArrowRight className="w-4 h-4" />
+                            Book a Free Inspection <ArrowRight className="w-4 h-4" />
                         </a>
                     </div>
                 </Reveal>
                 <Reveal delay={150}>
                     <div className="rounded-2xl overflow-hidden mb-6 border border-neutral-200">
                         <Img
-                            src="/ChatGPT Image Aug 6, 2026, 10_52_00 AM.png"
-                            alt="NAS enclosure with drive bays open during inspection"
+                            src="https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=900&q=70&auto=format&fit=crop"
+                            alt="Technician replacing a laptop keyboard"
                             className="w-full h-80 object-cover"
                         />
                     </div>
@@ -257,29 +261,29 @@ function Intro() {
     );
 }
 
-/* ---------- systems / RAID types we recover ---------- */
+/* ---------- laptops we repair ---------- */
 
-function SystemsSupported() {
+function BrandsSupported() {
     const items = [
-        { img: "/ChatGPT Image Aug 10, 2026, 12_38_47 PM.png", label: "Synology NAS" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_41_42 PM.png", label: "QNAP NAS" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_52_21 PM.png", label: "WD My Cloud" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_43_07 PM.png", label: "Netgear ReadyNAS" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_44_41 PM.png", label: "RAID 0/1/5/6/10" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_46_23 PM.png", label: "Btrfs / ext4 / ZFS" },
+        { img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&q=70&auto=format&fit=crop", label: "Dell / HP / Lenovo" },
+        { img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=70&auto=format&fit=crop", label: "Apple MacBook" },
+        { img: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=500&q=70&auto=format&fit=crop", label: "Asus / Acer / MSI" },
+        { img: "https://images.unsplash.com/photo-1602080858428-57174f9431cf?w=500&q=70&auto=format&fit=crop", label: "Gaming Laptops" },
+        { img: "https://images.unsplash.com/photo-1588200908342-23b585c03e26?w=500&q=70&auto=format&fit=crop", label: "Business Ultrabooks" },
+        { img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=70&auto=format&fit=crop", label: "2-in-1 & Convertibles" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">
             <div className="max-w-7xl mx-auto px-5">
                 <Reveal>
-                    <p className="font-mono text-xs tracking-[0.2em] text-neutral-400 text-center mb-8">SYSTEMS WE RECOVER FROM</p>
+                    <p className="font-mono text-xs tracking-[0.2em] text-neutral-400 text-center mb-8">LAPTOPS WE REPAIR</p>
                 </Reveal>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
                     {items.map((d, i) => (
                         <Reveal key={d.label} delay={i * 70}>
                             <div className="flex flex-col items-center text-center gap-3">
-                                <div className=" rounded-xl overflow-hidden border border-neutral-200">
-                                    <Img src={d.img} alt={d.label} className="w-full h-auto" />
+                                <div className="w-full aspect-square rounded-xl overflow-hidden border border-neutral-200">
+                                    <Img src={d.img} alt={d.label} className="w-full h-full object-cover" />
                                 </div>
                                 <span className="font-body text-xs text-neutral-500">{d.label}</span>
                             </div>
@@ -291,45 +295,45 @@ function SystemsSupported() {
     );
 }
 
-/* ---------- NAS failure cases (detailed) ---------- */
+/* ---------- keyboard fault cases (detailed) ---------- */
 
-function RecoveryCases() {
+function RepairCases() {
     const cases = [
         {
-            icon: Server,
-            title: "Degraded & Failed RAID Arrays",
-            desc: "One dropped disk puts the array in a fragile state, and pushing it further can turn a recoverable fault into total loss.",
-            points: ["Degraded RAID 5/6 arrays", "Multiple simultaneous disk failures", "Array showing 'crashed' or 'offline'"],
-        },
-        {
-            icon: RotateCcw,
-            title: "Failed Rebuilds & Migrations",
-            desc: "A rebuild or volume migration that fails partway through often leaves the file system in an inconsistent state.",
-            points: ["Rebuild failed or stalled mid-way", "Failed volume expansion/migration", "Wrong disk rebuilt into the array"],
-        },
-        {
-            icon: HardDrive,
-            title: "Individual Drive Failure",
-            desc: "Bad sectors, clicking drives, or a disk that's dropped out of the array entirely — assessed at the drive level first.",
-            points: ["Clicking or grinding member disks", "Bad sectors on one or more drives", "Drive not recognized by the NAS"],
-        },
-        {
-            icon: ShieldOff,
-            title: "Ransomware & Encrypted Volumes",
-            desc: "NAS boxes exposed to the internet are common ransomware targets — we assess what's recoverable without paying a ransom.",
-            points: ["Ransomware-encrypted shares", "Renamed or locked file extensions", "Compromised admin accounts"],
-        },
-        {
             icon: KeyRound,
-            title: "Corrupted Firmware & Boot Failures",
-            desc: "A failed firmware update or power event can leave the NAS unable to boot even though the array itself is intact.",
-            points: ["NAS stuck in recovery/BIOS mode", "Failed DSM/QTS firmware update", "Corrupted system partition"],
+            title: "Sticky or Unresponsive Keys",
+            desc: "Individual keys that stick, double-type, or don't register at all, without needing a full replacement.",
+            points: ["Single-key stem & switch repair", "Keys that double-type or lag", "Cleaning under sticking keys"],
         },
         {
-            icon: AlertTriangle,
-            title: "Accidental Deletion & Volume Loss",
-            desc: "A deleted volume, reformatted array, or removed shared folder doesn't always mean the underlying data is gone.",
-            points: ["Accidentally deleted volumes", "Reformatted RAID array", "Deleted shared folders/snapshots"],
+            icon: Layers,
+            title: "Missing or Broken Keycaps",
+            desc: "Snapped, popped-off, or missing keycaps and hinges replaced to match your exact model.",
+            points: ["Individual keycap replacement", "Broken scissor / butterfly hinges", "Colour & profile matched to model"],
+        },
+        {
+            icon: Droplets,
+            title: "Spill Damage Under the Keys",
+            desc: "Coffee, water, or juice spilled directly on the keyboard — cleaned before it reaches the board beneath.",
+            points: ["Full keyboard disassembly & cleaning", "Corrosion check on the membrane", "Post-spill functional testing"],
+        },
+        {
+            icon: Keyboard,
+            title: "Full Keyboard Replacement",
+            desc: "When the keyboard assembly itself has failed, we replace it with a genuine or OEM-matched unit.",
+            points: ["Genuine / OEM-matched keyboards", "Palm-rest & chassis-integrated units", "Backlit keyboard variants available"],
+        },
+        {
+            icon: Cable,
+            title: "Ribbon Cable & Connector Faults",
+            desc: "Loose, torn, or disconnected keyboard ribbon cables causing partial or total keyboard failure.",
+            points: ["Ribbon cable reseating & repair", "Connector pin repair on the board", "Diagnosing rows/columns that fail"],
+        },
+        {
+            icon: Lightbulb,
+            title: "Backlight & Trackpad Issues",
+            desc: "Keyboard backlighting that won't turn on, and trackpads affected by the same assembly.",
+            points: ["Backlight circuit diagnosis", "Trackpad click / tracking faults", "Function-key & shortcut testing"],
         },
     ];
     return (
@@ -337,9 +341,9 @@ function RecoveryCases() {
             <div className="max-w-7xl mx-auto px-5">
                 <Reveal>
                     <div className="max-w-2xl mb-14">
-                        <span className="font-mono text-xs tracking-[0.2em] text-orange-600">NAS ISSUES WE HANDLE</span>
+                        <span className="font-mono text-xs tracking-[0.2em] text-orange-600">REPAIRS WE HANDLE</span>
                         <h2 className="font-display font-bold text-3xl sm:text-4xl text-neutral-900 mt-3 tracking-tight">
-                            Every kind of NAS failure, one lab.
+                            Every kind of keyboard fault, one lab.
                         </h2>
                     </div>
                 </Reveal>
@@ -374,19 +378,19 @@ function RecoveryCases() {
 function LabGallery() {
     const shots = [
         {
-            img: "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=900&q=70&auto=format&fit=crop",
-            title: "Array mapping",
-            desc: "We map the RAID configuration and drive order exactly as it was before any rebuild is attempted.",
+            img: "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=900&q=70&auto=format&fit=crop",
+            title: "Careful disassembly",
+            desc: "The keyboard is removed key by key or as a full assembly, without disturbing the drive underneath.",
         },
         {
-            img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=70&auto=format&fit=crop",
-            title: "Disk-by-disk imaging",
-            desc: "Every member disk is imaged individually first, so the original array is never modified directly.",
+            img: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=900&q=70&auto=format&fit=crop",
+            title: "Key & switch level repair",
+            desc: "Individual switches, hinges, and keycaps are repaired where possible instead of a full swap.",
         },
         {
-            img: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=900&q=70&auto=format&fit=crop",
-            title: "Virtual array reconstruction",
-            desc: "The array is rebuilt virtually from the disk images to extract shares, snapshots, and files intact.",
+            img: "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&q=70&auto=format&fit=crop",
+            title: "Genuine parts & testing",
+            desc: "Every key is tested for registration and travel before the laptop goes back to you.",
         },
     ];
     return (
@@ -396,7 +400,7 @@ function LabGallery() {
                     <div className="max-w-2xl mb-14">
                         <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
                         <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
-                            What happens to your NAS.
+                            What happens to your laptop.
                         </h2>
                     </div>
                 </Reveal>
@@ -422,11 +426,11 @@ function LabGallery() {
 
 function Process() {
     const steps = [
-        { icon: ScanSearch, title: "Free Diagnosis", desc: "We inspect the NAS and array to identify whether the fault is logical, drive-level, or controller-level." },
-        { icon: FileCheck2, title: "Honest Quote", desc: "You get a clear price and timeline before any recovery work begins." },
-        { icon: Wrench, title: "Recovery", desc: "Our engineers recover the data using the method the fault actually calls for." },
-        { icon: ShieldCheck, title: "Verification", desc: "Recovered shares and files are checked and verified before handover." },
-        { icon: PackageCheck, title: "Secure Delivery", desc: "Your data is returned on a drive of your choice, securely." },
+        { icon: ScanSearch, title: "Free Inspection", desc: "We test every key and identify whether the fault is a switch, cable, or full assembly." },
+        { icon: FileCheck2, title: "Honest Quote", desc: "You get a clear price and timeline before any repair work begins." },
+        { icon: Wrench, title: "Repair / Replace", desc: "Our technicians repair individual keys or fit a full replacement keyboard as needed." },
+        { icon: ShieldCheck, title: "Testing", desc: "Every key is tested for travel and registration before we call it done." },
+        { icon: PackageCheck, title: "Ready to Collect", desc: "Your laptop is returned clean, working, and with your data intact." },
     ];
     return (
         <section className="bg-white py-20">
@@ -465,16 +469,16 @@ function Process() {
 
 function DoDont() {
     const donts = [
-        "Click 'Repair' or start a RAID rebuild without knowing which disk actually failed",
-        "Reinitialize the volume or reinstall the OS/firmware before checking for recoverable data",
-        "Swap disk order or slots while troubleshooting a degraded array",
-        "Keep power-cycling a NAS that's clicking, overheating, or failing to mount",
+        "Keep typing on keys that are stuck, especially if a liquid spill caused it",
+        "Try to pry off keycaps yourself without knowing the hinge type",
+        "Use compressed air aggressively near a spilled or sticky keyboard",
+        "Keep the laptop powered on right after a liquid spill on the keys",
     ];
     const dos = [
-        "Power down the NAS as soon as you notice a degraded, crashed, or offline array",
-        "Label each disk with its bay number before removing anything",
-        "Note down any error codes or messages shown on the NAS dashboard",
-        "Bring or ship all member disks together, along with the NAS model",
+        "Shut the laptop down immediately if liquid gets on the keyboard",
+        "Turn the laptop upside down (gently) to let any liquid drain out",
+        "Note which specific keys are affected before bringing it in",
+        "Bring or ship the laptop to us as-is, along with the charger",
     ];
     return (
         <section className="bg-neutral-950 py-20">
@@ -530,10 +534,10 @@ function DoDont() {
 
 function Guarantees() {
     const items = [
-        { icon: Lock, title: "No Data, No Charge", desc: "If we can't recover it, you don't pay the recovery fee." },
-        { icon: Clock, title: "24–48 Hour Diagnosis", desc: "Most NAS units are assessed within one to two working days." },
-        { icon: ShieldCheck, title: "Clean-Room-Standard Handling", desc: "Every disk is opened and handled under controlled conditions." },
-        { icon: Zap, title: "Confidential by Default", desc: "Your files are never viewed beyond what recovery requires." },
+        { icon: Lock, title: "Data Kept Intact", desc: "Keyboard repairs are done without touching your drive or files." },
+        { icon: Clock, title: "24–48 Hour Turnaround", desc: "Most keyboard repairs are completed within one to two working days." },
+        { icon: ShieldCheck, title: "Genuine / OEM-Matched Parts", desc: "Every replacement keyboard or keycap is matched to your exact model." },
+        { icon: Zap, title: "Warranty on Repairs", desc: "Every repair we complete is backed by a service warranty." },
     ];
     return (
         <section className="bg-neutral-50 py-14">
@@ -577,11 +581,11 @@ function FAQItem({ q, a, defaultOpen = false }) {
 
 function FAQ() {
     const faqs = [
-        { q: "One of my RAID drives failed — can you still recover the array?", a: "In most redundant RAID levels (5, 6, 10), yes — a single failed disk usually leaves enough data across the remaining drives to reconstruct the array. The key is stopping and not attempting a rebuild before diagnosis." },
-        { q: "My NAS shows 'crashed' or 'degraded' — is my data gone?", a: "Not necessarily. Those states usually mean the array has lost redundancy, not that the data is destroyed. In most cases the remaining disks still hold enough to reconstruct the volume." },
-        { q: "Can you recover data from a ransomware-encrypted NAS?", a: "We can assess what's recoverable, including deleted snapshots or previous versions that may not have been touched by the encryption, without requiring you to pay a ransom." },
-        { q: "I accidentally deleted a shared folder or reformatted a volume — can it be recovered?", a: "Often, yes. Deleted volumes and folders aren't usually wiped immediately at the storage level. Power down the NAS and avoid writing new data to stop it from being overwritten." },
-        { q: "What happens if my data can't be recovered?", a: "You only pay for the diagnosis, not the recovery fee. We'll always tell you upfront if a NAS or array isn't recoverable rather than attempting work we don't expect to succeed." },
+        { q: "Can a single key be repaired, or does the whole keyboard need replacing?", a: "Most of the time, a single key can be repaired — we replace the individual stem, hinge, or switch. A full keyboard replacement is only needed if the assembly itself, the membrane, or the ribbon cable has failed." },
+        { q: "Will a keyboard repair affect my files or data?", a: "No. Keyboard repairs are done at the input-device level and never touch the storage drive, so your files stay exactly as they were." },
+        { q: "I spilled liquid on my keyboard — what should I do first?", a: "Shut the laptop down immediately, unplug it, and avoid typing or pressing keys. Bring it in as soon as possible — the sooner it's cleaned, the less chance of corrosion spreading to the board underneath." },
+        { q: "Do you match the exact keyboard layout and backlighting?", a: "Yes. We source genuine or OEM-matched keyboards for your specific model, including backlit variants where the original had one." },
+        { q: "How long does a keyboard repair take?", a: "Single-key repairs are often same-day. Full keyboard replacements typically take 24 to 48 hours depending on part availability." },
     ];
     return (
         <section className="bg-white py-20">
@@ -607,23 +611,23 @@ function FAQ() {
     );
 }
 
-export default function NASDataRecoveryPage() {
+export default function LaptopKeyboardRepairServicePage() {
     return (
         <div className="font-body bg-white min-h-screen">
             <style>{FONT_STYLES}</style>
 
             <Breadcrumb
-                title="NAS Data Recovery"
-                subtitle="Degraded arrays, failed rebuilds, ransomware, or a dead controller — recovered honestly and handled with care."
+                title="Laptop Keyboard Repair & Replacement"
+                subtitle="Sticky keys, spill damage, missing keycaps, or a full keyboard swap — repaired properly, with your data kept intact."
                 trail={[
                     { label: "Home", href: "#" },
                     { label: "Services", href: "#services" },
-                    { label: "NAS Data Recovery", href: "#nas-data-recovery" },
+                    { label: "Keyboard Repair & Replacement", href: "#laptop-keyboard-repair-service" },
                 ]}
             />
             <Intro />
-            <SystemsSupported />
-            <RecoveryCases />
+            <BrandsSupported />
+            <RepairCases />
             <LabGallery />
             <Process />
             <DoDont />

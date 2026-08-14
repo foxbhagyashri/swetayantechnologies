@@ -22,32 +22,114 @@ export default function SiteHeader() {
         { name: "Home", path: "/" },
         { name: "About Us", path: "/About_us" },
         {
-            name: "Services",
+            name: "Data Recovery Service",
+            dropdown: [
+                { name: "Hard Disk Data Recovery", path: "/services/hard-disk-data-recovery" },
+                { name: "Laptop Data Recovery", path: "/services/laptop-data-recovery" },
+                { name: "Data Recovery for MacBook®", path: "/services/macbook-data-recovery" },
+                { name: "SSD Data Recovery", path: "/services/ssd-data-recovery" },
+                { name: "Removable Media Recovery", path: "/services/removable-media-recovery" },
+                { name: "CCTV Footage Recovery", path: "/services/cctv-footage-recovery" },
+                { name: "NAS Data Recovery", path: "/services/nas-data-recovery" },
+                { name: "RAID Server Recovery", path: "/services/raid-server-recovery" },
+            ],
+        },
+        {
+            name: "Laptop Repair Service",
             dropdown: [
                 {
-                    name: "Data Recovery",
-                    dropdown: [
-                        { name: "Hard Disk Data Recovery", path: "/services/hard-disk-data-recovery" },
-                        { name: "Laptop Data Recovery", path: "/services/laptop-data-recovery" },
-                        { name: "Data Recovery for MacBook®", path: "/services/macbook-data-recovery" },
-                        { name: "SSD Data Recovery", path: "/services/ssd-data-recovery" },
-                        { name: "Removable Media Recovery", path: "/services/removable-media-recovery" },
-                        { name: "CCTV Footage Recovery", path: "/services/cctv-footage-recovery" },
-                        { name: "NAS Data Recovery", path: "/services/nas-data-recovery" },
-                        { name: "RAID Server Recovery", path: "/services/raid-server-recovery" },
-                    ],
+                    name: "Laptop Virus Removal Service & Installation",
+                    path: "/services/laptop-virus-removal-service-installation",
                 },
                 {
-                    name: "Laptop Repair Service",
+                    name: "Laptop Keyboard Repair & Replacement",
+                    path: "/services/laptop-keyboard-repair-replacement",
+                },
+                {
+                    name: "Laptop CPU Fan Repair & Replacement",
+                    path: "/services/laptop-cpu-fan-repair-replacement",
+                },
+                {
+                    name: "Laptop Not Turning On Repair",
+                    path: "/services/laptop-not-turning-on-repair",
+                },
+                {
+                    name: "Laptop Overheating Issue Repair",
+                    path: "/services/laptop-overheating-issue-repair",
+                },
+                {
+                    name: "Laptop Battery Repair & Replacement",
+                    path: "/services/laptop-repair",
+                },
+                {
+                    name: "Laptop Touchpad Track pad Repair & Replacement",
+                    path: "/services/laptop-repair",
+                },
+                {
+                    name: "Laptop Back Panel / Body Replacement",
+                    path: "/services/laptop-repair",
+                },
+                {
+                    name: "Laptop Screen Repair & Replacement",
+                    path: "/services/laptop-repair",
+                },
+                {
+                    name: "Laptop Processor Fan Noise Repair & Replacement",
+                    path: "/services/laptop-repair",
+                },
+                {
+                    name: "Laptop Not Charging Repair",
+                    path: "/services/laptop-repair",
+                },
+                {
+                    name: "Laptop Hinges Repair & Replacement",
+                    path: "/services/laptop-repair",
+                },
+
+                {
+                    name: "Laptop SSD Installation / Setup",
+                    path: "/services/laptop-repair",
+                },
+                {
+                    name: "Laptop Booting Issue Repair",
+                    path: "/services/laptop-repair",
+                },
+
+                {
+                    name: "Laptop Charging Point Repair & Replacement",
+                    path: "/services/laptop-repair",
+                },
+                {
+                    name: "Laptop Motherboard Repair & Replacement",
+                    path: "/services/laptop-repair",
+                },
+                {
+                    name: "Laptop RAM Replacement Fix & Upgrade",
+                    path: "/services/laptop-repair",
+                },
+                {
+                    name: "Laptop Booting Issue Repair",
+                    path: "/services/laptop-repair",
+                },
+                {
+                    name: "Laptop Charger Repair & Replacement",
+                    path: "/services/laptop-repair",
+                },
+                {
+                    name: "Laptop Hard Disk Repair & Replacement",
+                    path: "/services/laptop-repair",
+                },
+                {
+                    name: "Laptop BIOS Setup & Installation",
                     path: "/services/laptop-repair",
                 },
             ],
         },
-       
-        
+
+
 
         { name: "Blogs", path: "/Blog" },
-        { name: "Contact", path: "/Contact_us" },
+        { name: "Contact Us", path: "/Contact_us" },
     ];
 
     return (
@@ -57,7 +139,7 @@ export default function SiteHeader() {
                 <div className="max-w-7xl mx-auto px-5 py-2 flex items-center justify-between">
                     <div className="flex items-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-                        <span>Emergency drop-off & free diagnostics — Every Day, 10 AM – 8 PM</span>
+                        <span className="font-arial">Emergency drop-off & free diagnostics — Every Day, 10 AM – 8 PM</span>
                     </div>
 
                     <div className="hidden sm:flex items-center gap-5">
@@ -71,7 +153,7 @@ export default function SiteHeader() {
 
 
                         <a href="mailto:help@swetayantech.in"
-                            className="flex items-center gap-2 hover:text-orange-400"
+                            className="flex items-center gap-2 hover:text-orange-400 font-arial"
                         >
                             <Mail size={14} />
                             help@swetayantech.in
@@ -92,7 +174,7 @@ export default function SiteHeader() {
                     {/* Logo */}
                     <NavLink to="/" className="flex items-center">
                         <img
-                            src="/swetayan-tech.png"
+                            src="/ChatGPT Image Aug 8, 2026, 10_21_03 AM.png"
                             alt="Swetayan Technologies"
                             className="w-56 object-contain"
                         />
@@ -121,7 +203,7 @@ export default function SiteHeader() {
 
                                                     <button
                                                         type="button"
-                                                        className="w-full flex items-center justify-between px-5 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-500"
+                                                        className="w-full flex items-center justify-between px-5 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-500 font-arial"
                                                     >
                                                         {item.name}
                                                         <ChevronRight size={16} />
@@ -133,7 +215,7 @@ export default function SiteHeader() {
                                                             <NavLink
                                                                 key={sub.name}
                                                                 to={sub.path}
-                                                                className="block px-5 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-500"
+                                                                className="block px-0 py-0 text-gray-700 hover:bg-orange-50 hover:text-orange-500 font-arial"
                                                             >
                                                                 {sub.name}
                                                             </NavLink>
@@ -148,7 +230,7 @@ export default function SiteHeader() {
                                                 <NavLink
                                                     key={item.name}
                                                     to={item.path}
-                                                    className="block px-5 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-500"
+                                                    className="block px-5 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-500 font-arial text-sm"
                                                 >
                                                     {item.name}
                                                 </NavLink>
@@ -169,7 +251,7 @@ export default function SiteHeader() {
                                     className={({ isActive }) =>
                                         `font-medium transition-colors ${isActive
                                             ? "text-orange-500"
-                                            : "text-gray-800 hover:text-orange-500"
+                                            : "text-gray-800 hover:text-orange-500 font-arial"
                                         }`
                                     }
                                 >

@@ -15,20 +15,22 @@ import {
     PackageCheck,
     Wrench,
     AlertTriangle,
-    Server,
-    HardDrive,
-    Network,
-    ShieldOff,
-    RotateCcw,
-    KeyRound,
+    Laptop,
+    Fan,
+    Thermometer,
+    Volume2,
+    Wind,
+    Gauge,
+    CircuitBoard,
 } from "lucide-react";
 
 /* ---------------------------------------------------------
-   Swetayan Technologies — NAS Data Recovery
+   Swetayan Technologies — Laptop CPU Fan Repair &
+   Replacement Service
    Reuses the exact design tokens, motion language and brand
-   mark from the Home / About / Services / MacBook / CCTV
-   pages (Space Grotesk + Inter + IBM Plex Mono, orange-500
-   accent, neutral-950 chrome).
+   mark from the Home / About / Services / Data Recovery pages
+   (Space Grotesk + Inter + IBM Plex Mono, orange-500 accent,
+   neutral-950 chrome).
 --------------------------------------------------------- */
 
 const FONT_STYLES = `
@@ -48,6 +50,9 @@ const FONT_STYLES = `
 
   @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
   .animate-pulse-dot { animation: pulse-dot 1.8s ease-in-out infinite; }
+
+  @keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  .animate-spin-slow { animation: spin-slow 3s linear infinite; }
 
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal-in { opacity: 1; transform: translateY(0); }
@@ -107,7 +112,7 @@ function Img({ src, alt, className }) {
     if (failed) {
         return (
             <div className={`${className} bg-gradient-to-br from-neutral-800 to-neutral-950 flex items-center justify-center`}>
-                <Server className="w-10 h-10 text-neutral-600" />
+                <Laptop className="w-10 h-10 text-neutral-600" />
             </div>
         );
     }
@@ -118,8 +123,8 @@ function Img({ src, alt, className }) {
 
 function FloatingContact() {
     return (
-        <a
-            href="tel:+919876543210"
+        
+           <a href="tel:+919876543210"
             className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-orange-500 hover:bg-orange-400 text-neutral-950 flex items-center justify-center shadow-2xl animate-ring transition-colors"
             aria-label="Call Swetayan Technologies"
         >
@@ -133,7 +138,7 @@ function Breadcrumb({ trail, title, subtitle }) {
         <section className="relative bg-neutral-950 text-white overflow-hidden">
             <Img
                 src="https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=1600&q=70&auto=format&fit=crop"
-                alt="NAS array of drives during diagnostics"
+                alt="Laptop internals showing the cooling fan during repair"
                 className="absolute inset-0 w-full h-full object-cover opacity-20"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-neutral-950 via-neutral-950/95 to-neutral-950/80" />
@@ -143,7 +148,7 @@ function Breadcrumb({ trail, title, subtitle }) {
                     <span className="relative flex h-2 w-2">
                         <span className="animate-pulse-dot absolute inline-flex h-full w-full rounded-full bg-orange-500" />
                     </span>
-                    <span className="font-mono text-[11px] tracking-[0.2em] text-orange-400">CLEAN-ROOM-STANDARD LAB</span>
+                    <span className="font-mono text-[11px] tracking-[0.2em] text-orange-400">CERTIFIED REPAIR TECHNICIANS</span>
                 </div>
                 <h1 className="font-display font-bold text-3xl sm:text-4xl tracking-tight">{title}</h1>
                 {subtitle && <p className="font-body text-neutral-400 mt-2 max-w-xl">{subtitle}</p>}
@@ -172,20 +177,20 @@ function Breadcrumb({ trail, title, subtitle }) {
 
 function CTABanner() {
     return (
-        <section className="bg-[#ff8904] py-14 relative overflow-hidden">
+        <section className="bg-orange-500 py-14 relative overflow-hidden">
             <div className="absolute -right-10 -top-10 w-64 h-64 bg-white/10 rounded-full blur-2xl animate-glow" />
             <Reveal>
                 <div className="max-w-7xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-6 relative">
                     <div>
                         <h3 className="font-display font-bold text-2xl sm:text-3xl text-neutral-950 tracking-tight">
-                            NAS showing "degraded", "crashed", or won't come back online?
+                            Fan running loud, laptop overheating, or shutting down on its own?
                         </h3>
                         <p className="font-body text-neutral-900/80 mt-2">
-                            Don't attempt a RAID rebuild or reinitialize the volume first — get a free diagnosis before anything else touches the disks.
+                            Don't wait for thermal shutdown to become permanent damage — get a free inspection today.
                         </p>
                     </div>
                     <a href="#contact" className="bg-neutral-950 hover:bg-neutral-800 hover:scale-105 text-white font-body font-semibold px-6 py-3 rounded-md whitespace-nowrap transition-all flex items-center gap-2">
-                        Get Free Diagnosis <ArrowRight className="w-4 h-4" />
+                        Get Free Inspection <ArrowRight className="w-4 h-4" />
                     </a>
                 </div>
             </Reveal>
@@ -198,42 +203,43 @@ function CTABanner() {
 function Intro() {
     const [ref, inView] = useInView(0.4);
     const stats = [
-        { value: 15, suffix: "+", label: "Years recovering NAS data" },
-        { value: 3400, suffix: "+", label: "NAS/RAID jobs recovered" },
-        { value: 93, suffix: "%", label: "Success rate" },
-        { value: 48, suffix: "hr", label: "Typical diagnosis time" },
+        { value: 16, suffix: "+", label: "Years repairing laptops" },
+        { value: 14000, suffix: "+", label: "Fans cleaned or replaced" },
+        { value: 96, suffix: "%", label: "First-visit fix rate" },
+        { value: 24, suffix: "hr", label: "Typical turnaround" },
     ];
     return (
         <section className="bg-white py-20">
             <div className="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-14 items-center">
                 <Reveal>
-                    <span className="font-mono text-xs tracking-[0.2em] text-orange-600">NAS DATA RECOVERY</span>
+                    <span className="font-mono text-xs tracking-[0.2em] text-orange-600">CPU FAN REPAIR SERVICE</span>
                     <h2 className="font-display font-bold text-3xl sm:text-4xl text-neutral-900 mt-3 tracking-tight leading-tight">
-                        Degraded arrays, failed rebuilds, or a dead controller — we still get your data back.
+                        Loud fans, overheating, or thermal shutdowns — fixed properly, without risking the components around it.
                     </h2>
                     <p className="font-body text-neutral-600 mt-5 leading-relaxed">
-                        NAS storage isn't a single drive — it's a RAID array striped or
-                        mirrored across multiple disks, running on file systems like
-                        Btrfs, ext4, or ZFS, managed by firmware that varies by brand.
-                        That makes a failed or degraded NAS harder to recover from with
-                        generic tools, but not impossible in the right hands. We work
-                        with Synology, QNAP, WD My Cloud, Netgear ReadyNAS, and other
-                        multi-bay systems — through multi-drive failure, failed rebuilds,
-                        firmware corruption, and ransomware-encrypted volumes. We
-                        diagnose first, quote honestly, and only charge the recovery fee
-                        once your data is actually back.
+                        A struggling CPU fan is one of the fastest ways a laptop starts
+                        throttling performance, shutting down mid-task, or getting
+                        uncomfortably hot to hold. We open the cooling assembly, clear
+                        out dust and debris, replace worn bearings or the fan unit
+                        itself, and re-apply thermal paste so heat actually transfers
+                        the way it should. Because we're a data recovery lab first,
+                        every job is handled with the same care around your files — the
+                        drive is never touched during a fan or cooling repair. We work
+                        on all major laptop brands, from everyday consumer machines to
+                        business ultrabooks and gaming laptops, and quote honestly
+                        before any work begins.
                     </p>
                     <div className="flex flex-wrap gap-3 mt-8">
                         <a href="#contact" className="bg-orange-500 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
-                            Book a Free Diagnosis <ArrowRight className="w-4 h-4" />
+                            Book a Free Inspection <ArrowRight className="w-4 h-4" />
                         </a>
                     </div>
                 </Reveal>
                 <Reveal delay={150}>
                     <div className="rounded-2xl overflow-hidden mb-6 border border-neutral-200">
                         <Img
-                            src="/ChatGPT Image Aug 6, 2026, 10_52_00 AM.png"
-                            alt="NAS enclosure with drive bays open during inspection"
+                            src="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=900&q=70&auto=format&fit=crop"
+                            alt="Technician cleaning a laptop cooling fan and heatsink"
                             className="w-full h-80 object-cover"
                         />
                     </div>
@@ -257,29 +263,29 @@ function Intro() {
     );
 }
 
-/* ---------- systems / RAID types we recover ---------- */
+/* ---------- laptops we repair ---------- */
 
-function SystemsSupported() {
+function BrandsSupported() {
     const items = [
-        { img: "/ChatGPT Image Aug 10, 2026, 12_38_47 PM.png", label: "Synology NAS" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_41_42 PM.png", label: "QNAP NAS" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_52_21 PM.png", label: "WD My Cloud" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_43_07 PM.png", label: "Netgear ReadyNAS" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_44_41 PM.png", label: "RAID 0/1/5/6/10" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_46_23 PM.png", label: "Btrfs / ext4 / ZFS" },
+        { img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&q=70&auto=format&fit=crop", label: "Dell / HP / Lenovo" },
+        { img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=70&auto=format&fit=crop", label: "Apple MacBook" },
+        { img: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=500&q=70&auto=format&fit=crop", label: "Asus / Acer / MSI" },
+        { img: "https://images.unsplash.com/photo-1602080858428-57174f9431cf?w=500&q=70&auto=format&fit=crop", label: "Gaming Laptops" },
+        { img: "https://images.unsplash.com/photo-1588200908342-23b585c03e26?w=500&q=70&auto=format&fit=crop", label: "Business Ultrabooks" },
+        { img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=70&auto=format&fit=crop", label: "2-in-1 & Convertibles" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">
             <div className="max-w-7xl mx-auto px-5">
                 <Reveal>
-                    <p className="font-mono text-xs tracking-[0.2em] text-neutral-400 text-center mb-8">SYSTEMS WE RECOVER FROM</p>
+                    <p className="font-mono text-xs tracking-[0.2em] text-neutral-400 text-center mb-8">LAPTOPS WE REPAIR</p>
                 </Reveal>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
                     {items.map((d, i) => (
                         <Reveal key={d.label} delay={i * 70}>
                             <div className="flex flex-col items-center text-center gap-3">
-                                <div className=" rounded-xl overflow-hidden border border-neutral-200">
-                                    <Img src={d.img} alt={d.label} className="w-full h-auto" />
+                                <div className="w-full aspect-square rounded-xl overflow-hidden border border-neutral-200">
+                                    <Img src={d.img} alt={d.label} className="w-full h-full object-cover" />
                                 </div>
                                 <span className="font-body text-xs text-neutral-500">{d.label}</span>
                             </div>
@@ -291,45 +297,45 @@ function SystemsSupported() {
     );
 }
 
-/* ---------- NAS failure cases (detailed) ---------- */
+/* ---------- fan / cooling fault cases (detailed) ---------- */
 
-function RecoveryCases() {
+function RepairCases() {
     const cases = [
         {
-            icon: Server,
-            title: "Degraded & Failed RAID Arrays",
-            desc: "One dropped disk puts the array in a fragile state, and pushing it further can turn a recoverable fault into total loss.",
-            points: ["Degraded RAID 5/6 arrays", "Multiple simultaneous disk failures", "Array showing 'crashed' or 'offline'"],
+            icon: Volume2,
+            title: "Loud or Grinding Fan Noise",
+            desc: "Rattling, grinding, or high-pitched whining fans caused by worn bearings or trapped debris.",
+            points: ["Worn bearing diagnosis", "Debris & hair caught in the blades", "Fan balancing & noise testing"],
         },
         {
-            icon: RotateCcw,
-            title: "Failed Rebuilds & Migrations",
-            desc: "A rebuild or volume migration that fails partway through often leaves the file system in an inconsistent state.",
-            points: ["Rebuild failed or stalled mid-way", "Failed volume expansion/migration", "Wrong disk rebuilt into the array"],
+            icon: Thermometer,
+            title: "Overheating & Thermal Shutdowns",
+            desc: "A laptop that gets hot to the touch, throttles performance, or shuts down unexpectedly under load.",
+            points: ["Full thermal diagnostic under load", "Heatsink contact & seating check", "Shutdown-threshold verification"],
         },
         {
-            icon: HardDrive,
-            title: "Individual Drive Failure",
-            desc: "Bad sectors, clicking drives, or a disk that's dropped out of the array entirely — assessed at the drive level first.",
-            points: ["Clicking or grinding member disks", "Bad sectors on one or more drives", "Drive not recognized by the NAS"],
+            icon: Wind,
+            title: "Dust Build-Up & Blocked Vents",
+            desc: "Compacted dust inside the heatsink fins and vents restricting airflow over time.",
+            points: ["Full internal dust removal", "Vent & fin deep cleaning", "Airflow path inspection"],
         },
         {
-            icon: ShieldOff,
-            title: "Ransomware & Encrypted Volumes",
-            desc: "NAS boxes exposed to the internet are common ransomware targets — we assess what's recoverable without paying a ransom.",
-            points: ["Ransomware-encrypted shares", "Renamed or locked file extensions", "Compromised admin accounts"],
+            icon: Fan,
+            title: "Fan Not Spinning / Dead Fan",
+            desc: "A fan that stays silent even under heavy load, often the first sign of total cooling failure.",
+            points: ["Fan motor & connector testing", "Full fan unit replacement", "BIOS / EC fan-control check"],
         },
         {
-            icon: KeyRound,
-            title: "Corrupted Firmware & Boot Failures",
-            desc: "A failed firmware update or power event can leave the NAS unable to boot even though the array itself is intact.",
-            points: ["NAS stuck in recovery/BIOS mode", "Failed DSM/QTS firmware update", "Corrupted system partition"],
+            icon: CircuitBoard,
+            title: "Thermal Paste & Pad Replacement",
+            desc: "Dried-out or degraded thermal paste on the CPU/GPU that stops heat transferring to the heatsink.",
+            points: ["CPU & GPU repaste", "Thermal pad replacement", "Idle & load temperature retest"],
         },
         {
-            icon: AlertTriangle,
-            title: "Accidental Deletion & Volume Loss",
-            desc: "A deleted volume, reformatted array, or removed shared folder doesn't always mean the underlying data is gone.",
-            points: ["Accidentally deleted volumes", "Reformatted RAID array", "Deleted shared folders/snapshots"],
+            icon: Gauge,
+            title: "Fan Running Constantly at High Speed",
+            desc: "A fan stuck at full speed even at idle, usually a sensor, control, or airflow-restriction issue.",
+            points: ["Temperature sensor diagnosis", "Fan-curve / EC firmware check", "Airflow restriction troubleshooting"],
         },
     ];
     return (
@@ -337,9 +343,9 @@ function RecoveryCases() {
             <div className="max-w-7xl mx-auto px-5">
                 <Reveal>
                     <div className="max-w-2xl mb-14">
-                        <span className="font-mono text-xs tracking-[0.2em] text-orange-600">NAS ISSUES WE HANDLE</span>
+                        <span className="font-mono text-xs tracking-[0.2em] text-orange-600">REPAIRS WE HANDLE</span>
                         <h2 className="font-display font-bold text-3xl sm:text-4xl text-neutral-900 mt-3 tracking-tight">
-                            Every kind of NAS failure, one lab.
+                            Every kind of fan & cooling fault, one lab.
                         </h2>
                     </div>
                 </Reveal>
@@ -375,18 +381,18 @@ function LabGallery() {
     const shots = [
         {
             img: "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=900&q=70&auto=format&fit=crop",
-            title: "Array mapping",
-            desc: "We map the RAID configuration and drive order exactly as it was before any rebuild is attempted.",
+            title: "Full cooling teardown",
+            desc: "The fan and heatsink assembly is removed carefully, keeping the drive and data untouched.",
         },
         {
-            img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=70&auto=format&fit=crop",
-            title: "Disk-by-disk imaging",
-            desc: "Every member disk is imaged individually first, so the original array is never modified directly.",
+            img: "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=900&q=70&auto=format&fit=crop",
+            title: "Deep dust & debris removal",
+            desc: "Heatsink fins, vents, and blades are cleaned of compacted dust that restricts airflow.",
         },
         {
-            img: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=900&q=70&auto=format&fit=crop",
-            title: "Virtual array reconstruction",
-            desc: "The array is rebuilt virtually from the disk images to extract shares, snapshots, and files intact.",
+            img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=70&auto=format&fit=crop",
+            title: "Repaste & load testing",
+            desc: "Fresh thermal paste is applied and temperatures are verified under real load before it's returned.",
         },
     ];
     return (
@@ -396,7 +402,7 @@ function LabGallery() {
                     <div className="max-w-2xl mb-14">
                         <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
                         <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
-                            What happens to your NAS.
+                            What happens to your laptop.
                         </h2>
                     </div>
                 </Reveal>
@@ -422,11 +428,11 @@ function LabGallery() {
 
 function Process() {
     const steps = [
-        { icon: ScanSearch, title: "Free Diagnosis", desc: "We inspect the NAS and array to identify whether the fault is logical, drive-level, or controller-level." },
-        { icon: FileCheck2, title: "Honest Quote", desc: "You get a clear price and timeline before any recovery work begins." },
-        { icon: Wrench, title: "Recovery", desc: "Our engineers recover the data using the method the fault actually calls for." },
-        { icon: ShieldCheck, title: "Verification", desc: "Recovered shares and files are checked and verified before handover." },
-        { icon: PackageCheck, title: "Secure Delivery", desc: "Your data is returned on a drive of your choice, securely." },
+        { icon: ScanSearch, title: "Free Inspection", desc: "We check fan noise, airflow, and temperatures under load to pinpoint the fault." },
+        { icon: FileCheck2, title: "Honest Quote", desc: "You get a clear price and timeline before any repair work begins." },
+        { icon: Wrench, title: "Clean / Repair / Replace", desc: "We clean the cooling path, repaste, or fit a new fan — only what's actually needed." },
+        { icon: ShieldCheck, title: "Testing", desc: "Temperatures are verified under real load before we call it done." },
+        { icon: PackageCheck, title: "Ready to Collect", desc: "Your laptop is returned running cool, quiet, and with your data intact." },
     ];
     return (
         <section className="bg-white py-20">
@@ -465,16 +471,16 @@ function Process() {
 
 function DoDont() {
     const donts = [
-        "Click 'Repair' or start a RAID rebuild without knowing which disk actually failed",
-        "Reinitialize the volume or reinstall the OS/firmware before checking for recoverable data",
-        "Swap disk order or slots while troubleshooting a degraded array",
-        "Keep power-cycling a NAS that's clicking, overheating, or failing to mount",
+        "Keep using a laptop that shuts down or restarts unexpectedly under load",
+        "Block the vents by using the laptop on a bed, pillow, or soft surface",
+        "Open the chassis yourself to clean the fan if you're unsure of the model",
+        "Ignore a fan that's grinding or squealing louder over time",
     ];
     const dos = [
-        "Power down the NAS as soon as you notice a degraded, crashed, or offline array",
-        "Label each disk with its bay number before removing anything",
-        "Note down any error codes or messages shown on the NAS dashboard",
-        "Bring or ship all member disks together, along with the NAS model",
+        "Shut the laptop down if it feels unusually hot or shuts off on its own",
+        "Use it on a hard, flat surface until the fan is inspected",
+        "Note when the noise or heat started, and what you were doing at the time",
+        "Bring or ship the laptop to us as-is, along with the charger",
     ];
     return (
         <section className="bg-neutral-950 py-20">
@@ -530,10 +536,10 @@ function DoDont() {
 
 function Guarantees() {
     const items = [
-        { icon: Lock, title: "No Data, No Charge", desc: "If we can't recover it, you don't pay the recovery fee." },
-        { icon: Clock, title: "24–48 Hour Diagnosis", desc: "Most NAS units are assessed within one to two working days." },
-        { icon: ShieldCheck, title: "Clean-Room-Standard Handling", desc: "Every disk is opened and handled under controlled conditions." },
-        { icon: Zap, title: "Confidential by Default", desc: "Your files are never viewed beyond what recovery requires." },
+        { icon: Lock, title: "Data Kept Intact", desc: "Cooling repairs never touch your drive or files." },
+        { icon: Clock, title: "24–48 Hour Turnaround", desc: "Most fan and cooling repairs are completed within one to two working days." },
+        { icon: ShieldCheck, title: "Genuine / OEM-Matched Fans", desc: "Every replacement fan is sourced and tested for your exact model." },
+        { icon: Zap, title: "Warranty on Repairs", desc: "Every repair we complete is backed by a service warranty." },
     ];
     return (
         <section className="bg-neutral-50 py-14">
@@ -577,11 +583,11 @@ function FAQItem({ q, a, defaultOpen = false }) {
 
 function FAQ() {
     const faqs = [
-        { q: "One of my RAID drives failed — can you still recover the array?", a: "In most redundant RAID levels (5, 6, 10), yes — a single failed disk usually leaves enough data across the remaining drives to reconstruct the array. The key is stopping and not attempting a rebuild before diagnosis." },
-        { q: "My NAS shows 'crashed' or 'degraded' — is my data gone?", a: "Not necessarily. Those states usually mean the array has lost redundancy, not that the data is destroyed. In most cases the remaining disks still hold enough to reconstruct the volume." },
-        { q: "Can you recover data from a ransomware-encrypted NAS?", a: "We can assess what's recoverable, including deleted snapshots or previous versions that may not have been touched by the encryption, without requiring you to pay a ransom." },
-        { q: "I accidentally deleted a shared folder or reformatted a volume — can it be recovered?", a: "Often, yes. Deleted volumes and folders aren't usually wiped immediately at the storage level. Power down the NAS and avoid writing new data to stop it from being overwritten." },
-        { q: "What happens if my data can't be recovered?", a: "You only pay for the diagnosis, not the recovery fee. We'll always tell you upfront if a NAS or array isn't recoverable rather than attempting work we don't expect to succeed." },
+        { q: "Does a noisy fan always mean it needs replacing?", a: "Not always. A lot of fan noise comes from trapped dust or debris on the blades, which a deep clean resolves. We only recommend a full fan replacement if the motor or bearing itself has actually worn out." },
+        { q: "Will cleaning the fan affect my files or data?", a: "No. Fan and cooling repairs are done entirely at the hardware level around the cooling assembly and never involve the storage drive, so your files are unaffected." },
+        { q: "My laptop shuts down randomly under load — is that the fan?", a: "It's one of the most common causes. When cooling can't keep up, the system shuts itself down to protect the CPU. We run a full thermal diagnostic under load to confirm whether it's the fan, dust blockage, or dried-out thermal paste." },
+        { q: "How often should thermal paste be replaced?", a: "Typically every 2–3 years, or sooner if the laptop is used heavily for gaming, rendering, or other sustained workloads. Dried-out paste is one of the most common causes of gradual overheating." },
+        { q: "How long does a fan or cooling repair take?", a: "A clean and repaste is often same-day. A full fan replacement typically takes 24 to 48 hours depending on part availability." },
     ];
     return (
         <section className="bg-white py-20">
@@ -607,23 +613,23 @@ function FAQ() {
     );
 }
 
-export default function NASDataRecoveryPage() {
+export default function LaptopFanRepairServicePage() {
     return (
         <div className="font-body bg-white min-h-screen">
             <style>{FONT_STYLES}</style>
 
             <Breadcrumb
-                title="NAS Data Recovery"
-                subtitle="Degraded arrays, failed rebuilds, ransomware, or a dead controller — recovered honestly and handled with care."
+                title="Laptop CPU Fan Repair & Replacement"
+                subtitle="Loud fans, overheating, dust build-up, or a dead cooling fan — repaired properly, with your data kept intact."
                 trail={[
                     { label: "Home", href: "#" },
                     { label: "Services", href: "#services" },
-                    { label: "NAS Data Recovery", href: "#nas-data-recovery" },
+                    { label: "CPU Fan Repair & Replacement", href: "#laptop-fan-repair-service" },
                 ]}
             />
             <Intro />
-            <SystemsSupported />
-            <RecoveryCases />
+            <BrandsSupported />
+            <RepairCases />
             <LabGallery />
             <Process />
             <DoDont />

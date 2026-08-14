@@ -12,6 +12,11 @@ import CCTVFootageRecoveryPage from "./components/services/cctv-footage-recovery
 import NASDataRecoveryPage from "./components/services/nas-data-recovery";
 import RAIDServerRecoveryPage from "./components/services/raid-server-recovery";
 import LaptopRepairServicePage from "./components/services/laptop-repair";
+import LaptopVirusRemovalServiceInstallationPage from "./components/services/laptop-virus-removal-service-installation";
+import LaptopKeyboardRepairReplacementPage from "./components/services/laptop-keyboard-repair-replacement";
+import LaptopCPUFanRepairReplacementPage from "./components/services/laptop-cpu-fan-repair-replacement";
+import LaptopNotTurningOnRepairServicePage from "./components/services/laptop-not-turning-on-repair"
+import LaptopOverheatingRepairServicePage from "./components/services/laptop-overheating-issue-repair"
 import ContactPage from "./components/Contact_us";
 import BlogPage from "./components/Blog";
 import "./App.css";
@@ -37,6 +42,12 @@ function App() {
         <Route path="/services/nas-data-recovery" element={<NASDataRecoveryPage />} />
         <Route path="/services/raid-server-recovery" element={<RAIDServerRecoveryPage />} />
         <Route path="/services/laptop-repair" element={<LaptopRepairServicePage />} />
+        <Route path="/services/laptop-virus-removal-service-installation" element={<LaptopVirusRemovalServiceInstallationPage />} />
+        <Route path="/services/laptop-keyboard-repair-replacement" element={<LaptopKeyboardRepairReplacementPage />} />
+        <Route path="/services/laptop-cpu-fan-repair-replacement" element={<LaptopCPUFanRepairReplacementPage />} />
+         <Route path="/services/laptop-not-turning-on-repair" element={<LaptopNotTurningOnRepairServicePage />} />
+         <Route path="/services/laptop-overheating-issue-repair" element={<LaptopOverheatingRepairServicePage />} />
+       
         <Route path="/Contact_us" element={<ContactPage />} />
         <Route path="/Blog" element={<BlogPage />} />
 

@@ -23,9 +23,9 @@ import {
 
 const FONT_STYLES = `
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
-  .font-display { font-family: 'Space Grotesk', sans-serif; }
-  .font-body { font-family: 'Inter', sans-serif; }
-  .font-mono { font-family: 'IBM Plex Mono', monospace; }
+  .font-display { font-family: 'Arial'; }
+  .font-body { font-family: 'Arial'; }
+  .font-mono { font-family: 'Arial'; }
 
   @keyframes glow-pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 0.7; } }
   .animate-glow { animation: glow-pulse 3.5s ease-in-out infinite; }
@@ -293,11 +293,10 @@ function FilterBar({ active, setActive, query, setQuery }) {
             <button
               key={cat}
               onClick={() => setActive(cat)}
-              className={`font-mono text-xs px-4 py-2 rounded-full border transition-colors ${
-                active === cat
-                  ? "bg-neutral-950 border-neutral-950 text-white"
-                  : "border-neutral-200 text-neutral-600 hover:border-orange-300 hover:text-orange-600"
-              }`}
+              className={`font-mono text-xs px-4 py-2 rounded-full border transition-colors ${active === cat
+                ? "bg-neutral-950 border-neutral-950 text-white"
+                : "border-neutral-200 text-neutral-600 hover:border-orange-300 hover:text-orange-600"
+                }`}
             >
               {cat}
             </button>

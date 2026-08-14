@@ -33,9 +33,9 @@ import {
 
 const FONT_STYLES = `
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
-  .font-display { font-family: 'Space Grotesk', sans-serif; }
-  .font-body { font-family: 'Inter', sans-serif; }
-  .font-mono { font-family: 'IBM Plex Mono', monospace; }
+  .font-display { font-family: 'Arial'; }
+  .font-body { font-family: 'Arial'; }
+  .font-mono { font-family: 'Arial'; }
 
   @keyframes glow-pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 0.7; } }
   .animate-glow { animation: glow-pulse 3.5s ease-in-out infinite; }
@@ -262,12 +262,12 @@ function Intro() {
 
 function SystemsSupported() {
     const items = [
-        { img: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=500&q=70&auto=format&fit=crop", label: "DVR Recorders" },
-        { img: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=500&q=70&auto=format&fit=crop", label: "NVR / IP Systems" },
-        { img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=70&auto=format&fit=crop", label: "Surveillance HDDs" },
-        { img: "https://images.unsplash.com/photo-1591405351990-4726e331f141?w=500&q=70&auto=format&fit=crop", label: "RAID / NAS Arrays" },
-        { img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&q=70&auto=format&fit=crop", label: "SD & Flash Cards" },
-        { img: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=500&q=70&auto=format&fit=crop", label: "Hikvision / Dahua / CP Plus" },
+        { img: "/ChatGPT Image Aug 10, 2026, 11_34_27 AM.png", label: "DVR Recorders" },
+        { img: "/ChatGPT Image Aug 10, 2026, 11_35_43 AM.png", label: "NVR / IP Systems" },
+        { img: "/ChatGPT Image Aug 10, 2026, 11_37_09 AM.png", label: "Surveillance HDDs" },
+        { img: "/ChatGPT Image Aug 10, 2026, 11_57_07 AM.png", label: "RAID / NAS Arrays" },
+        { img: "/ChatGPT Image Aug 10, 2026, 12_19_24 PM.png", label: "SD & Flash Cards" },
+        { img: "/b29e4f2d-bc59-4dba-92dc-b5d150695608.png", label: "Hikvision / Dahua / CP Plus" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">
@@ -279,8 +279,8 @@ function SystemsSupported() {
                     {items.map((d, i) => (
                         <Reveal key={d.label} delay={i * 70}>
                             <div className="flex flex-col items-center text-center gap-3">
-                                <div className="w-full aspect-square rounded-xl overflow-hidden border border-neutral-200">
-                                    <Img src={d.img} alt={d.label} className="w-full h-full object-cover" />
+                                <div className="rounded-xl overflow-hidden border border-neutral-200">
+                                    <Img src={d.img} alt={d.label} className="w-full h-auto" />
                                 </div>
                                 <span className="font-body text-xs text-neutral-500">{d.label}</span>
                             </div>
