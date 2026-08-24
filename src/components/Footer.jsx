@@ -17,7 +17,7 @@ export default function Footer() {
                             className="w-56 bg-white rounded-md p-2"
                         />
 
-                        <p className="mt-5 text-sm text-neutral-400 leading-7">
+                        <p className="mt-5 text-sm text-white leading-7">
                             Swetayan Technologies provides professional laptop repair,
                             desktop repair, data recovery, and IT support services with
                             reliable solutions and quick turnaround times.
@@ -121,27 +121,27 @@ export default function Footer() {
                             <li className="flex items-start gap-3">
                                 <MapPin className="w-5 h-5 text-[#ff8904] mt-1" />
                                 <span>
-                                    Office No. 101, Pune, Maharashtra, India
+                                    Shop No 2 Keshavkunj Building, Opp Yashoda Medical , Nr Bank of Maharashtra , Pimple Gurav, Pune 411061
                                 </span>
                             </li>
 
                             <li className="flex items-center gap-3">
                                 <Phone className="w-5 h-5 text-[#ff8904]" />
                                 <a
-                                    href="tel:+919876543210"
+                                    href="tel:+919284562996"
                                     className="hover:text-orange-400"
                                 >
-                                    +91 98765 43210
+                                    9284562996 / 8421873733
                                 </a>
                             </li>
 
                             <li className="flex items-center gap-3">
                                 <Mail className="w-5 h-5 text-[#ff8904]" />
                                 <a
-                                    href="mailto:help@swetayantech.in"
+                                    href="mailto:swetayantechnologies@gmail.com"
                                     className="hover:text-orange-400"
                                 >
-                                    help@swetayantech.in
+                                    swetayantechnologies@gmail.com
                                 </a>
                             </li>
 

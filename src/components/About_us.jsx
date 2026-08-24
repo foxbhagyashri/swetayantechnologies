@@ -146,11 +146,11 @@ function Breadcrumb({ trail, title, subtitle }) {
                     <span className="relative flex h-2 w-2">
                         <span className="animate-pulse-dot absolute inline-flex h-full w-full rounded-full bg-orange-500" />
                     </span>
-                    <span className="font-mono text-[11px] tracking-[0.2em] text-orange-400">16+ YEARS IN DATA RECOVERY</span>
+                    <span className="font-mono text-md tracking-[0.2em] text-orange-400">16+ YEARS IN DATA RECOVERY</span>
                 </div>
                 <h1 className="font-display font-bold text-3xl sm:text-4xl tracking-tight">{title}</h1>
-                {subtitle && <p className="font-body text-neutral-400 mt-2 max-w-xl">{subtitle}</p>}
-                <nav aria-label="Breadcrumb" className="flex items-center gap-2 font-mono text-xs text-neutral-400 mt-5">
+                {subtitle && <p className="font-body text-white mt-2 max-w-xl">{subtitle}</p>}
+                <nav aria-label="Breadcrumb" className="flex items-center gap-2 font-mono text-xs text-white mt-5">
                     {trail.map((item, i) => (
                         <span key={item.label} className="flex items-center gap-2">
                             {i === 0 ? (
@@ -250,7 +250,7 @@ function Intro() {
                                         {n.toLocaleString()}
                                         {s.suffix}
                                     </p>
-                                    <p className="font-body text-sm text-neutral-400 mt-1.5">{s.label}</p>
+                                    <p className="font-body text-sm text-white mt-1.5">{s.label}</p>
                                 </div>
                             );
                         })}
@@ -282,7 +282,7 @@ function VisionMission() {
                                 <Eye className="w-6 h-6 text-neutral-950" />
                             </div>
                             <h3 className="font-display font-semibold text-xl text-white">Our Vision</h3>
-                            <p className="font-body text-sm text-neutral-400 mt-3 leading-relaxed">
+                            <p className="font-body text-sm text-white mt-3 leading-relaxed">
                                 To be the most trusted name in data recovery and device
                                 repair — the lab people turn to first when a hard drive,
                                 laptop, MacBook, RAID array, or NAS fails, because they
@@ -298,7 +298,7 @@ function VisionMission() {
                                 <Target className="w-6 h-6 text-neutral-950" />
                             </div>
                             <h3 className="font-display font-semibold text-xl text-white">Our Mission</h3>
-                            <p className="font-body text-sm text-neutral-400 mt-3 leading-relaxed">
+                            <p className="font-body text-sm text-white mt-3 leading-relaxed">
                                 To recover what matters — using the right method for
                                 every device and failure type, quoting honestly before
                                 any work begins, protecting every file we touch, and
@@ -348,7 +348,7 @@ function Services() {
                                     <s.icon className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                                 </div>
                                 <h3 className="font-display font-semibold text-base text-neutral-900">{s.title}</h3>
-                                <p className="font-body text-sm text-neutral-500 mt-2 leading-relaxed">{s.desc}</p>
+                                <p className="font-body text-sm text-neutral-600 mt-2 leading-relaxed">{s.desc}</p>
                             </div>
                         </Reveal>
                     ))}
@@ -388,7 +388,7 @@ function Journey() {
                                     <Award className="w-5 h-5 text-orange-400" />
                                 </div>
                                 <h3 className="font-display font-semibold text-base text-neutral-900">{m.title}</h3>
-                                <p className="font-body text-sm text-neutral-500 mt-2 leading-relaxed">{m.desc}</p>
+                                <p className="font-body text-sm text-neutral-600 mt-2 leading-relaxed">{m.desc}</p>
                                 {i < milestones.length - 1 && (
                                     <div className="hidden lg:block absolute top-[74px] -right-3 w-6 h-px bg-neutral-300" />
                                 )}
@@ -420,7 +420,7 @@ function WhyUs() {
                         <div className="text-center">
                             <it.icon className="w-6 h-6 text-orange-500 mx-auto mb-3" />
                             <p className="font-display font-semibold text-sm text-neutral-900">{it.title}</p>
-                            <p className="font-body text-xs text-neutral-500 mt-2 leading-relaxed">{it.desc}</p>
+                            <p className="font-body text-xs text-neutral-600 mt-2 leading-relaxed">{it.desc}</p>
                         </div>
                     </Reveal>
                 ))}

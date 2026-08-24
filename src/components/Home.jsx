@@ -212,7 +212,7 @@ function RecoveryScanner() {
         </div>
         <div className="leading-tight">
           <p className="font-display font-bold text-sm text-neutral-900">96% Success</p>
-          <p className="font-mono text-[10px] text-neutral-500">recovery rate</p>
+          <p className="font-mono text-[10px] text-neutral-600">recovery rate</p>
         </div>
       </div>
     </div>
@@ -244,7 +244,7 @@ function Hero() {
       <div className="max-w-7xl mx-auto px-5 py-16 md:py-24 grid md:grid-cols-2 gap-14 items-center relative">
         <div>
           <div
-            className={`inline-flex items-center gap-2 font-mono text-xs text-orange-400 border border-orange-400/30 bg-orange-400/10 rounded-full px-3 py-1 mb-6 transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
+            className={`inline-flex items-center gap-2 font-mono text-md text-orange-400 border border-orange-400/30 bg-orange-400/10 rounded-full px-3 py-1 mb-6 transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
               }`}
           >
             <AlertTriangle className="w-3.5 h-3.5" /> No fix, no fee — on every recovery job
@@ -258,7 +258,7 @@ function Hero() {
             Your data <span className="text-[#ff8904]">didn't</span>.
           </h1>
           <p
-            className={`font-body text-neutral-400 text-lg mt-6 max-w-md leading-relaxed transition-all duration-700 delay-200 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            className={`font-body text-white text-lg mt-6 max-w-md leading-relaxed transition-all duration-700 delay-200 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
           >
             Crashed hard drives, dead laptops, corrupted RAID arrays — we bring
@@ -276,7 +276,7 @@ function Hero() {
               View Services
             </a>
           </div>
-          <div ref={statsRef} className="flex items-center gap-6 mt-10 font-mono text-xs text-neutral-500 flex-wrap">
+          <div ref={statsRef} className="flex items-center gap-6 mt-10 font-mono text-xs text-white flex-wrap">
             <StatItem value={12400} suffix="+" label=" drives recovered" inView={statsInView} />
             <div className="w-px h-8 bg-neutral-800" />
             <StatItem value={96} suffix="%" label=" success rate" inView={statsInView} />
@@ -305,7 +305,7 @@ function ServiceCard({ image, icon: Icon, title, tagline, items, accent, delay }
         </div>
         <div className="p-7">
           <h3 className="font-display font-bold text-xl text-neutral-900">{title}</h3>
-          <p className="font-body text-neutral-500 text-sm mt-1.5 mb-5">{tagline}</p>
+          <p className="font-body text-neutral-600 text-sm mt-1.5 mb-5">{tagline}</p>
           <ul className="space-y-2.5">
             {items.map((it) => (
               <li key={it} className="flex items-start gap-2.5 font-body text-sm text-neutral-700">
@@ -326,7 +326,7 @@ function Services() {
       <div className="max-w-7xl mx-auto px-5">
         <Reveal>
           <div className="max-w-2xl mb-12">
-            <span className="font-mono text-xs tracking-[0.2em] text-orange-600">WHAT WE FIX</span>
+            <span className="font-mono text-md tracking-[0.2em] text-orange-600">WHAT WE FIX</span>
             <h2 className="font-display font-bold text-3xl sm:text-4xl text-neutral-900 mt-3 tracking-tight">
               Two labs under one roof.
             </h2>
@@ -384,7 +384,7 @@ function Process() {
       <div className="max-w-7xl mx-auto px-5">
         <Reveal>
           <div className="max-w-2xl mb-14">
-            <span className="font-mono text-xs tracking-[0.2em] text-orange-600">HOW IT WORKS</span>
+            <span className="font-mono text-md tracking-[0.2em] text-orange-600">HOW IT WORKS</span>
             <h2 className="font-display font-bold text-3xl sm:text-4xl text-neutral-900 mt-3 tracking-tight">
               Four steps, start to finish.
             </h2>
@@ -400,7 +400,7 @@ function Process() {
                 </div>
                 <s.icon className="w-5 h-5 text-orange-500 mb-2" />
                 <h3 className="font-display font-bold text-lg text-neutral-900">{s.title}</h3>
-                <p className="font-body text-sm text-neutral-500 mt-1.5 leading-relaxed">{s.desc}</p>
+                <p className="font-body text-sm text-neutral-600 mt-1.5 leading-relaxed">{s.desc}</p>
               </div>
             </Reveal>
           ))}
@@ -423,7 +423,7 @@ function WhyUs() {
       <div className="max-w-7xl mx-auto px-5 relative">
         <Reveal>
           <div className="max-w-2xl mb-14">
-            <span className="font-mono text-xs tracking-[0.2em] text-orange-400">WHY SWETAYAN</span>
+            <span className="font-mono text-md tracking-[0.2em] text-orange-400">WHY SWETAYAN</span>
             <h2 className="font-display font-bold text-3xl sm:text-4xl mt-3 tracking-tight">
               Built for the worst day your device has had.
             </h2>
@@ -450,7 +450,7 @@ function Brands() {
   const loop = [...brands, ...brands];
   return (
     <section className="bg-neutral-50 py-14 border-y border-neutral-200 overflow-hidden">
-      <p className="text-center font-mono text-xs tracking-[0.2em] text-neutral-500 mb-8">
+      <p className="text-center font-mono text-xs tracking-[0.2em] text-neutral-600 mb-8">
         WE SERVICE EVERY MAJOR BRAND
       </p>
       <div className="relative">
@@ -479,7 +479,7 @@ function Testimonials() {
       <div className="max-w-7xl mx-auto px-5">
         <Reveal>
           <div className="max-w-2xl mb-12">
-            <span className="font-mono text-xs tracking-[0.2em] text-orange-600">CLIENT STORIES</span>
+            <span className="font-mono text-md tracking-[0.2em] text-orange-600">CLIENT STORIES</span>
             <h2 className="font-display font-bold text-3xl sm:text-4xl text-neutral-900 mt-3 tracking-tight">
               Real drives, real recoveries.
             </h2>
@@ -500,7 +500,7 @@ function Testimonials() {
                   <Img src={r.img} alt={r.name} className="w-9 h-9 rounded-full object-cover" />
                   <div>
                     <p className="font-display font-semibold text-sm text-neutral-900">{r.name}</p>
-                    <p className="font-body text-xs text-neutral-500">{r.role}</p>
+                    <p className="font-body text-xs text-neutral-600">{r.role}</p>
                   </div>
                 </div>
               </div>
@@ -546,7 +546,7 @@ function Contact() {
       <div className="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-12">
         <Reveal>
           <div>
-            <span className="font-mono text-xs tracking-[0.2em] text-orange-600">GET IN TOUCH</span>
+            <span className="font-mono text-md tracking-[0.2em] text-orange-600">GET IN TOUCH</span>
             <h2 className="font-display font-bold text-3xl sm:text-4xl text-neutral-900 mt-3 tracking-tight">
               Tell us what happened.
             </h2>
@@ -556,15 +556,15 @@ function Contact() {
             <div className="mt-8 space-y-5 font-body text-sm text-neutral-700">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-orange-500 mt-0.5" />
-                <span>Shop No. 4, Tech Plaza, MG Road, Your City, India 400001</span>
+                <span>Shop No 2 Keshavkunj Building, Opp Yashoda Medical , Nr Bank of Maharashtra , Pimple Gurav, Pune 411061</span>
               </div>
               <div className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-orange-500 mt-0.5" />
-                <span>+91 98765 43210 — 10am to 8pm, all days</span>
+                <span>+91 9284562996 / 8421873733 — 9. 30 am To 9.30 pm, all days</span>
               </div>
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-orange-500 mt-0.5" />
-                <span>help@swetayantech.in</span>
+                <span>swetayantechnologies@gmail.com </span>
               </div>
             </div>
           </div>
@@ -577,7 +577,7 @@ function Contact() {
                   <CheckCircle2 className="w-9 h-9 text-orange-500" />
                 </div>
                 <h3 className="font-display font-bold text-lg text-neutral-900">Request received</h3>
-                <p className="font-body text-sm text-neutral-500 mt-2">We'll reach out shortly with your free diagnosis details.</p>
+                <p className="font-body text-sm text-neutral-600 mt-2">We'll reach out shortly with your free diagnosis details.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">

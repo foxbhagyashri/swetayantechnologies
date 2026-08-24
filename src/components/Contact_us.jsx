@@ -159,11 +159,11 @@ function Breadcrumb({ trail, title, subtitle }) {
           <span className="relative flex h-2 w-2">
             <span className="animate-pulse-dot absolute inline-flex h-full w-full rounded-full bg-orange-500" />
           </span>
-          <span className="font-mono text-[11px] tracking-[0.2em] text-orange-400">USUALLY REPLY WITHIN THE HOUR</span>
+          <span className="font-mono text-md tracking-[0.2em] text-orange-400">USUALLY REPLY WITHIN THE HOUR</span>
         </div>
         <h1 className="font-display font-bold text-3xl sm:text-4xl tracking-tight">{title}</h1>
-        {subtitle && <p className="font-body text-neutral-400 mt-2 max-w-xl">{subtitle}</p>}
-        <nav aria-label="Breadcrumb" className="flex items-center gap-2 font-mono text-xs text-neutral-400 mt-5">
+        {subtitle && <p className="font-body text-white mt-2 max-w-xl">{subtitle}</p>}
+        <nav aria-label="Breadcrumb" className="flex items-center gap-2 font-mono text-xs text-white mt-5">
           {trail.map((item, i) => (
             <span key={item.label} className="flex items-center gap-2">
               {i === 0 ? (
@@ -190,10 +190,10 @@ function Breadcrumb({ trail, title, subtitle }) {
 
 function QuickContact() {
   const cards = [
-    { icon: Phone, title: "Call Us", value: "+91 98765 43210", href: "tel:+919876543210", cta: "Tap to call" },
-    { icon: Mail, title: "Email Us", value: "hello@swetayantech.com", href: "mailto:hello@swetayantech.com", cta: "Tap to email" },
-    { icon: MapPin, title: "Visit the Lab", value: "Shivaji Nagar, Pune, MH", href: "#map", cta: "Get directions" },
-    { icon: Clock, title: "Working Hours", value: "Mon–Sat, 10am–7pm", href: null, cta: "Sunday: closed" },
+    { icon: Phone, title: "Call Us", value: "9284562996 / 8421873733", href: "tel:+919284562996", cta: "Tap to call" },
+    { icon: Mail, title: "Email Us", value: "swetayantechnologies@gmail.com ", href: "mailto:swetayantechnologies@gmail.com", cta: "Tap to email" },
+    { icon: MapPin, title: "Visit the Lab", value: "Shop No 2 Keshavkunj Building, Opp Yashoda Medical , Nr Bank of Maharashtra , Pimple Gurav, Pune 411061", href: "#map", cta: "Get directions" },
+    { icon: Clock, title: "Working Hours", value: "Mon–Sat, 9. 30 am To 9.30 pm", href: null, cta: "Sunday: closed" },
   ];
   return (
     <section className="bg-white py-20">
@@ -356,35 +356,18 @@ function ContactForm() {
         <Reveal delay={150} className="lg:col-span-2">
           <div className="flex flex-col gap-6 h-full">
             <div id="map" className="relative rounded-2xl overflow-hidden h-64">
-              <Img
-                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=900&q=70&auto=format&fit=crop"
-                alt="Map area near the Swetayan Technologies lab"
-                className="w-full h-full object-cover"
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.5626221056746!2d73.81721177372236!3d18.58928456707459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b8c76aaaaac9%3A0x5210fbaae0c299fc!2sSwetayan%20Technologies%20Data%20Recovery%20Lab!5e1!3m2!1sen!2sin!4v1787546026229!5m2!1sen!2sin"
+                width="600"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                title="Swetayan Technologies Data Recovery Lab Location"
               />
-              <div className="absolute inset-0 bg-neutral-950/30" />
-              <div className="absolute bottom-4 left-4 right-4 bg-white rounded-lg px-4 py-3 flex items-center gap-3">
-                <MapPin className="w-5 h-5 text-orange-500 shrink-0" />
-                <div className="leading-tight">
-                  <p className="font-display font-semibold text-sm text-neutral-900">Swetayan Technologies Lab</p>
-                  <p className="font-body text-xs text-neutral-500">Shivaji Nagar, Pune, Maharashtra</p>
-                </div>
-              </div>
             </div>
 
-            <div className="bg-neutral-950 rounded-2xl p-7 flex-1">
-              <div className="flex items-center gap-2.5 mb-4">
-                <Truck className="w-5 h-5 text-orange-400" />
-                <h3 className="font-display font-semibold text-white">Can't visit in person?</h3>
-              </div>
-              <p className="font-body text-sm text-neutral-400 leading-relaxed">
-                Ship your drive or laptop to our lab in its original packaging where possible.
-                We'll confirm receipt, run a free diagnosis, and send you a quote before any work begins.
-              </p>
-              <div className="flex items-center gap-2.5 mt-5 pt-5 border-t border-neutral-800">
-                <Building2 className="w-4 h-4 text-neutral-500 shrink-0" />
-                <p className="font-mono text-xs text-neutral-500">GSTIN available on request for business clients</p>
-              </div>
-            </div>
 
             <div className="border border-neutral-200 rounded-2xl p-6 flex items-center gap-4">
               <ShieldCheck className="w-8 h-8 text-orange-500 shrink-0" />

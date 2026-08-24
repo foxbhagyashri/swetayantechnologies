@@ -17,6 +17,13 @@ import LaptopKeyboardRepairReplacementPage from "./components/services/laptop-ke
 import LaptopCPUFanRepairReplacementPage from "./components/services/laptop-cpu-fan-repair-replacement";
 import LaptopNotTurningOnRepairServicePage from "./components/services/laptop-not-turning-on-repair"
 import LaptopOverheatingRepairServicePage from "./components/services/laptop-overheating-issue-repair"
+import LaptopBatteryRepairReplacementServicePage from "./components/services/laptop-battery-repair-replacement"
+import LaptopTouchpadRepairReplacementServicePage from "./components/services/laptop-touchpad-track-pad-repair-and-replacement"
+import LaptopBackPanelBodyReplacementServicePage from "./components/services/laptop-back-panel-body-replacement"
+import LaptopScreenRepairServicePage from "./components/services/laptop-screen-repair-and-replacement"
+import LaptopFanNoiseRepairServicePage from "./components/services/laptop-processor-fan-noise-repaire-and-replacement"
+import LaptopNotChargingRepairServicePage from "./components/services/laptop-not-charging-repair"
+import LaptopHingeRepairServicePage from "./components/services/laptop-hinges-repair-and-replacement"
 import ContactPage from "./components/Contact_us";
 import BlogPage from "./components/Blog";
 import "./App.css";
@@ -45,9 +52,18 @@ function App() {
         <Route path="/services/laptop-virus-removal-service-installation" element={<LaptopVirusRemovalServiceInstallationPage />} />
         <Route path="/services/laptop-keyboard-repair-replacement" element={<LaptopKeyboardRepairReplacementPage />} />
         <Route path="/services/laptop-cpu-fan-repair-replacement" element={<LaptopCPUFanRepairReplacementPage />} />
-         <Route path="/services/laptop-not-turning-on-repair" element={<LaptopNotTurningOnRepairServicePage />} />
-         <Route path="/services/laptop-overheating-issue-repair" element={<LaptopOverheatingRepairServicePage />} />
-       
+        <Route path="/services/laptop-not-turning-on-repair" element={<LaptopNotTurningOnRepairServicePage />} />
+        <Route path="/services/laptop-overheating-issue-repair" element={<LaptopOverheatingRepairServicePage />} />
+        <Route path="/services/laptop-battery-repair-replacement" element={<LaptopBatteryRepairReplacementServicePage />} />
+
+        <Route path="/services/laptop-touchpad-track-pad-repair-and-replacement" element={<LaptopTouchpadRepairReplacementServicePage />} />
+        <Route path="/services/laptop-back-panel-body-replacement" element={<LaptopBackPanelBodyReplacementServicePage />} />
+        <Route path="/services/laptop-screen-repair-and-replacement" element={<LaptopScreenRepairServicePage />} />
+        <Route path="/services/laptop-processor-fan-noise-repaire-and-replacement" element={<LaptopFanNoiseRepairServicePage />} />
+        <Route path="/services/laptop-not-charging-repair" element={<LaptopNotChargingRepairServicePage />} />
+        <Route path="/services/laptop-hinges-repair-and-replacement" element={<LaptopHingeRepairServicePage />} />
+
+
         <Route path="/Contact_us" element={<ContactPage />} />
         <Route path="/Blog" element={<BlogPage />} />
 

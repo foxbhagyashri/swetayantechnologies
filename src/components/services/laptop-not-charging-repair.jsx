@@ -15,18 +15,21 @@ import {
     PackageCheck,
     Wrench,
     AlertTriangle,
-    Video,
-    HardDrive,
-    Flame,
-    Server,
-    Eraser,
-    ShieldOff,
+    Laptop,
+    BatteryCharging,
+    Plug,
+    Cable,
+    BatteryWarning,
+    CircuitBoard,
+    Battery,
 } from "lucide-react";
 
 /* ---------------------------------------------------------
-   Swetayan Technologies — CCTV Footage Recovery
+   Swetayan Technologies — Laptop Not Charging Repair
+   Service
    Reuses the exact design tokens, motion language and brand
-   mark from the Home / About / Services / MacBook Data Recovery
+   mark from the Home / About / Services / Data Recovery /
+   Virus Removal / Power Repair / Overheating / Screen / Fan
    pages (Space Grotesk + Inter + IBM Plex Mono, orange-500
    accent, neutral-950 chrome).
 --------------------------------------------------------- */
@@ -107,7 +110,7 @@ function Img({ src, alt, className }) {
     if (failed) {
         return (
             <div className={`${className} bg-gradient-to-br from-neutral-800 to-neutral-950 flex items-center justify-center`}>
-                <Video className="w-10 h-10 text-neutral-600" />
+                <Laptop className="w-10 h-10 text-neutral-600" />
             </div>
         );
     }
@@ -132,8 +135,8 @@ function Breadcrumb({ trail, title, subtitle }) {
     return (
         <section className="relative bg-neutral-950 text-white overflow-hidden">
             <Img
-                src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1600&q=70&auto=format&fit=crop"
-                alt="Security control room reviewing CCTV footage"
+                src="https://images.unsplash.com/photo-1588200908342-23b585c03e26?w=1600&q=70&auto=format&fit=crop"
+                alt="Technician testing a laptop charging port and power adapter"
                 className="absolute inset-0 w-full h-full object-cover opacity-20"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-neutral-950 via-neutral-950/95 to-neutral-950/80" />
@@ -143,11 +146,11 @@ function Breadcrumb({ trail, title, subtitle }) {
                     <span className="relative flex h-2 w-2">
                         <span className="animate-pulse-dot absolute inline-flex h-full w-full rounded-full bg-orange-500" />
                     </span>
-                    <span className="font-mono text-[11px] tracking-[0.2em] text-orange-400">CLEAN-ROOM-STANDARD LAB</span>
+                    <span className="font-mono text-[11px] tracking-[0.2em] text-orange-400">CERTIFIED POWER & CHARGING TECHNICIANS</span>
                 </div>
                 <h1 className="font-display font-bold text-3xl sm:text-4xl tracking-tight">{title}</h1>
-                {subtitle && <p className="font-body text-white mt-2 max-w-xl">{subtitle}</p>}
-                <nav aria-label="Breadcrumb" className="flex items-center gap-2 font-mono text-xs text-white mt-5">
+                {subtitle && <p className="font-body text-neutral-400 mt-2 max-w-xl">{subtitle}</p>}
+                <nav aria-label="Breadcrumb" className="flex items-center gap-2 font-mono text-xs text-neutral-400 mt-5">
                     {trail.map((item, i) => (
                         <span key={item.label} className="flex items-center gap-2">
                             {i === 0 ? (
@@ -172,20 +175,20 @@ function Breadcrumb({ trail, title, subtitle }) {
 
 function CTABanner() {
     return (
-        <section className="bg-[#ff8904] py-14 relative overflow-hidden">
+        <section className="bg-orange-500 py-14 relative overflow-hidden">
             <div className="absolute -right-10 -top-10 w-64 h-64 bg-white/10 rounded-full blur-2xl animate-glow" />
             <Reveal>
                 <div className="max-w-7xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-6 relative">
                     <div>
                         <h3 className="font-display font-bold text-2xl sm:text-3xl text-neutral-950 tracking-tight">
-                            Footage from an incident is missing or won't play back?
+                            Plugged in but not charging, or stuck at 0%?
                         </h3>
                         <p className="font-body text-neutral-900/80 mt-2">
-                            Don't reformat the DVR or swap the drive first — get a free footage diagnosis before anything else touches it.
+                            Don't run it down to empty guessing why — get a free charging diagnosis first.
                         </p>
                     </div>
                     <a href="#contact" className="bg-neutral-950 hover:bg-neutral-800 hover:scale-105 text-white font-body font-semibold px-6 py-3 rounded-md whitespace-nowrap transition-all flex items-center gap-2">
-                        Get Free Diagnosis <ArrowRight className="w-4 h-4" />
+                        Get Free Charging Diagnosis <ArrowRight className="w-4 h-4" />
                     </a>
                 </div>
             </Reveal>
@@ -198,43 +201,40 @@ function CTABanner() {
 function Intro() {
     const [ref, inView] = useInView(0.4);
     const stats = [
-        { value: 15, suffix: "+", label: "Years recovering footage" },
-        { value: 4800, suffix: "+", label: "DVR/NVR jobs recovered" },
-        { value: 92, suffix: "%", label: "Success rate" },
-        { value: 24, suffix: "hr", label: "Typical diagnosis time" },
+        { value: 16, suffix: "+", label: "Years in IT services" },
+        { value: 17800, suffix: "+", label: "Charging faults fixed" },
+        { value: 95, suffix: "%", label: "Fixed without board swap" },
+        { value: 24, suffix: "hr", label: "Typical turnaround" },
     ];
     return (
         <section className="bg-white py-20">
             <div className="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-14 items-center">
                 <Reveal>
-                    <span className="font-mono text-xs tracking-[0.2em] text-orange-600">CCTV FOOTAGE RECOVERY</span>
+                    <span className="font-mono text-xs tracking-[0.2em] text-orange-600">NOT CHARGING REPAIR</span>
                     <h2 className="font-display font-bold text-3xl sm:text-4xl text-neutral-900 mt-3 tracking-tight leading-tight">
-                        Overwritten timelines, dead DVRs, or a corrupted RAID — we still get your footage back.
+                        Not charging, charging slowly, or stuck on battery? We find the exact break in the chain.
                     </h2>
                     <p className="font-body text-neutral-600 mt-5 leading-relaxed">
-                        CCTV storage isn't like a regular hard drive — footage is written
-                        in continuous cyclic loops, often across proprietary DVR/NVR file
-                        systems, split between H.264/H.265 streams, and sometimes striped
-                        across multiple drives in a RAID array. That makes a failed or
-                        overwritten recorder harder to recover from with generic tools,
-                        but not impossible in the right hands. We work with Hikvision,
-                        Dahua, CP Plus, Honeywell, and other DVR/NVR brands — through
-                        drive failure, power loss corruption, accidental formatting, and
-                        footage that's been recorded over. We diagnose first, quote
-                        honestly, and only charge the recovery fee once your footage is
-                        actually back.
+                        A laptop that won't charge isn't always a dead battery. It could
+                        be a worn charging port, a faulty adapter or cable, a loose
+                        DC-in connector on the motherboard, or a battery that's simply
+                        reached the end of its life. We test the adapter, port, and
+                        battery separately to isolate exactly where the charge is being
+                        lost — instead of guessing. Because we're a data recovery lab
+                        first, every repair is done with your files protected — nothing
+                        is wiped unless you ask for it.
                     </p>
                     <div className="flex flex-wrap gap-3 mt-8">
                         <a href="#contact" className="bg-orange-500 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
-                            Book a Free Diagnosis <ArrowRight className="w-4 h-4" />
+                            Book a Free Charging Diagnosis <ArrowRight className="w-4 h-4" />
                         </a>
                     </div>
                 </Reveal>
                 <Reveal delay={150}>
                     <div className="rounded-2xl overflow-hidden mb-6 border border-neutral-200">
                         <Img
-                            src="/ChatGPT Image Aug 6, 2026, 10_38_04 AM.png"
-                            alt="DVR unit being inspected during footage recovery"
+                            src="https://images.unsplash.com/photo-1587202372556-4bcb5f21b2b0?w=900&q=70&auto=format&fit=crop"
+                            alt="Technician repairing a laptop DC-in charging port"
                             className="w-full h-80 object-cover"
                         />
                     </div>
@@ -258,31 +258,31 @@ function Intro() {
     );
 }
 
-/* ---------- systems / storage types we recover ---------- */
+/* ---------- symptoms we diagnose ---------- */
 
-function SystemsSupported() {
+function BrandsSupported() {
     const items = [
-        { img: "/ChatGPT Image Aug 10, 2026, 11_34_27 AM.png", label: "DVR Recorders" },
-        { img: "/ChatGPT Image Aug 10, 2026, 11_35_43 AM.png", label: "NVR / IP Systems" },
-        { img: "/ChatGPT Image Aug 10, 2026, 11_37_09 AM.png", label: "Surveillance HDDs" },
-        { img: "/ChatGPT Image Aug 10, 2026, 11_57_07 AM.png", label: "RAID / NAS Arrays" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_19_24 PM.png", label: "SD & Flash Cards" },
-        { img: "/b29e4f2d-bc59-4dba-92dc-b5d150695608.png", label: "Hikvision / Dahua / CP Plus" },
+        { img: "https://images.unsplash.com/photo-1588200908342-23b585c03e26?w=500&q=70&auto=format&fit=crop", label: "No Charging Icon" },
+        { img: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=500&q=70&auto=format&fit=crop", label: "Stuck at 0% or 1%" },
+        { img: "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=500&q=70&auto=format&fit=crop", label: "Charges Only at an Angle" },
+        { img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&q=70&auto=format&fit=crop", label: "Very Slow Charging" },
+        { img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500&q=70&auto=format&fit=crop", label: "Battery Drains While Plugged In" },
+        { img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=70&auto=format&fit=crop", label: "Loose or Wobbly Port" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">
             <div className="max-w-7xl mx-auto px-5">
                 <Reveal>
-                    <p className="font-mono text-xs tracking-[0.2em] text-black text-center mb-8">SYSTEMS WE RECOVER FROM</p>
+                    <p className="font-mono text-xs tracking-[0.2em] text-neutral-400 text-center mb-8">SYMPTOMS WE DIAGNOSE</p>
                 </Reveal>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
                     {items.map((d, i) => (
                         <Reveal key={d.label} delay={i * 70}>
                             <div className="flex flex-col items-center text-center gap-3">
-                                <div className="rounded-xl overflow-hidden border border-neutral-200">
-                                    <Img src={d.img} alt={d.label} className="w-full h-auto" />
+                                <div className="w-full aspect-square rounded-xl overflow-hidden border border-neutral-200">
+                                    <Img src={d.img} alt={d.label} className="w-full h-full object-cover" />
                                 </div>
-                                <span className="font-body text-xs text-black">{d.label}</span>
+                                <span className="font-body text-xs text-neutral-500">{d.label}</span>
                             </div>
                         </Reveal>
                     ))}
@@ -292,45 +292,45 @@ function SystemsSupported() {
     );
 }
 
-/* ---------- CCTV failure cases (detailed) ---------- */
+/* ---------- repair cases (detailed) ---------- */
 
-function RecoveryCases() {
+function RepairCases() {
     const cases = [
         {
-            icon: Eraser,
-            title: "Overwritten & Cyclic-Loop Footage",
-            desc: "DVRs record in a loop and overwrite old footage — we recover the specific window before it's gone or partially overwritten.",
-            points: ["Footage recorded over before export", "Partial overwrite of the incident window", "Fragmented clips from loop recording"],
+            icon: Plug,
+            title: "DC-In / Charging Port Repair",
+            desc: "Loose, bent, or broken charging ports that need to wiggle the cable to make contact.",
+            points: ["Port continuity testing", "DC-jack resoldering or replacement", "Connector alignment check"],
         },
         {
-            icon: HardDrive,
-            title: "Drive Failure & Bad Sectors",
-            desc: "Surveillance drives run 24/7 and fail differently from desktop drives — clicking, bad sectors, or a drive that's stopped spinning.",
-            points: ["Clicking or grinding hard drives", "Bad sectors mid-recording", "Drive not detected by the DVR"],
+            icon: Cable,
+            title: "Adapter & Cable Testing",
+            desc: "Chargers and cables that look fine but no longer deliver a stable output.",
+            points: ["Adapter output voltage test", "Cable continuity check", "Genuine replacement sourcing"],
         },
         {
-            icon: Server,
-            title: "RAID & NAS Array Failures",
-            desc: "Multi-drive NVR and NAS setups fail when one or more member disks drop out, and rebuilding the wrong way can make it worse.",
-            points: ["Degraded or failed RAID arrays", "Dropped member disks", "Failed RAID rebuild attempts"],
+            icon: Battery,
+            title: "Battery Replacement",
+            desc: "Batteries that no longer hold charge, drain rapidly, or are reported as not detected.",
+            points: ["Battery health diagnostics", "Genuine-grade replacement", "Charge-cycle verification"],
         },
         {
-            icon: Flame,
-            title: "Power Loss & Corrupted File Systems",
-            desc: "A sudden outage or unsafe shutdown mid-write can corrupt the recorder's proprietary file system.",
-            points: ["Corrupted DVR/NVR file systems", "Unreadable or unmountable volumes", "Damaged .dav / .mp4 / .264 files"],
+            icon: BatteryWarning,
+            title: "Stuck at 0% / Not Charging Icon",
+            desc: "Laptops that show plugged-in-not-charging or freeze at a fixed battery percentage.",
+            points: ["Charge controller diagnosis", "Battery vs. port isolation", "Root-cause repair, not a reset"],
         },
         {
-            icon: ShieldOff,
-            title: "Accidental Format & Factory Reset",
-            desc: "A wrong menu tap or a factory reset doesn't have to mean the footage is unrecoverable.",
-            points: ["Accidental DVR/NVR format", "Factory reset before export", "Deleted channels or date ranges"],
+            icon: CircuitBoard,
+            title: "Charging Circuit & IC Repair",
+            desc: "Board-level charging faults where power reaches the laptop but never reaches the battery.",
+            points: ["Charging IC diagnosis", "Component-level board repair", "Power delivery re-testing"],
         },
         {
-            icon: AlertTriangle,
-            title: "Physical & Fire/Water Damage",
-            desc: "Recorders damaged by fire, flooding, power surges, or physical impact still often hold recoverable drives inside.",
-            points: ["Fire or smoke-damaged units", "Flooded or water-damaged drives", "Surge-damaged recorder boards"],
+            icon: BatteryCharging,
+            title: "Slow or Unstable Charging",
+            desc: "Charging that works but is unusually slow, drops out, or fluctuates while plugged in.",
+            points: ["Wattage delivery testing", "Loose connection isolation", "Stability re-test under load"],
         },
     ];
     return (
@@ -338,9 +338,9 @@ function RecoveryCases() {
             <div className="max-w-7xl mx-auto px-5">
                 <Reveal>
                     <div className="max-w-2xl mb-14">
-                        <span className="font-mono text-xs tracking-[0.2em] text-orange-600">CCTV ISSUES WE HANDLE</span>
+                        <span className="font-mono text-xs tracking-[0.2em] text-orange-600">WHAT WE HANDLE</span>
                         <h2 className="font-display font-bold text-3xl sm:text-4xl text-neutral-900 mt-3 tracking-tight">
-                            Every kind of footage loss, one lab.
+                            Every reason a laptop won't charge, one visit.
                         </h2>
                     </div>
                 </Reveal>
@@ -352,10 +352,10 @@ function RecoveryCases() {
                                     <c.icon className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                                 </div>
                                 <h3 className="font-display font-semibold text-base text-neutral-900">{c.title}</h3>
-                                <p className="font-body text-sm text-black mt-2 leading-relaxed">{c.desc}</p>
+                                <p className="font-body text-sm text-neutral-500 mt-2 leading-relaxed">{c.desc}</p>
                                 <ul className="mt-4 space-y-1.5">
                                     {c.points.map((p) => (
-                                        <li key={p} className="flex items-start gap-2 font-body text-sm text-black">
+                                        <li key={p} className="flex items-start gap-2 font-body text-xs text-neutral-500">
                                             <CheckCircle2 className="w-3.5 h-3.5 text-orange-500 mt-0.5 shrink-0" />
                                             {p}
                                         </li>
@@ -375,19 +375,19 @@ function RecoveryCases() {
 function LabGallery() {
     const shots = [
         {
-            img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=70&auto=format&fit=crop",
-            title: "Drive extraction",
-            desc: "We remove the surveillance drive from the DVR/NVR chassis without disturbing the existing data layout.",
+            img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=900&q=70&auto=format&fit=crop",
+            title: "Port & adapter testing",
+            desc: "We test the charging port, cable, and adapter individually to isolate exactly where power is being lost.",
         },
         {
-            img: "https://images.unsplash.com/photo-1591405351990-4726e331f141?w=900&q=70&auto=format&fit=crop",
-            title: "Sector-level imaging",
-            desc: "A forensic image is taken first, so recovery work never runs directly against the original drive.",
+            img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900&q=70&auto=format&fit=crop",
+            title: "Board-level inspection",
+            desc: "If power isn't reaching the battery, we trace the charging circuit down to the component level.",
         },
         {
-            img: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=900&q=70&auto=format&fit=crop",
-            title: "Timeline reconstruction",
-            desc: "Recovered clips are matched back to their channel and timestamp so the incident window is intact.",
+            img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=70&auto=format&fit=crop",
+            title: "Repair & re-test",
+            desc: "The faulty part is repaired or replaced and the laptop is charge-cycle tested before it's handed back.",
         },
     ];
     return (
@@ -397,7 +397,7 @@ function LabGallery() {
                     <div className="max-w-2xl mb-14">
                         <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
                         <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
-                            What happens to your footage.
+                            What happens to your laptop.
                         </h2>
                     </div>
                 </Reveal>
@@ -408,7 +408,7 @@ function LabGallery() {
                                 <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
                                 <div className="p-5 bg-neutral-900">
                                     <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
-                                    <p className="font-body text-xs text-white mt-2 leading-relaxed">{s.desc}</p>
+                                    <p className="font-body text-xs text-neutral-400 mt-2 leading-relaxed">{s.desc}</p>
                                 </div>
                             </div>
                         </Reveal>
@@ -423,11 +423,11 @@ function LabGallery() {
 
 function Process() {
     const steps = [
-        { icon: ScanSearch, title: "Free Diagnosis", desc: "We inspect the DVR/NVR or drive and identify whether the fault is logical, physical, or array-level." },
-        { icon: FileCheck2, title: "Honest Quote", desc: "You get a clear price and timeline before any recovery work begins." },
-        { icon: Wrench, title: "Recovery", desc: "Our engineers recover the footage using the method the fault actually calls for." },
-        { icon: ShieldCheck, title: "Verification", desc: "Recovered clips are checked for playback and matched to timestamps before handover." },
-        { icon: PackageCheck, title: "Secure Delivery", desc: "Your footage is returned on a drive of your choice, securely." },
+        { icon: ScanSearch, title: "Free Charging Diagnosis", desc: "We test the port, cable, adapter, and battery separately to find exactly where charging fails." },
+        { icon: FileCheck2, title: "Honest Quote", desc: "You get a clear price and timeline before any port, battery, or board repair begins." },
+        { icon: Wrench, title: "Port, Battery or Board Repair", desc: "The faulty part — port, cable, battery, or charging circuit — is repaired or replaced." },
+        { icon: BatteryCharging, title: "Charge-Cycle Testing", desc: "The laptop is charged and discharged under monitoring to confirm the fix holds." },
+        { icon: PackageCheck, title: "Ready to Collect", desc: "Your laptop is returned charging reliably, with your data intact." },
     ];
     return (
         <section className="bg-white py-20">
@@ -449,7 +449,7 @@ function Process() {
                                     <s.icon className="w-5 h-5 text-orange-400" />
                                 </div>
                                 <h3 className="font-display font-semibold text-base text-neutral-900">{s.title}</h3>
-                                <p className="font-body text-sm text-black mt-2 leading-relaxed">{s.desc}</p>
+                                <p className="font-body text-sm text-neutral-500 mt-2 leading-relaxed">{s.desc}</p>
                                 {i < steps.length - 1 && (
                                     <div className="hidden lg:block absolute top-[74px] -right-3 w-6 h-px bg-neutral-300" />
                                 )}
@@ -466,16 +466,16 @@ function Process() {
 
 function DoDont() {
     const donts = [
-        "Keep the DVR/NVR recording and looping after you know footage is needed",
-        "Format the drive or reinstall the recorder's firmware before checking for recoverable data",
-        "Attempt a RAID rebuild yourself if a member disk has failed",
-        "Keep restarting a clicking or grinding hard drive repeatedly",
+        "Keep wiggling the cable to force a charge, which wears the port out further",
+        "Use a generic third-party adapter you're unsure is rated for the laptop",
+        "Ignore a battery that drains fast even while it says it's 'charging'",
+        "Try to resolder or force the DC-in port yourself without proper tools",
     ];
     const dos = [
-        "Power down the DVR/NVR as soon as you know footage needs to be preserved",
-        "Note the exact date, time, and channel of the incident you need",
-        "Remove the drive carefully if you're comfortable doing so, or leave the unit as-is",
-        "Bring or ship the recorder or drive to us as-is, along with any RAID details",
+        "Note whether the issue is the port, the cable, the adapter, or all three",
+        "Check if it only charges at a certain angle, which points to the port",
+        "Bring the original charger and cable along with the laptop",
+        "Ship or bring the laptop to us as soon as possible if the battery is swollen",
     ];
     return (
         <section className="bg-neutral-950 py-20">
@@ -497,7 +497,7 @@ function DoDont() {
                             </div>
                             <ul className="space-y-3">
                                 {dos.map((d) => (
-                                    <li key={d} className="flex items-start gap-2.5 font-body text-sm text-white">
+                                    <li key={d} className="flex items-start gap-2.5 font-body text-sm text-neutral-400">
                                         <span className="w-1.5 h-1.5 rounded-full bg-orange-400 mt-2 shrink-0" />
                                         {d}
                                     </li>
@@ -508,12 +508,12 @@ function DoDont() {
                     <Reveal delay={120}>
                         <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-7 h-full">
                             <div className="flex items-center gap-2.5 mb-5">
-                                <AlertTriangle className="w-5 h-5 text-black" />
+                                <AlertTriangle className="w-5 h-5 text-neutral-500" />
                                 <h3 className="font-display font-semibold text-white">Avoid this</h3>
                             </div>
                             <ul className="space-y-3">
                                 {donts.map((d) => (
-                                    <li key={d} className="flex items-start gap-2.5 font-body text-sm text-white">
+                                    <li key={d} className="flex items-start gap-2.5 font-body text-sm text-neutral-400">
                                         <span className="w-1.5 h-1.5 rounded-full bg-neutral-600 mt-2 shrink-0" />
                                         {d}
                                     </li>
@@ -531,10 +531,10 @@ function DoDont() {
 
 function Guarantees() {
     const items = [
-        { icon: Lock, title: "No Data, No Charge", desc: "If we can't recover it, you don't pay the recovery fee." },
-        { icon: Clock, title: "24–48 Hour Diagnosis", desc: "Most recorders and drives are assessed within one to two working days." },
-        { icon: ShieldCheck, title: "Clean-Room-Standard Handling", desc: "Every drive is opened and handled under controlled conditions." },
-        { icon: Zap, title: "Confidential by Default", desc: "Your footage is never viewed beyond what recovery and verification require." },
+        { icon: Lock, title: "Data Kept Intact", desc: "Charging repairs are done at the port, battery, and board level without touching your storage drive." },
+        { icon: Clock, title: "24–48 Hour Turnaround", desc: "Most port, cable, and battery repairs are completed within one to two working days." },
+        { icon: ShieldCheck, title: "Genuine-Grade Parts", desc: "Every battery, adapter, and port component we fit is genuine or manufacturer-grade." },
+        { icon: Zap, title: "Warranty on Repair", desc: "Every charging repair we complete is backed by a service warranty." },
     ];
     return (
         <section className="bg-neutral-50 py-14">
@@ -544,7 +544,7 @@ function Guarantees() {
                         <div className="text-center">
                             <it.icon className="w-6 h-6 text-orange-500 mx-auto mb-3" />
                             <p className="font-display font-semibold text-sm text-neutral-900">{it.title}</p>
-                            <p className="font-body text-xs text-black mt-2 leading-relaxed">{it.desc}</p>
+                            <p className="font-body text-xs text-neutral-500 mt-2 leading-relaxed">{it.desc}</p>
                         </div>
                     </Reveal>
                 ))}
@@ -569,7 +569,7 @@ function FAQItem({ q, a, defaultOpen = false }) {
             </button>
             <div className={`grid transition-all duration-300 ease-in-out ${open ? "grid-rows-[1fr] opacity-100 mt-3" : "grid-rows-[0fr] opacity-0"}`}>
                 <div className="overflow-hidden">
-                    <p className="font-body text-sm text-black leading-relaxed">{a}</p>
+                    <p className="font-body text-sm text-neutral-500 leading-relaxed">{a}</p>
                 </div>
             </div>
         </div>
@@ -578,11 +578,11 @@ function FAQItem({ q, a, defaultOpen = false }) {
 
 function FAQ() {
     const faqs = [
-        { q: "The footage has already been overwritten by the loop — can you still recover it?", a: "Sometimes. Overwritten data is harder to recover the more the system keeps running, which is why powering down as soon as possible matters. We'll tell you honestly during diagnosis whether the specific window is still recoverable." },
-        { q: "My DVR/NVR won't boot or the drive isn't detected — is my footage gone?", a: "Not necessarily. A recorder that won't boot or a drive that isn't detected is often a controller, power, or file-system fault rather than the footage itself being destroyed. In many cases the recording data is still intact on the platters." },
-        { q: "One drive in my NVR's RAID array failed — what should I do?", a: "Stop the recorder and avoid attempting a rebuild yourself, since a failed rebuild can overwrite recoverable data on the remaining disks. Bring in all drives from the array together for diagnosis." },
-        { q: "I accidentally formatted the DVR — can the footage be recovered?", a: "In many cases, yes. A format doesn't always erase the underlying video data immediately, especially if the recorder was powered down shortly after. Stop using the system and bring it in as soon as possible." },
-        { q: "What happens if my footage can't be recovered?", a: "You only pay for the diagnosis, not the recovery fee. We'll always tell you upfront if a drive or recorder isn't recoverable rather than attempting work we don't expect to succeed." },
+        { q: "My laptop shows 'plugged in, not charging' — what does that mean?", a: "It usually means power is reaching the laptop but not making it to the battery. This can point to a battery, charge controller, or charging circuit issue, and we test each to find which." },
+        { q: "Will a charging repair erase my data?", a: "No. Charging repairs work on the port, battery, adapter, or charging circuit — your storage drive and files are never touched." },
+        { q: "How do I know if it's the charger or the laptop?", a: "If a different, known-working charger of the correct wattage still doesn't charge the laptop, the fault is more likely in the port, battery, or internal circuit rather than the adapter." },
+        { q: "My laptop only charges when I hold the cable at an angle — is that serious?", a: "That's a strong sign of a loose or worn charging port. It's best addressed before it stops making contact altogether." },
+        { q: "How long does a charging repair take?", a: "Most port and battery repairs are completed within 24 hours. Board-level charging circuit repairs may take up to 48 hours depending on the fault." },
     ];
     return (
         <section className="bg-white py-20">
@@ -592,7 +592,7 @@ function FAQ() {
                     <h2 className="font-display font-bold text-3xl text-neutral-900 mt-3 tracking-tight">
                         Questions we hear often.
                     </h2>
-                    <p className="font-body text-black mt-4 leading-relaxed">
+                    <p className="font-body text-neutral-500 mt-4 leading-relaxed">
                         Can't find what you're looking for? Reach out and we'll answer directly.
                     </p>
                 </Reveal>
@@ -608,23 +608,23 @@ function FAQ() {
     );
 }
 
-export default function CCTVFootageRecoveryPage() {
+export default function LaptopNotChargingRepairServicePage() {
     return (
         <div className="font-body bg-white min-h-screen">
             <style>{FONT_STYLES}</style>
 
             <Breadcrumb
-                title="CCTV Footage Recovery"
-                subtitle="Overwritten loops, dead DVRs, failed RAID arrays, or a corrupted NVR — recovered honestly and handled with care."
+                title="Laptop Not Charging Repair"
+                subtitle="Charging ports, cables, adapters, batteries, and circuit faults diagnosed and fixed, with your data kept intact."
                 trail={[
                     { label: "Home", href: "#" },
                     { label: "Services", href: "#services" },
-                    { label: "CCTV Footage Recovery", href: "#cctv-footage-recovery" },
+                    { label: "Not Charging Repair", href: "#laptop-not-charging-repair-service" },
                 ]}
             />
             <Intro />
-            <SystemsSupported />
-            <RecoveryCases />
+            <BrandsSupported />
+            <RepairCases />
             <LabGallery />
             <Process />
             <DoDont />

@@ -59,31 +59,31 @@ export default function SiteHeader() {
                 },
                 {
                     name: "Laptop Battery Repair & Replacement",
-                    path: "/services/laptop-repair",
+                    path: "/services/laptop-battery-repair-replacement",
                 },
                 {
                     name: "Laptop Touchpad Track pad Repair & Replacement",
-                    path: "/services/laptop-repair",
+                    path: "/services/laptop-touchpad-track-pad-repair-and-replacement",
                 },
                 {
                     name: "Laptop Back Panel / Body Replacement",
-                    path: "/services/laptop-repair",
+                    path: "/services/laptop-back-panel-body-replacement",
                 },
                 {
                     name: "Laptop Screen Repair & Replacement",
-                    path: "/services/laptop-repair",
+                    path: "/services/laptop-screen-repair-and-replacement",
                 },
                 {
                     name: "Laptop Processor Fan Noise Repair & Replacement",
-                    path: "/services/laptop-repair",
+                    path: "/services/laptop-processor-fan-noise-repaire-and-replacement",
                 },
                 {
                     name: "Laptop Not Charging Repair",
-                    path: "/services/laptop-repair",
+                    path: "/services/laptop-not-charging-repair",
                 },
                 {
                     name: "Laptop Hinges Repair & Replacement",
-                    path: "/services/laptop-repair",
+                    path: "/services/laptop-hinges-repair-and-replacement",
                 },
 
                 {
@@ -139,24 +139,24 @@ export default function SiteHeader() {
                 <div className="max-w-7xl mx-auto px-5 py-2 flex items-center justify-between">
                     <div className="flex items-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
-                        <span className="font-arial">Emergency drop-off & free diagnostics — Every Day, 10 AM – 8 PM</span>
+                        <span className="font-arial">Emergency drop-off & free diagnostics — Every Day, 9. 30 am To 9.30 pm</span>
                     </div>
 
                     <div className="hidden sm:flex items-center gap-5">
 
-                        <a href="tel:+919876543210"
+                        <a href="tel:+919284562996"
                             className="flex items-center gap-2 hover:text-orange-400"
                         >
                             <Phone size={14} />
-                            +91 98765 43210
+                            +91 9284562996
                         </a>
 
 
-                        <a href="mailto:help@swetayantech.in"
+                        <a href="mailto:swetayantechnologies@gmail.com"
                             className="flex items-center gap-2 hover:text-orange-400 font-arial"
                         >
                             <Mail size={14} />
-                            help@swetayantech.in
+                            swetayantechnologies@gmail.com
                         </a>
                     </div>
                 </div>

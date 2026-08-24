@@ -149,8 +149,8 @@ function Breadcrumb({ trail, title, subtitle }) {
                     <span className="font-mono text-[11px] tracking-[0.2em] text-orange-400">CERTIFIED THERMAL & HARDWARE TECHNICIANS</span>
                 </div>
                 <h1 className="font-display font-bold text-3xl sm:text-4xl tracking-tight">{title}</h1>
-                {subtitle && <p className="font-body text-neutral-400 mt-2 max-w-xl">{subtitle}</p>}
-                <nav aria-label="Breadcrumb" className="flex items-center gap-2 font-mono text-xs text-neutral-400 mt-5">
+                {subtitle && <p className="font-body text-white mt-2 max-w-xl">{subtitle}</p>}
+                <nav aria-label="Breadcrumb" className="flex items-center gap-2 font-mono text-xs text-white mt-5">
                     {trail.map((item, i) => (
                         <span key={item.label} className="flex items-center gap-2">
                             {i === 0 ? (
@@ -273,7 +273,7 @@ function BrandsSupported() {
         <section className="bg-white py-14 border-y border-neutral-100">
             <div className="max-w-7xl mx-auto px-5">
                 <Reveal>
-                    <p className="font-mono text-xs tracking-[0.2em] text-neutral-400 text-center mb-8">SYMPTOMS WE DIAGNOSE</p>
+                    <p className="font-mono text-xs tracking-[0.2em] text-black text-center mb-8">SYMPTOMS WE DIAGNOSE</p>
                 </Reveal>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
                     {items.map((d, i) => (
@@ -282,7 +282,7 @@ function BrandsSupported() {
                                 <div className="w-full aspect-square rounded-xl overflow-hidden border border-neutral-200">
                                     <Img src={d.img} alt={d.label} className="w-full h-full object-cover" />
                                 </div>
-                                <span className="font-body text-xs text-neutral-500">{d.label}</span>
+                                <span className="font-body text-xs text-black">{d.label}</span>
                             </div>
                         </Reveal>
                     ))}
@@ -352,10 +352,10 @@ function RepairCases() {
                                     <c.icon className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                                 </div>
                                 <h3 className="font-display font-semibold text-base text-neutral-900">{c.title}</h3>
-                                <p className="font-body text-sm text-neutral-500 mt-2 leading-relaxed">{c.desc}</p>
+                                <p className="font-body text-sm text-black mt-2 leading-relaxed">{c.desc}</p>
                                 <ul className="mt-4 space-y-1.5">
                                     {c.points.map((p) => (
-                                        <li key={p} className="flex items-start gap-2 font-body text-xs text-neutral-500">
+                                        <li key={p} className="flex items-start gap-2 font-body text-sm text-black">
                                             <CheckCircle2 className="w-3.5 h-3.5 text-orange-500 mt-0.5 shrink-0" />
                                             {p}
                                         </li>
@@ -408,7 +408,7 @@ function LabGallery() {
                                 <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
                                 <div className="p-5 bg-neutral-900">
                                     <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
-                                    <p className="font-body text-xs text-neutral-400 mt-2 leading-relaxed">{s.desc}</p>
+                                    <p className="font-body text-xs text-white mt-2 leading-relaxed">{s.desc}</p>
                                 </div>
                             </div>
                         </Reveal>
@@ -449,7 +449,7 @@ function Process() {
                                     <s.icon className="w-5 h-5 text-orange-400" />
                                 </div>
                                 <h3 className="font-display font-semibold text-base text-neutral-900">{s.title}</h3>
-                                <p className="font-body text-sm text-neutral-500 mt-2 leading-relaxed">{s.desc}</p>
+                                <p className="font-body text-sm text-black mt-2 leading-relaxed">{s.desc}</p>
                                 {i < steps.length - 1 && (
                                     <div className="hidden lg:block absolute top-[74px] -right-3 w-6 h-px bg-neutral-300" />
                                 )}
@@ -497,7 +497,7 @@ function DoDont() {
                             </div>
                             <ul className="space-y-3">
                                 {dos.map((d) => (
-                                    <li key={d} className="flex items-start gap-2.5 font-body text-sm text-neutral-400">
+                                    <li key={d} className="flex items-start gap-2.5 font-body text-sm text-white">
                                         <span className="w-1.5 h-1.5 rounded-full bg-orange-400 mt-2 shrink-0" />
                                         {d}
                                     </li>
@@ -508,12 +508,12 @@ function DoDont() {
                     <Reveal delay={120}>
                         <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-7 h-full">
                             <div className="flex items-center gap-2.5 mb-5">
-                                <AlertTriangle className="w-5 h-5 text-neutral-500" />
+                                <AlertTriangle className="w-5 h-5 text-black" />
                                 <h3 className="font-display font-semibold text-white">Avoid this</h3>
                             </div>
                             <ul className="space-y-3">
                                 {donts.map((d) => (
-                                    <li key={d} className="flex items-start gap-2.5 font-body text-sm text-neutral-400">
+                                    <li key={d} className="flex items-start gap-2.5 font-body text-sm text-white">
                                         <span className="w-1.5 h-1.5 rounded-full bg-neutral-600 mt-2 shrink-0" />
                                         {d}
                                     </li>
@@ -544,7 +544,7 @@ function Guarantees() {
                         <div className="text-center">
                             <it.icon className="w-6 h-6 text-orange-500 mx-auto mb-3" />
                             <p className="font-display font-semibold text-sm text-neutral-900">{it.title}</p>
-                            <p className="font-body text-xs text-neutral-500 mt-2 leading-relaxed">{it.desc}</p>
+                            <p className="font-body text-xs text-black mt-2 leading-relaxed">{it.desc}</p>
                         </div>
                     </Reveal>
                 ))}
@@ -569,7 +569,7 @@ function FAQItem({ q, a, defaultOpen = false }) {
             </button>
             <div className={`grid transition-all duration-300 ease-in-out ${open ? "grid-rows-[1fr] opacity-100 mt-3" : "grid-rows-[0fr] opacity-0"}`}>
                 <div className="overflow-hidden">
-                    <p className="font-body text-sm text-neutral-500 leading-relaxed">{a}</p>
+                    <p className="font-body text-sm text-black leading-relaxed">{a}</p>
                 </div>
             </div>
         </div>
@@ -592,7 +592,7 @@ function FAQ() {
                     <h2 className="font-display font-bold text-3xl text-neutral-900 mt-3 tracking-tight">
                         Questions we hear often.
                     </h2>
-                    <p className="font-body text-neutral-500 mt-4 leading-relaxed">
+                    <p className="font-body text-black mt-4 leading-relaxed">
                         Can't find what you're looking for? Reach out and we'll answer directly.
                     </p>
                 </Reveal>

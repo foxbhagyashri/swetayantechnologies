@@ -15,20 +15,23 @@ import {
     PackageCheck,
     Wrench,
     AlertTriangle,
-    Video,
-    HardDrive,
-    Flame,
-    Server,
-    Eraser,
-    ShieldOff,
+    Laptop,
+    LayoutPanelTop,
+    Cable,
+    Frame,
+    Unlock,
+    RotateCw,
+    Hammer,
 } from "lucide-react";
 
 /* ---------------------------------------------------------
-   Swetayan Technologies — CCTV Footage Recovery
+   Swetayan Technologies — Laptop Hinges Repair &
+   Replacement Service
    Reuses the exact design tokens, motion language and brand
-   mark from the Home / About / Services / MacBook Data Recovery
-   pages (Space Grotesk + Inter + IBM Plex Mono, orange-500
-   accent, neutral-950 chrome).
+   mark from the Home / About / Services / Data Recovery /
+   Virus Removal / Power Repair / Overheating / Screen / Fan
+   / Not Charging pages (Space Grotesk + Inter + IBM Plex
+   Mono, orange-500 accent, neutral-950 chrome).
 --------------------------------------------------------- */
 
 const FONT_STYLES = `
@@ -107,7 +110,7 @@ function Img({ src, alt, className }) {
     if (failed) {
         return (
             <div className={`${className} bg-gradient-to-br from-neutral-800 to-neutral-950 flex items-center justify-center`}>
-                <Video className="w-10 h-10 text-neutral-600" />
+                <Laptop className="w-10 h-10 text-neutral-600" />
             </div>
         );
     }
@@ -132,8 +135,8 @@ function Breadcrumb({ trail, title, subtitle }) {
     return (
         <section className="relative bg-neutral-950 text-white overflow-hidden">
             <Img
-                src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1600&q=70&auto=format&fit=crop"
-                alt="Security control room reviewing CCTV footage"
+                src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=1600&q=70&auto=format&fit=crop"
+                alt="Technician inspecting a loose laptop hinge and lid assembly"
                 className="absolute inset-0 w-full h-full object-cover opacity-20"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-neutral-950 via-neutral-950/95 to-neutral-950/80" />
@@ -143,11 +146,11 @@ function Breadcrumb({ trail, title, subtitle }) {
                     <span className="relative flex h-2 w-2">
                         <span className="animate-pulse-dot absolute inline-flex h-full w-full rounded-full bg-orange-500" />
                     </span>
-                    <span className="font-mono text-[11px] tracking-[0.2em] text-orange-400">CLEAN-ROOM-STANDARD LAB</span>
+                    <span className="font-mono text-[11px] tracking-[0.2em] text-orange-400">CERTIFIED CHASSIS & HINGE TECHNICIANS</span>
                 </div>
                 <h1 className="font-display font-bold text-3xl sm:text-4xl tracking-tight">{title}</h1>
-                {subtitle && <p className="font-body text-white mt-2 max-w-xl">{subtitle}</p>}
-                <nav aria-label="Breadcrumb" className="flex items-center gap-2 font-mono text-xs text-white mt-5">
+                {subtitle && <p className="font-body text-neutral-400 mt-2 max-w-xl">{subtitle}</p>}
+                <nav aria-label="Breadcrumb" className="flex items-center gap-2 font-mono text-xs text-neutral-400 mt-5">
                     {trail.map((item, i) => (
                         <span key={item.label} className="flex items-center gap-2">
                             {i === 0 ? (
@@ -172,20 +175,20 @@ function Breadcrumb({ trail, title, subtitle }) {
 
 function CTABanner() {
     return (
-        <section className="bg-[#ff8904] py-14 relative overflow-hidden">
+        <section className="bg-orange-500 py-14 relative overflow-hidden">
             <div className="absolute -right-10 -top-10 w-64 h-64 bg-white/10 rounded-full blur-2xl animate-glow" />
             <Reveal>
                 <div className="max-w-7xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-6 relative">
                     <div>
                         <h3 className="font-display font-bold text-2xl sm:text-3xl text-neutral-950 tracking-tight">
-                            Footage from an incident is missing or won't play back?
+                            Lid loose, sagging, or cracking near the hinge?
                         </h3>
                         <p className="font-body text-neutral-900/80 mt-2">
-                            Don't reformat the DVR or swap the drive first — get a free footage diagnosis before anything else touches it.
+                            Don't let it snap the display cable — get a free hinge inspection first.
                         </p>
                     </div>
                     <a href="#contact" className="bg-neutral-950 hover:bg-neutral-800 hover:scale-105 text-white font-body font-semibold px-6 py-3 rounded-md whitespace-nowrap transition-all flex items-center gap-2">
-                        Get Free Diagnosis <ArrowRight className="w-4 h-4" />
+                        Get Free Hinge Inspection <ArrowRight className="w-4 h-4" />
                     </a>
                 </div>
             </Reveal>
@@ -198,43 +201,40 @@ function CTABanner() {
 function Intro() {
     const [ref, inView] = useInView(0.4);
     const stats = [
-        { value: 15, suffix: "+", label: "Years recovering footage" },
-        { value: 4800, suffix: "+", label: "DVR/NVR jobs recovered" },
-        { value: 92, suffix: "%", label: "Success rate" },
-        { value: 24, suffix: "hr", label: "Typical diagnosis time" },
+        { value: 16, suffix: "+", label: "Years in IT services" },
+        { value: 11400, suffix: "+", label: "Hinges repaired" },
+        { value: 96, suffix: "%", label: "Fixed without chassis swap" },
+        { value: 24, suffix: "hr", label: "Typical turnaround" },
     ];
     return (
         <section className="bg-white py-20">
             <div className="max-w-7xl mx-auto px-5 grid md:grid-cols-2 gap-14 items-center">
                 <Reveal>
-                    <span className="font-mono text-xs tracking-[0.2em] text-orange-600">CCTV FOOTAGE RECOVERY</span>
+                    <span className="font-mono text-xs tracking-[0.2em] text-orange-600">HINGE REPAIR & REPLACEMENT</span>
                     <h2 className="font-display font-bold text-3xl sm:text-4xl text-neutral-900 mt-3 tracking-tight leading-tight">
-                        Overwritten timelines, dead DVRs, or a corrupted RAID — we still get your footage back.
+                        Loose, stiff, or cracked hinge? We fix it before it takes the screen with it.
                     </h2>
                     <p className="font-body text-neutral-600 mt-5 leading-relaxed">
-                        CCTV storage isn't like a regular hard drive — footage is written
-                        in continuous cyclic loops, often across proprietary DVR/NVR file
-                        systems, split between H.264/H.265 streams, and sometimes striped
-                        across multiple drives in a RAID array. That makes a failed or
-                        overwritten recorder harder to recover from with generic tools,
-                        but not impossible in the right hands. We work with Hikvision,
-                        Dahua, CP Plus, Honeywell, and other DVR/NVR brands — through
-                        drive failure, power loss corruption, accidental formatting, and
-                        footage that's been recorded over. We diagnose first, quote
-                        honestly, and only charge the recovery fee once your footage is
-                        actually back.
+                        Hinge damage rarely stays cosmetic. A loose or sagging lid puts
+                        constant strain on the display cable running through it, and a
+                        cracked hinge mount can spread into the chassis or bezel around
+                        it. We check hinge tension, cable routing, and chassis mounts
+                        together, and fix or replace exactly what's failing — instead
+                        of guessing. Because we're a data recovery lab first, every
+                        repair is done with your files protected — nothing is wiped
+                        unless you ask for it.
                     </p>
                     <div className="flex flex-wrap gap-3 mt-8">
                         <a href="#contact" className="bg-orange-500 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
-                            Book a Free Diagnosis <ArrowRight className="w-4 h-4" />
+                            Book a Free Hinge Inspection <ArrowRight className="w-4 h-4" />
                         </a>
                     </div>
                 </Reveal>
                 <Reveal delay={150}>
                     <div className="rounded-2xl overflow-hidden mb-6 border border-neutral-200">
                         <Img
-                            src="/ChatGPT Image Aug 6, 2026, 10_38_04 AM.png"
-                            alt="DVR unit being inspected during footage recovery"
+                            src="https://images.unsplash.com/photo-1587202372556-4bcb5f21b2b0?w=900&q=70&auto=format&fit=crop"
+                            alt="Technician replacing a laptop hinge and lid bracket"
                             className="w-full h-80 object-cover"
                         />
                     </div>
@@ -258,31 +258,31 @@ function Intro() {
     );
 }
 
-/* ---------- systems / storage types we recover ---------- */
+/* ---------- symptoms we diagnose ---------- */
 
-function SystemsSupported() {
+function BrandsSupported() {
     const items = [
-        { img: "/ChatGPT Image Aug 10, 2026, 11_34_27 AM.png", label: "DVR Recorders" },
-        { img: "/ChatGPT Image Aug 10, 2026, 11_35_43 AM.png", label: "NVR / IP Systems" },
-        { img: "/ChatGPT Image Aug 10, 2026, 11_37_09 AM.png", label: "Surveillance HDDs" },
-        { img: "/ChatGPT Image Aug 10, 2026, 11_57_07 AM.png", label: "RAID / NAS Arrays" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_19_24 PM.png", label: "SD & Flash Cards" },
-        { img: "/b29e4f2d-bc59-4dba-92dc-b5d150695608.png", label: "Hikvision / Dahua / CP Plus" },
+        { img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=70&auto=format&fit=crop", label: "Loose / Wobbly Lid" },
+        { img: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=500&q=70&auto=format&fit=crop", label: "Screen Sags Backward" },
+        { img: "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=500&q=70&auto=format&fit=crop", label: "Cracked Hinge Cover" },
+        { img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&q=70&auto=format&fit=crop", label: "Stiff / Hard to Open" },
+        { img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500&q=70&auto=format&fit=crop", label: "Grinding When Opened" },
+        { img: "https://images.unsplash.com/photo-1588200908342-23b585c03e26?w=500&q=70&auto=format&fit=crop", label: "Gap Between Lid & Base" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">
             <div className="max-w-7xl mx-auto px-5">
                 <Reveal>
-                    <p className="font-mono text-xs tracking-[0.2em] text-black text-center mb-8">SYSTEMS WE RECOVER FROM</p>
+                    <p className="font-mono text-xs tracking-[0.2em] text-neutral-400 text-center mb-8">SYMPTOMS WE DIAGNOSE</p>
                 </Reveal>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
                     {items.map((d, i) => (
                         <Reveal key={d.label} delay={i * 70}>
                             <div className="flex flex-col items-center text-center gap-3">
-                                <div className="rounded-xl overflow-hidden border border-neutral-200">
-                                    <Img src={d.img} alt={d.label} className="w-full h-auto" />
+                                <div className="w-full aspect-square rounded-xl overflow-hidden border border-neutral-200">
+                                    <Img src={d.img} alt={d.label} className="w-full h-full object-cover" />
                                 </div>
-                                <span className="font-body text-xs text-black">{d.label}</span>
+                                <span className="font-body text-xs text-neutral-500">{d.label}</span>
                             </div>
                         </Reveal>
                     ))}
@@ -292,45 +292,45 @@ function SystemsSupported() {
     );
 }
 
-/* ---------- CCTV failure cases (detailed) ---------- */
+/* ---------- repair cases (detailed) ---------- */
 
-function RecoveryCases() {
+function RepairCases() {
     const cases = [
         {
-            icon: Eraser,
-            title: "Overwritten & Cyclic-Loop Footage",
-            desc: "DVRs record in a loop and overwrite old footage — we recover the specific window before it's gone or partially overwritten.",
-            points: ["Footage recorded over before export", "Partial overwrite of the incident window", "Fragmented clips from loop recording"],
+            icon: RotateCw,
+            title: "Hinge Tension Repair",
+            desc: "Lids that flop open, won't hold their angle, or feel loose compared to when they were new.",
+            points: ["Tension mechanism inspection", "Hinge clutch repair or swap", "Hold-angle re-testing"],
         },
         {
-            icon: HardDrive,
-            title: "Drive Failure & Bad Sectors",
-            desc: "Surveillance drives run 24/7 and fail differently from desktop drives — clicking, bad sectors, or a drive that's stopped spinning.",
-            points: ["Clicking or grinding hard drives", "Bad sectors mid-recording", "Drive not detected by the DVR"],
+            icon: Frame,
+            title: "Hinge & Bracket Replacement",
+            desc: "Cracked, snapped, or stripped hinge mounts that no longer hold the lid securely to the chassis.",
+            points: ["Full hinge assembly replacement", "Chassis mount reinforcement", "Matching OEM-spec parts"],
         },
         {
-            icon: Server,
-            title: "RAID & NAS Array Failures",
-            desc: "Multi-drive NVR and NAS setups fail when one or more member disks drop out, and rebuilding the wrong way can make it worse.",
-            points: ["Degraded or failed RAID arrays", "Dropped member disks", "Failed RAID rebuild attempts"],
+            icon: Cable,
+            title: "Display Cable Protection",
+            desc: "The display and webcam cables that route through the hinge, checked for pinching or fraying.",
+            points: ["Cable routing inspection", "Fray & pinch point check", "Cable replacement if damaged"],
         },
         {
-            icon: Flame,
-            title: "Power Loss & Corrupted File Systems",
-            desc: "A sudden outage or unsafe shutdown mid-write can corrupt the recorder's proprietary file system.",
-            points: ["Corrupted DVR/NVR file systems", "Unreadable or unmountable volumes", "Damaged .dav / .mp4 / .264 files"],
+            icon: LayoutPanelTop,
+            title: "Lid & Bezel Alignment",
+            desc: "Lids that sit crooked, show a visible gap, or don't close flush against the keyboard deck.",
+            points: ["Alignment diagnosis", "Bezel & lid reseating", "Closed-gap inspection"],
         },
         {
-            icon: ShieldOff,
-            title: "Accidental Format & Factory Reset",
-            desc: "A wrong menu tap or a factory reset doesn't have to mean the footage is unrecoverable.",
-            points: ["Accidental DVR/NVR format", "Factory reset before export", "Deleted channels or date ranges"],
+            icon: Unlock,
+            title: "Stiff or Hard-to-Open Hinges",
+            desc: "Hinges that have seized up, requiring two hands or excess force to open the lid.",
+            points: ["Mechanism lubrication & cleaning", "Binding point diagnosis", "Smooth-action re-testing"],
         },
         {
-            icon: AlertTriangle,
-            title: "Physical & Fire/Water Damage",
-            desc: "Recorders damaged by fire, flooding, power surges, or physical impact still often hold recoverable drives inside.",
-            points: ["Fire or smoke-damaged units", "Flooded or water-damaged drives", "Surge-damaged recorder boards"],
+            icon: Hammer,
+            title: "Chassis & Palm-Rest Crack Repair",
+            desc: "Cracks in the plastic or metal chassis around the hinge area from repeated stress or a knock.",
+            points: ["Chassis crack assessment", "Structural reinforcement or panel swap", "Cosmetic finish matching"],
         },
     ];
     return (
@@ -338,9 +338,9 @@ function RecoveryCases() {
             <div className="max-w-7xl mx-auto px-5">
                 <Reveal>
                     <div className="max-w-2xl mb-14">
-                        <span className="font-mono text-xs tracking-[0.2em] text-orange-600">CCTV ISSUES WE HANDLE</span>
+                        <span className="font-mono text-xs tracking-[0.2em] text-orange-600">WHAT WE HANDLE</span>
                         <h2 className="font-display font-bold text-3xl sm:text-4xl text-neutral-900 mt-3 tracking-tight">
-                            Every kind of footage loss, one lab.
+                            Every reason a hinge fails, one visit.
                         </h2>
                     </div>
                 </Reveal>
@@ -352,10 +352,10 @@ function RecoveryCases() {
                                     <c.icon className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
                                 </div>
                                 <h3 className="font-display font-semibold text-base text-neutral-900">{c.title}</h3>
-                                <p className="font-body text-sm text-black mt-2 leading-relaxed">{c.desc}</p>
+                                <p className="font-body text-sm text-neutral-500 mt-2 leading-relaxed">{c.desc}</p>
                                 <ul className="mt-4 space-y-1.5">
                                     {c.points.map((p) => (
-                                        <li key={p} className="flex items-start gap-2 font-body text-sm text-black">
+                                        <li key={p} className="flex items-start gap-2 font-body text-xs text-neutral-500">
                                             <CheckCircle2 className="w-3.5 h-3.5 text-orange-500 mt-0.5 shrink-0" />
                                             {p}
                                         </li>
@@ -375,19 +375,19 @@ function RecoveryCases() {
 function LabGallery() {
     const shots = [
         {
-            img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=70&auto=format&fit=crop",
-            title: "Drive extraction",
-            desc: "We remove the surveillance drive from the DVR/NVR chassis without disturbing the existing data layout.",
+            img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=900&q=70&auto=format&fit=crop",
+            title: "Hinge tension check",
+            desc: "We open and close the lid through its full range to feel exactly where the tension or grinding sits.",
         },
         {
-            img: "https://images.unsplash.com/photo-1591405351990-4726e331f141?w=900&q=70&auto=format&fit=crop",
-            title: "Sector-level imaging",
-            desc: "A forensic image is taken first, so recovery work never runs directly against the original drive.",
+            img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900&q=70&auto=format&fit=crop",
+            title: "Chassis strip-down",
+            desc: "The bezel, keyboard deck, and hinge covers are removed to expose the hinge mounts and cabling.",
         },
         {
-            img: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=900&q=70&auto=format&fit=crop",
-            title: "Timeline reconstruction",
-            desc: "Recovered clips are matched back to their channel and timestamp so the incident window is intact.",
+            img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=70&auto=format&fit=crop",
+            title: "Replace & re-align",
+            desc: "New hinges are fitted, cables re-routed clear of pinch points, and the lid is checked for a flush close.",
         },
     ];
     return (
@@ -397,7 +397,7 @@ function LabGallery() {
                     <div className="max-w-2xl mb-14">
                         <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
                         <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
-                            What happens to your footage.
+                            What happens to your laptop.
                         </h2>
                     </div>
                 </Reveal>
@@ -408,7 +408,7 @@ function LabGallery() {
                                 <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
                                 <div className="p-5 bg-neutral-900">
                                     <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
-                                    <p className="font-body text-xs text-white mt-2 leading-relaxed">{s.desc}</p>
+                                    <p className="font-body text-xs text-neutral-400 mt-2 leading-relaxed">{s.desc}</p>
                                 </div>
                             </div>
                         </Reveal>
@@ -423,11 +423,11 @@ function LabGallery() {
 
 function Process() {
     const steps = [
-        { icon: ScanSearch, title: "Free Diagnosis", desc: "We inspect the DVR/NVR or drive and identify whether the fault is logical, physical, or array-level." },
-        { icon: FileCheck2, title: "Honest Quote", desc: "You get a clear price and timeline before any recovery work begins." },
-        { icon: Wrench, title: "Recovery", desc: "Our engineers recover the footage using the method the fault actually calls for." },
-        { icon: ShieldCheck, title: "Verification", desc: "Recovered clips are checked for playback and matched to timestamps before handover." },
-        { icon: PackageCheck, title: "Secure Delivery", desc: "Your footage is returned on a drive of your choice, securely." },
+        { icon: ScanSearch, title: "Free Hinge Inspection", desc: "We open and close the lid to check tension, alignment, and cable clearance through the hinge." },
+        { icon: FileCheck2, title: "Honest Quote", desc: "You get a clear price and timeline before any hinge, bracket, or chassis work begins." },
+        { icon: Wrench, title: "Hinge Repair or Replace", desc: "Hinges, brackets, and mounts are repaired or swapped, with cables re-routed clear of pinch points." },
+        { icon: RotateCw, title: "Open-Close Testing", desc: "The lid is cycled repeatedly to confirm smooth action and a flush, secure close." },
+        { icon: PackageCheck, title: "Ready to Collect", desc: "Your laptop is returned with a solid, secure lid and your data intact." },
     ];
     return (
         <section className="bg-white py-20">
@@ -449,7 +449,7 @@ function Process() {
                                     <s.icon className="w-5 h-5 text-orange-400" />
                                 </div>
                                 <h3 className="font-display font-semibold text-base text-neutral-900">{s.title}</h3>
-                                <p className="font-body text-sm text-black mt-2 leading-relaxed">{s.desc}</p>
+                                <p className="font-body text-sm text-neutral-500 mt-2 leading-relaxed">{s.desc}</p>
                                 {i < steps.length - 1 && (
                                     <div className="hidden lg:block absolute top-[74px] -right-3 w-6 h-px bg-neutral-300" />
                                 )}
@@ -466,16 +466,16 @@ function Process() {
 
 function DoDont() {
     const donts = [
-        "Keep the DVR/NVR recording and looping after you know footage is needed",
-        "Format the drive or reinstall the recorder's firmware before checking for recoverable data",
-        "Attempt a RAID rebuild yourself if a member disk has failed",
-        "Keep restarting a clicking or grinding hard drive repeatedly",
+        "Keep opening the lid past a stiff or grinding point, forcing the hinge",
+        "Ignore a wobbly screen, since it puts constant strain on the display cable",
+        "Pick the laptop up by the screen instead of the base",
+        "Try to tighten or replace hinge screws yourself without removing the bezel properly",
     ];
     const dos = [
-        "Power down the DVR/NVR as soon as you know footage needs to be preserved",
-        "Note the exact date, time, and channel of the incident you need",
-        "Remove the drive carefully if you're comfortable doing so, or leave the unit as-is",
-        "Bring or ship the recorder or drive to us as-is, along with any RAID details",
+        "Note whether the fault is looseness, stiffness, or a visible crack",
+        "Check if the screen flickers when you move the lid, which points to a cable issue",
+        "Support the base when opening or closing the lid, not the top corner",
+        "Bring or ship the laptop to us with its original charger",
     ];
     return (
         <section className="bg-neutral-950 py-20">
@@ -497,7 +497,7 @@ function DoDont() {
                             </div>
                             <ul className="space-y-3">
                                 {dos.map((d) => (
-                                    <li key={d} className="flex items-start gap-2.5 font-body text-sm text-white">
+                                    <li key={d} className="flex items-start gap-2.5 font-body text-sm text-neutral-400">
                                         <span className="w-1.5 h-1.5 rounded-full bg-orange-400 mt-2 shrink-0" />
                                         {d}
                                     </li>
@@ -508,12 +508,12 @@ function DoDont() {
                     <Reveal delay={120}>
                         <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-7 h-full">
                             <div className="flex items-center gap-2.5 mb-5">
-                                <AlertTriangle className="w-5 h-5 text-black" />
+                                <AlertTriangle className="w-5 h-5 text-neutral-500" />
                                 <h3 className="font-display font-semibold text-white">Avoid this</h3>
                             </div>
                             <ul className="space-y-3">
                                 {donts.map((d) => (
-                                    <li key={d} className="flex items-start gap-2.5 font-body text-sm text-white">
+                                    <li key={d} className="flex items-start gap-2.5 font-body text-sm text-neutral-400">
                                         <span className="w-1.5 h-1.5 rounded-full bg-neutral-600 mt-2 shrink-0" />
                                         {d}
                                     </li>
@@ -531,10 +531,10 @@ function DoDont() {
 
 function Guarantees() {
     const items = [
-        { icon: Lock, title: "No Data, No Charge", desc: "If we can't recover it, you don't pay the recovery fee." },
-        { icon: Clock, title: "24–48 Hour Diagnosis", desc: "Most recorders and drives are assessed within one to two working days." },
-        { icon: ShieldCheck, title: "Clean-Room-Standard Handling", desc: "Every drive is opened and handled under controlled conditions." },
-        { icon: Zap, title: "Confidential by Default", desc: "Your footage is never viewed beyond what recovery and verification require." },
+        { icon: Lock, title: "Data Kept Intact", desc: "Hinge repairs are done at the chassis and lid level without touching your storage drive." },
+        { icon: Clock, title: "24–48 Hour Turnaround", desc: "Most hinge tightening and replacement jobs are completed within one to two working days." },
+        { icon: ShieldCheck, title: "OEM-Spec Parts", desc: "Every hinge, bracket, and mount we fit matches the original manufacturer specification." },
+        { icon: Zap, title: "Warranty on Repair", desc: "Every hinge repair we complete is backed by a service warranty." },
     ];
     return (
         <section className="bg-neutral-50 py-14">
@@ -544,7 +544,7 @@ function Guarantees() {
                         <div className="text-center">
                             <it.icon className="w-6 h-6 text-orange-500 mx-auto mb-3" />
                             <p className="font-display font-semibold text-sm text-neutral-900">{it.title}</p>
-                            <p className="font-body text-xs text-black mt-2 leading-relaxed">{it.desc}</p>
+                            <p className="font-body text-xs text-neutral-500 mt-2 leading-relaxed">{it.desc}</p>
                         </div>
                     </Reveal>
                 ))}
@@ -569,7 +569,7 @@ function FAQItem({ q, a, defaultOpen = false }) {
             </button>
             <div className={`grid transition-all duration-300 ease-in-out ${open ? "grid-rows-[1fr] opacity-100 mt-3" : "grid-rows-[0fr] opacity-0"}`}>
                 <div className="overflow-hidden">
-                    <p className="font-body text-sm text-black leading-relaxed">{a}</p>
+                    <p className="font-body text-sm text-neutral-500 leading-relaxed">{a}</p>
                 </div>
             </div>
         </div>
@@ -578,11 +578,11 @@ function FAQItem({ q, a, defaultOpen = false }) {
 
 function FAQ() {
     const faqs = [
-        { q: "The footage has already been overwritten by the loop — can you still recover it?", a: "Sometimes. Overwritten data is harder to recover the more the system keeps running, which is why powering down as soon as possible matters. We'll tell you honestly during diagnosis whether the specific window is still recoverable." },
-        { q: "My DVR/NVR won't boot or the drive isn't detected — is my footage gone?", a: "Not necessarily. A recorder that won't boot or a drive that isn't detected is often a controller, power, or file-system fault rather than the footage itself being destroyed. In many cases the recording data is still intact on the platters." },
-        { q: "One drive in my NVR's RAID array failed — what should I do?", a: "Stop the recorder and avoid attempting a rebuild yourself, since a failed rebuild can overwrite recoverable data on the remaining disks. Bring in all drives from the array together for diagnosis." },
-        { q: "I accidentally formatted the DVR — can the footage be recovered?", a: "In many cases, yes. A format doesn't always erase the underlying video data immediately, especially if the recorder was powered down shortly after. Stop using the system and bring it in as soon as possible." },
-        { q: "What happens if my footage can't be recovered?", a: "You only pay for the diagnosis, not the recovery fee. We'll always tell you upfront if a drive or recorder isn't recoverable rather than attempting work we don't expect to succeed." },
+        { q: "My laptop screen flops backward on its own — is that the hinge?", a: "Yes, almost always. It means the hinge's tension mechanism has worn out and can no longer hold the screen at an angle, which is a straightforward hinge repair." },
+        { q: "Will a hinge repair erase my data?", a: "No. Hinge repairs work on the chassis, lid, and hinge mechanism — your storage drive and files are never touched." },
+        { q: "Can a loose hinge damage my screen?", a: "Yes. A loose or wobbly hinge puts repeated strain on the display cable and bezel, which can lead to flickering, cable damage, or cracking if left unaddressed." },
+        { q: "Why is my laptop hinge suddenly stiff to open?", a: "This is often dust or debris inside the hinge mechanism, or in some cases a mechanical fault in the clutch itself. We check both before recommending a fix." },
+        { q: "How long does a hinge repair take?", a: "Most hinge tightening or replacement jobs are completed within 24 hours. Chassis or bracket replacement may take up to 48 hours depending on parts." },
     ];
     return (
         <section className="bg-white py-20">
@@ -592,7 +592,7 @@ function FAQ() {
                     <h2 className="font-display font-bold text-3xl text-neutral-900 mt-3 tracking-tight">
                         Questions we hear often.
                     </h2>
-                    <p className="font-body text-black mt-4 leading-relaxed">
+                    <p className="font-body text-neutral-500 mt-4 leading-relaxed">
                         Can't find what you're looking for? Reach out and we'll answer directly.
                     </p>
                 </Reveal>
@@ -608,23 +608,23 @@ function FAQ() {
     );
 }
 
-export default function CCTVFootageRecoveryPage() {
+export default function LaptopHingeRepairServicePage() {
     return (
         <div className="font-body bg-white min-h-screen">
             <style>{FONT_STYLES}</style>
 
             <Breadcrumb
-                title="CCTV Footage Recovery"
-                subtitle="Overwritten loops, dead DVRs, failed RAID arrays, or a corrupted NVR — recovered honestly and handled with care."
+                title="Laptop Hinges Repair & Replacement Service"
+                subtitle="Loose, stiff, cracked, and misaligned hinges diagnosed and fixed, with your data kept intact."
                 trail={[
                     { label: "Home", href: "#" },
                     { label: "Services", href: "#services" },
-                    { label: "CCTV Footage Recovery", href: "#cctv-footage-recovery" },
+                    { label: "Hinge Repair", href: "#laptop-hinge-repair-service" },
                 ]}
             />
             <Intro />
-            <SystemsSupported />
-            <RecoveryCases />
+            <BrandsSupported />
+            <RepairCases />
             <LabGallery />
             <Process />
             <DoDont />
