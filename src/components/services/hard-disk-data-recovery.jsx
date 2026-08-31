@@ -259,12 +259,12 @@ function Intro() {
 
 function DrivesSupported() {
     const drives = [
-        { img: "/ChatGPT Image Aug 8, 2026, 11_51_20 AM.png", label: "Desktop 3.5\" HDDs" },
-        { img: "/ChatGPT Image Aug 8, 2026, 11_52_36 AM.png", label: "Laptop 2.5\" HDDs" },
-        { img: "/ChatGPT Image Aug 8, 2026, 12_01_34 PM.png", label: "External USB HDDs" },
-        { img: "/ChatGPT Image Aug 8, 2026, 12_03_31 PM.png", label: "NAS enclosure disks" },
-        { img: "/ChatGPT Image Aug 8, 2026, 12_05_01 PM.png", label: "Server & RAID disks" },
-        { img: "/ChatGPT Image Aug 8, 2026, 12_06_43 PM.png", label: "DVR / CCTV disks" },
+        { img: "/pexels-martabranco-32892856.jpg", label: "Desktop 3.5\" HDDs" },
+        { img: "/pexels-sejio402-6429162.jpg", label: "Laptop 2.5\" HDDs" },
+        { img: "/pexels-ian-panelo-4675007.jpg", label: "External USB HDDs" },
+        { img: "/pexels-nicolas-foster-65973708-38117131.jpg", label: "NAS enclosure disks" },
+        { img: "/pexels-zeleboba-35147264.jpg", label: "Server & RAID disks" },
+        { img: "/pexels-martabranco-32920312.jpg", label: "DVR / CCTV disks" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">

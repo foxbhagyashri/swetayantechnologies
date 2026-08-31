@@ -262,12 +262,12 @@ function Intro() {
 
 function SystemsSupported() {
     const items = [
-        { img: "/ChatGPT Image Aug 10, 2026, 11_34_27 AM.png", label: "DVR Recorders" },
-        { img: "/ChatGPT Image Aug 10, 2026, 11_35_43 AM.png", label: "NVR / IP Systems" },
-        { img: "/ChatGPT Image Aug 10, 2026, 11_37_09 AM.png", label: "Surveillance HDDs" },
-        { img: "/ChatGPT Image Aug 10, 2026, 11_57_07 AM.png", label: "RAID / NAS Arrays" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_19_24 PM.png", label: "SD & Flash Cards" },
-        { img: "/b29e4f2d-bc59-4dba-92dc-b5d150695608.png", label: "Hikvision / Dahua / CP Plus" },
+        { img: "/pexels-magda-ehlers-pexels-38666635.jpg", label: "DVR Recorders" },
+        { img: "/pexels-cookiecutter-17636234.jpg", label: "NVR / IP Systems" },
+        { img: "/pexels-bohed-117729.jpg", label: "Surveillance HDDs" },
+        { img: "/pexels-jakubzerdzicki-19825057.jpg", label: "RAID / NAS Arrays" },
+        { img: "/pexels-josh-a-d-4850116-18166725.jpg", label: "SD & Flash Cards" },
+        { img: "/pexels-thomas-veillon-451521767-29866272.jpg", label: "Hikvision / Dahua / CP Plus" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">

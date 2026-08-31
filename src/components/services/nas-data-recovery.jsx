@@ -261,12 +261,12 @@ function Intro() {
 
 function SystemsSupported() {
     const items = [
-        { img: "/ChatGPT Image Aug 10, 2026, 12_38_47 PM.png", label: "Synology NAS" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_41_42 PM.png", label: "QNAP NAS" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_52_21 PM.png", label: "WD My Cloud" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_43_07 PM.png", label: "Netgear ReadyNAS" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_44_41 PM.png", label: "RAID 0/1/5/6/10" },
-        { img: "/ChatGPT Image Aug 10, 2026, 12_46_23 PM.png", label: "Btrfs / ext4 / ZFS" },
+        { img: "/pexels-arturoaez225-18734809.jpg", label: "Synology NAS" },
+        { img: "/pexels-martabranco-32923533.jpg", label: "QNAP NAS" },
+        { img: "/pexels-nicolas-foster-65973708-38117143.jpg", label: "WD My Cloud" },
+        { img: "/pexels-brett-sayles-2881228.jpg", label: "Netgear ReadyNAS" },
+        { img: "/pexels-nicolas-foster-65973708-38412996.jpg", label: "RAID 0/1/5/6/10" },
+        { img: "/pexels-soc-nang-d-ng-2150345854-35247357.jpg", label: "Btrfs / ext4 / ZFS" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">

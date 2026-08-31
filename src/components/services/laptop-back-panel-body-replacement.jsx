@@ -234,7 +234,7 @@ function Intro() {
                 <Reveal delay={150}>
                     <div className="rounded-2xl overflow-hidden mb-6 border border-neutral-200">
                         <Img
-                            src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=900&q=70&auto=format&fit=crop"
+                            src="/ChatGPT Image Aug 31, 2026, 11_39_32 AM.png"
                             alt="Technician fitting a replacement laptop bottom panel"
                             className="w-full h-80 object-cover"
                         />
@@ -263,12 +263,12 @@ function Intro() {
 
 function BrandsSupported() {
     const items = [
-        { img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=70&auto=format&fit=crop", label: "Cracked Corners" },
-        { img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=70&auto=format&fit=crop", label: "Broken Clips / Tabs" },
-        { img: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=500&q=70&auto=format&fit=crop", label: "Panel Won't Sit Flush" },
-        { img: "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=500&q=70&auto=format&fit=crop", label: "Bent or Warped Chassis" },
-        { img: "https://images.unsplash.com/photo-1588200908342-23b585c03e26?w=500&q=70&auto=format&fit=crop", label: "Stripped Screw Holes" },
-        { img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500&q=70&auto=format&fit=crop", label: "Discoloured / Worn Casing" },
+        { img: "/images (37).jfif", label: "Cracked Corners" },
+        { img: "/4wn9aeu109991.jpg", label: "Broken Clips / Tabs" },
+        { img: "/images (38).jfif", label: "Panel Won't Sit Flush" },
+        { img: "/430baa70e0ac5fd312d8f590ce68cba987cb8639_2_666x500.jpeg", label: "Bent or Warped Chassis" },
+        { img: "/images (39).jfif", label: "Stripped Screw Holes" },
+        { img: "/fe66e280-1774-42e6-97d6-87895cba0e97.png", label: "Discoloured / Worn Casing" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">
@@ -280,8 +280,8 @@ function BrandsSupported() {
                     {items.map((d, i) => (
                         <Reveal key={d.label} delay={i * 70}>
                             <div className="flex flex-col items-center text-center gap-3">
-                                <div className="w-full aspect-square rounded-xl overflow-hidden border border-neutral-200">
-                                    <Img src={d.img} alt={d.label} className="w-full h-full object-cover" />
+                                <div className="rounded-xl overflow-hidden border border-neutral-200">
+                                    <Img src={d.img} alt={d.label} className="w-full h-auto" />
                                 </div>
                                 <span className="font-body text-xs text-black">{d.label}</span>
                             </div>

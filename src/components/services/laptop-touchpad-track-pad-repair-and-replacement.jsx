@@ -234,7 +234,7 @@ function Intro() {
                 <Reveal delay={150}>
                     <div className="rounded-2xl overflow-hidden mb-6 border border-neutral-200">
                         <Img
-                            src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28?w=900&q=70&auto=format&fit=crop"
+                            src="/ChatGPT Image Aug 31, 2026, 11_37_35 AM.png"
                             alt="Technician replacing a laptop trackpad module"
                             className="w-full h-80 object-cover"
                         />
@@ -263,12 +263,12 @@ function Intro() {
 
 function BrandsSupported() {
     const items = [
-        { img: "https://images.unsplash.com/photo-1587614203976-365c74645e83?w=500&q=70&auto=format&fit=crop", label: "Cursor Jumps Around" },
-        { img: "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=500&q=70&auto=format&fit=crop", label: "Clicks Not Registering" },
-        { img: "https://images.unsplash.com/photo-1587614382346-4ec70e388b28?w=500&q=70&auto=format&fit=crop", label: "Totally Unresponsive" },
-        { img: "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=500&q=70&auto=format&fit=crop", label: "Raised or Bulging Pad" },
-        { img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500&q=70&auto=format&fit=crop", label: "Scroll / Gestures Broken" },
-        { img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=70&auto=format&fit=crop", label: "Works Only Sometimes" },
+        { img: "/pexels-pixabay-60504.jpg", label: "Cursor Jumps Around" },
+        { img: "/pexels-rdne-7821760.jpg", label: "Clicks Not Registering" },
+        { img: "/pexels-samerdaboul-1240527.jpg", label: "Totally Unresponsive" },
+        { img: "/pexels-karola-g-4195502.jpg", label: "Raised or Bulging Pad" },
+        { img: "/pexels-thefullonmonet-28379999.jpg", label: "Scroll / Gestures Broken" },
+        { img: "/pexels-iwashere-15227212.jpg", label: "Works Only Sometimes" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">
@@ -280,8 +280,8 @@ function BrandsSupported() {
                     {items.map((d, i) => (
                         <Reveal key={d.label} delay={i * 70}>
                             <div className="flex flex-col items-center text-center gap-3">
-                                <div className="w-full aspect-square rounded-xl overflow-hidden border border-neutral-200">
-                                    <Img src={d.img} alt={d.label} className="w-full h-full object-cover" />
+                                <div className="rounded-xl overflow-hidden border border-neutral-200">
+                                    <Img src={d.img} alt={d.label} className="w-full h-auto" />
                                 </div>
                                 <span className="font-body text-xs text-black">{d.label}</span>
                             </div>

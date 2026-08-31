@@ -234,7 +234,7 @@ function Intro() {
                 <Reveal delay={150}>
                     <div className="rounded-2xl overflow-hidden mb-6 border border-neutral-200">
                         <Img
-                            src="https://images.unsplash.com/photo-1588200908342-23b585c03e26?w=900&q=70&auto=format&fit=crop"
+                            src="/ChatGPT Image Aug 31, 2026, 11_41_17 AM.png"
                             alt="Technician fitting a replacement laptop display panel"
                             className="w-full h-80 object-cover"
                         />
@@ -263,7 +263,7 @@ function Intro() {
 
 function BrandsSupported() {
     const items = [
-        { img: "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=500&q=70&auto=format&fit=crop", label: "Cracked / Shattered Glass" },
+        { img: "/pexels-thefullonmonet-28379997.jpg", label: "Cracked / Shattered Glass" },
         { img: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=500&q=70&auto=format&fit=crop", label: "Black Screen, PC On" },
         { img: "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=500&q=70&auto=format&fit=crop", label: "Flickering Display" },
         { img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&q=70&auto=format&fit=crop", label: "Lines or Dead Pixels" },
@@ -280,8 +280,8 @@ function BrandsSupported() {
                     {items.map((d, i) => (
                         <Reveal key={d.label} delay={i * 70}>
                             <div className="flex flex-col items-center text-center gap-3">
-                                <div className="w-full aspect-square rounded-xl overflow-hidden border border-neutral-200">
-                                    <Img src={d.img} alt={d.label} className="w-full h-full object-cover" />
+                                <div className="rounded-xl overflow-hidden border border-neutral-200">
+                                    <Img src={d.img} alt={d.label} className="w-full h-auto" />
                                 </div>
                                 <span className="font-body text-xs text-black">{d.label}</span>
                             </div>

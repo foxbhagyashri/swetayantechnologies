@@ -234,7 +234,7 @@ function Intro() {
                 <Reveal delay={150}>
                     <div className="rounded-2xl overflow-hidden mb-6 border border-neutral-200">
                         <Img
-                            src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=900&q=70&auto=format&fit=crop"
+                            src="/ChatGPT Image Aug 31, 2026, 11_35_48 AM.png"
                             alt="Technician replacing a laptop battery pack"
                             className="w-full h-80 object-cover"
                         />
@@ -263,12 +263,12 @@ function Intro() {
 
 function BrandsSupported() {
     const items = [
-        { img: "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=500&q=70&auto=format&fit=crop", label: "Won't Hold Charge" },
-        { img: "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=500&q=70&auto=format&fit=crop", label: "Swollen Battery" },
-        { img: "https://images.unsplash.com/photo-1620825141669-cda50e7ea394?w=500&q=70&auto=format&fit=crop", label: "Plugged In, Not Charging" },
-        { img: "https://images.unsplash.com/photo-1588200908342-23b585c03e26?w=500&q=70&auto=format&fit=crop", label: "Drains in Under an Hour" },
-        { img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500&q=70&auto=format&fit=crop", label: "0% or 100% Stuck" },
-        { img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=70&auto=format&fit=crop", label: "Shuts Down Unplugged" },
+        { img: "/pexels-it-services-eu-9278798-7639355.jpg", label: "Won't Hold Charge" },
+        { img: "/pexels-elias-gamez-2002621-10558598 (1).jpg", label: "Swollen Battery" },
+        { img: "/pexels-sk-p-260664732-12786198.jpg", label: "Plugged In, Not Charging" },
+        { img: "/pexels-markusspiske-234140.jpg", label: "Drains in Under an Hour" },
+        { img: "/pexels-karola-g-5882580.jpg", label: "0% or 100% Stuck" },
+        { img: "/pexels-nickoloui-2506947.jpg", label: "Shuts Down Unplugged" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">
@@ -280,8 +280,8 @@ function BrandsSupported() {
                     {items.map((d, i) => (
                         <Reveal key={d.label} delay={i * 70}>
                             <div className="flex flex-col items-center text-center gap-3">
-                                <div className="w-full aspect-square rounded-xl overflow-hidden border border-neutral-200">
-                                    <Img src={d.img} alt={d.label} className="w-full h-full object-cover" />
+                                <div className="rounded-xl overflow-hidden border border-neutral-200">
+                                    <Img src={d.img} alt={d.label} className="w-full h-auto" />
                                 </div>
                                 <span className="font-body text-xs text-black">{d.label}</span>
                             </div>

@@ -233,7 +233,7 @@ function Intro() {
                 <Reveal delay={150}>
                     <div className="rounded-2xl overflow-hidden mb-6 border border-neutral-200">
                         <Img
-                            src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=70&auto=format&fit=crop"
+                            src="/ChatGPT Image Aug 31, 2026, 11_28_39 AM.png"
                             alt="Technician testing a laptop power board on the bench"
                             className="w-full h-80 object-cover"
                         />
@@ -262,12 +262,12 @@ function Intro() {
 
 function BrandsSupported() {
     const items = [
-        { img: "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=500&q=70&auto=format&fit=crop", label: "No Lights At All" },
-        { img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&q=70&auto=format&fit=crop", label: "Fan Spins, No Display" },
-        { img: "https://images.unsplash.com/photo-1588200908342-23b585c03e26?w=500&q=70&auto=format&fit=crop", label: "Charging Light, Won't Boot" },
-        { img: "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=500&q=70&auto=format&fit=crop", label: "Turns Off Randomly" },
-        { img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500&q=70&auto=format&fit=crop", label: "Beeping / Blinking Codes" },
-        { img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=70&auto=format&fit=crop", label: "After a Drop or Spill" },
+        { img: "/pexels-found-ghi-2156772983-34514242 (1).jpg", label: "No Lights At All" },
+        { img: "/pexels-thefullonmonet-28379998.jpg", label: "Fan Spins, No Display" },
+        { img: "/pexels-mediahooch-16385070.jpg", label: "Charging Light, Won't Boot" },
+        { img: "/pexels-it-services-eu-9278798-7639373.jpg", label: "Turns Off Randomly" },
+        { img: "/pexels-dkomov-34803994.jpg", label: "Beeping / Blinking Codes" },
+        { img: "/pexels-kieutruongphoto-15554492.jpg", label: "After a Drop or Spill" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">
@@ -279,8 +279,8 @@ function BrandsSupported() {
                     {items.map((d, i) => (
                         <Reveal key={d.label} delay={i * 70}>
                             <div className="flex flex-col items-center text-center gap-3">
-                                <div className="w-full aspect-square rounded-xl overflow-hidden border border-neutral-200">
-                                    <Img src={d.img} alt={d.label} className="w-full h-full object-cover" />
+                                <div className="rounded-xl overflow-hidden border border-neutral-200">
+                                    <Img src={d.img} alt={d.label} className="w-full h-auto" />
                                 </div>
                                 <span className="font-body text-xs text-black">{d.label}</span>
                             </div>

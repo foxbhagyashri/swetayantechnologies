@@ -262,12 +262,12 @@ function Intro() {
 
 function SystemsSupported() {
     const items = [
-        { img: "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=500&q=70&auto=format&fit=crop", label: "Dell PowerEdge" },
-        { img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&q=70&auto=format&fit=crop", label: "HPE ProLiant" },
-        { img: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=500&q=70&auto=format&fit=crop", label: "Hardware & Software RAID" },
-        { img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=70&auto=format&fit=crop", label: "VMware / Hyper-V Datastores" },
-        { img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&q=70&auto=format&fit=crop", label: "SQL / Exchange Servers" },
-        { img: "https://images.unsplash.com/photo-1591405351990-4726e331f141?w=500&q=70&auto=format&fit=crop", label: "RAID 0/1/5/6/10/50/60" },
+        { img: "/pexels-pok-rie-33563-1432680.jpg", label: "Dell PowerEdge" },
+        { img: "/pexels-cookiecutter-37605910.jpg", label: "HPE ProLiant" },
+        { img: "/pexels-cottonbro-8720589.jpg", label: "Hardware & Software RAID" },
+        { img: "/pexels-sejio402-6466141.jpg", label: "VMware / Hyper-V Datastores" },
+        { img: "/pexels-cookiecutter-17489152.jpg", label: "SQL / Exchange Servers" },
+        { img: "/pexels-vladimirsrajber-13963756.jpg", label: "RAID 0/1/5/6/10/50/60" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">
@@ -279,8 +279,8 @@ function SystemsSupported() {
                     {items.map((d, i) => (
                         <Reveal key={d.label} delay={i * 70}>
                             <div className="flex flex-col items-center text-center gap-3">
-                                <div className="w-full aspect-square rounded-xl overflow-hidden border border-neutral-200">
-                                    <Img src={d.img} alt={d.label} className="w-full h-full object-cover" />
+                                <div className="rounded-xl overflow-hidden border border-neutral-200">
+                                    <Img src={d.img} alt={d.label} className="w-full h-auto" />
                                 </div>
                                 <span className="font-body text-xs text-black">{d.label}</span>
                             </div>

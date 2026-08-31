@@ -238,7 +238,7 @@ function Intro() {
                 <Reveal delay={150}>
                     <div className="rounded-2xl overflow-hidden mb-6 border border-neutral-200">
                         <Img
-                            src="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=900&q=70&auto=format&fit=crop"
+                            src="/ChatGPT Image Aug 31, 2026, 11_24_14 AM.png"
                             alt="Technician cleaning a laptop cooling fan and heatsink"
                             className="w-full h-80 object-cover"
                         />

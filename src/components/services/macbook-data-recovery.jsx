@@ -258,12 +258,12 @@ function Intro() {
 
 function MacsSupported() {
     const items = [
-        { img: "/ChatGPT Image Aug 8, 2026, 12_37_10 PM.png", label: "MacBook Air" },
-        { img: "/ChatGPT Image Aug 8, 2026, 12_38_37 PM.png", label: "MacBook Pro" },
-        { img: "/ChatGPT Image Aug 8, 2026, 12_41_47 PM.png", label: "Intel-based MacBooks" },
-        { img: "/ChatGPT Image Aug 8, 2026, 12_43_16 PM.png", label: "Apple Silicon (M-series)" },
-        { img: "/ChatGPT Image Aug 8, 2026, 12_44_53 PM.png", label: "T2-chip Macs" },
-        { img: "/ChatGPT Image Aug 8, 2026, 12_46_24 PM.png", label: "APFS-formatted drives" },
+        { img: "/pexels-guilherme-pedrosa-2156844062-34406247.jpg", label: "MacBook Air" },
+        { img: "/pexels-tact-tm-3822337.jpg", label: "MacBook Pro" },
+        { img: "/pexels-jibarofoto-2148217.jpg", label: "Intel-based MacBooks" },
+        { img: "/pexels-cottonbro-5082561.jpg", label: "Apple Silicon (M-series)" },
+        { img: "/pexels-jakub-pabis-147246622-36169770.jpg", label: "T2-chip Macs" },
+        { img: "/pexels-nicolas-foster-65973708-37949788.jpg", label: "APFS-formatted drives" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">

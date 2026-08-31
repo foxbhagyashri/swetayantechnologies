@@ -234,7 +234,7 @@ function Intro() {
                 <Reveal delay={150}>
                     <div className="rounded-2xl overflow-hidden mb-6 border border-neutral-200">
                         <Img
-                            src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=900&q=70&auto=format&fit=crop"
+                            src="/ChatGPT Image Aug 31, 2026, 11_14_33 AM.png"
                             alt="Technician running a security scan on a laptop"
                             className="w-full h-80 object-cover"
                         />
@@ -263,12 +263,12 @@ function Intro() {
 
 function BrandsSupported() {
     const items = [
-        { img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&q=70&auto=format&fit=crop", label: "Windows 10 / 11" },
-        { img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=70&auto=format&fit=crop", label: "macOS Setup" },
-        { img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=500&q=70&auto=format&fit=crop", label: "Licensed Antivirus" },
-        { img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&q=70&auto=format&fit=crop", label: "MS Office & Productivity" },
-        { img: "https://images.unsplash.com/photo-1588200908342-23b585c03e26?w=500&q=70&auto=format&fit=crop", label: "Drivers & Firmware" },
-        { img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=70&auto=format&fit=crop", label: "Business & Home Use" },
+        { img: "/pexels-zeleboba-33092502.jpg", label: "Windows 10 / 11" },
+        { img: "/pexels-dkomov-34803971.jpg", label: "macOS Setup" },
+        { img: "/pexels-mikhail-nilov-6963944.jpg", label: "Licensed Antivirus" },
+        { img: "/pexels-lalorosas-907487.jpg", label: "MS Office & Productivity" },
+        { img: "/pexels-arturoaez225-18734809 (1).jpg", label: "Drivers & Firmware" },
+        { img: "/pexels-kampus-7289720.jpg", label: "Business & Home Use" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">
@@ -280,8 +280,8 @@ function BrandsSupported() {
                     {items.map((d, i) => (
                         <Reveal key={d.label} delay={i * 70}>
                             <div className="flex flex-col items-center text-center gap-3">
-                                <div className="w-full aspect-square rounded-xl overflow-hidden border border-neutral-200">
-                                    <Img src={d.img} alt={d.label} className="w-full h-full object-cover" />
+                                <div className="rounded-xl overflow-hidden border border-neutral-200">
+                                    <Img src={d.img} alt={d.label} className="w-full h-auto" />
                                 </div>
                                 <span className="font-body text-xs text-black">{d.label}</span>
                             </div>

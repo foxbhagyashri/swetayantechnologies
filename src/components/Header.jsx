@@ -2,6 +2,24 @@ import React, { useState, useEffect } from "react";
 import { Phone, Mail, ArrowRight, Menu, X, ChevronRight, ChevronDown } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
+// Custom thin scrollbar for dropdown menus
+const scrollbarStyles = `
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #ff8904;
+    border-radius: 10px;
+}
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #ff8904 transparent;
+}
+`;
+
 export default function SiteHeader() {
     const [open, setOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
@@ -88,40 +106,37 @@ export default function SiteHeader() {
 
                 {
                     name: "Laptop SSD Installation / Setup",
-                    path: "/services/laptop-repair",
+                    path: "/services/laptop-SSD-Installation-Setup",
                 },
                 {
                     name: "Laptop Booting Issue Repair",
-                    path: "/services/laptop-repair",
+                    path: "/services/laptop-Booting-Issue-Repair",
                 },
 
                 {
                     name: "Laptop Charging Point Repair & Replacement",
-                    path: "/services/laptop-repair",
+                    path: "/services/laptop-charging-point-repair-replacement",
                 },
                 {
                     name: "Laptop Motherboard Repair & Replacement",
-                    path: "/services/laptop-repair",
+                    path: "/services/laptop-motherboard-repair-replacement",
                 },
                 {
                     name: "Laptop RAM Replacement Fix & Upgrade",
-                    path: "/services/laptop-repair",
+                    path: "/services/laptop-ram-replacement-fix-upgrade",
                 },
-                {
-                    name: "Laptop Booting Issue Repair",
-                    path: "/services/laptop-repair",
-                },
+
                 {
                     name: "Laptop Charger Repair & Replacement",
-                    path: "/services/laptop-repair",
+                    path: "/services/laptop-charger-repair-replacement",
                 },
                 {
                     name: "Laptop Hard Disk Repair & Replacement",
-                    path: "/services/laptop-repair",
+                    path: "/services/laptop-hard-disk-repair-replacement",
                 },
                 {
                     name: "Laptop BIOS Setup & Installation",
-                    path: "/services/laptop-repair",
+                    path: "/services/laptop-BIOS-setup-and-Installation",
                 },
             ],
         },
@@ -134,6 +149,8 @@ export default function SiteHeader() {
 
     return (
         <>
+            <style>{scrollbarStyles}</style>
+
             {/* Top Bar */}
             <div className="bg-neutral-950 text-neutral-300 font-mono text-xs">
                 <div className="max-w-7xl mx-auto px-5 py-2 flex items-center justify-between">
@@ -193,7 +210,7 @@ export default function SiteHeader() {
                                         {link.name}
                                     </button>
 
-                                    <div className="absolute left-0 top-full mt-2 w-64 bg-white rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-2">
+                                    <div className="absolute left-0 top-full mt-2 w-64 bg-white rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-2 max-h-[300px] overflow-y-auto custom-scrollbar">
 
                                         {link.dropdown.map((item) =>
 
@@ -209,7 +226,7 @@ export default function SiteHeader() {
                                                         <ChevronRight size={16} />
                                                     </button>
 
-                                                    <div className="absolute left-full top-0 -mt-2 ml-1 w-64 bg-white rounded-lg shadow-xl border opacity-0 invisible group-hover/inner:opacity-100 group-hover/inner:visible transition-all duration-300 z-50 py-2">
+                                                    <div className="absolute left-full top-0 -mt-2 ml-1 w-64 bg-white rounded-lg shadow-xl border opacity-0 invisible group-hover/inner:opacity-100 group-hover/inner:visible transition-all duration-300 z-50 py-2 max-h-[300px] overflow-y-auto custom-scrollbar">
 
                                                         {item.dropdown.map((sub) => (
                                                             <NavLink
@@ -266,7 +283,7 @@ export default function SiteHeader() {
 
                     {/* CTA Button */}
                     <NavLink
-                        to="/contact"
+                        to="/EnquiryForm"
                         className="hidden lg:flex items-center gap-2 bg-[#ff8904] hover:bg-orange-600 text-white px-5 py-3 rounded-md transition"
                     >
                         Get Free Diagnosis
@@ -323,7 +340,7 @@ export default function SiteHeader() {
                                                         </button>
 
                                                         {openMobile[item.name] && (
-                                                            <div className="ml-4 mt-2 flex flex-col gap-2">
+                                                            <div className="ml-4 mt-2 flex flex-col gap-2 max-h-[250px] overflow-y-auto custom-scrollbar">
                                                                 {item.dropdown.map((sub) => (
                                                                     <NavLink
                                                                         key={sub.name}
@@ -377,7 +394,7 @@ export default function SiteHeader() {
 
                             ))}
                             <NavLink
-                                to="/contact"
+                                to="/EnquiryForm"
                                 onClick={() => setOpen(false)}
                                 className="bg-orange-500 text-white text-center py-3 rounded-md"
                             >

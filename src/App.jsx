@@ -24,7 +24,17 @@ import LaptopScreenRepairServicePage from "./components/services/laptop-screen-r
 import LaptopFanNoiseRepairServicePage from "./components/services/laptop-processor-fan-noise-repaire-and-replacement"
 import LaptopNotChargingRepairServicePage from "./components/services/laptop-not-charging-repair"
 import LaptopHingeRepairServicePage from "./components/services/laptop-hinges-repair-and-replacement"
+import LaptopSSDInstallationServicePage from "./components/services/laptop-SSD-Installation-Setup"
+import LaptopBootingIssueRepairServicePage from "./components/services/laptop-Booting-Issue-Repair"
+import LaptopChargingPointRepairServicePage from "./components/services/laptop-charging-point-repair-replacement"
+import LaptopMotherboardRepairServicePage from "./components/services/laptop-motherboard-repair-replacement"
+import LaptopRAMReplacementServicePage from "./components/services/laptop-ram-replacement-fix-upgrade"
+import LaptopChargerRepairServicePage from "./components/services/laptop-charger-repair-replacement"
+import LaptopHardDiskRepairServicePage from "./components/services/laptop-hard-disk-repair-replacement"
+import LaptopBiosSetupInstallationServicePage from "./components/services/laptop-BIOS-setup-and-Installation"
+
 import ContactPage from "./components/Contact_us";
+import EnquiryPage from "./components/EnquiryForm"
 import BlogPage from "./components/Blog";
 import "./App.css";
 
@@ -62,8 +72,19 @@ function App() {
         <Route path="/services/laptop-processor-fan-noise-repaire-and-replacement" element={<LaptopFanNoiseRepairServicePage />} />
         <Route path="/services/laptop-not-charging-repair" element={<LaptopNotChargingRepairServicePage />} />
         <Route path="/services/laptop-hinges-repair-and-replacement" element={<LaptopHingeRepairServicePage />} />
+        <Route path="/services/laptop-SSD-Installation-Setup" element={<LaptopSSDInstallationServicePage />} />
+        <Route path="/services/laptop-Booting-Issue-Repair" element={<LaptopBootingIssueRepairServicePage />} />
+        <Route path="/services/laptop-charging-point-repair-replacement" element={<LaptopChargingPointRepairServicePage />} />
+        <Route path="/services/laptop-motherboard-repair-replacement" element={<LaptopMotherboardRepairServicePage />} />
+        <Route path="/services/laptop-ram-replacement-fix-upgrade" element={<LaptopRAMReplacementServicePage />} />
+        <Route path="/services/laptop-charger-repair-replacement" element={<LaptopChargerRepairServicePage />} />
+        <Route path="/services/laptop-hard-disk-repair-replacement" element={<LaptopHardDiskRepairServicePage />} />
+
+ <Route path="/services/laptop-BIOS-setup-and-Installation" element={<LaptopBiosSetupInstallationServicePage />} />
 
 
+
+        <Route path="/EnquiryForm" element={<EnquiryPage />} />
         <Route path="/Contact_us" element={<ContactPage />} />
         <Route path="/Blog" element={<BlogPage />} />
 

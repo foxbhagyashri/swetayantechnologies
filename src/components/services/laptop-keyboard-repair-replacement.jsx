@@ -236,7 +236,7 @@ function Intro() {
                 <Reveal delay={150}>
                     <div className="rounded-2xl overflow-hidden mb-6 border border-neutral-200">
                         <Img
-                            src="https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=900&q=70&auto=format&fit=crop"
+                            src="/ChatGPT Image Aug 31, 2026, 11_18_39 AM.png"
                             alt="Technician replacing a laptop keyboard"
                             className="w-full h-80 object-cover"
                         />
@@ -266,8 +266,8 @@ function Intro() {
 function BrandsSupported() {
     const items = [
         { img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&q=70&auto=format&fit=crop", label: "Dell / HP / Lenovo" },
-        { img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=70&auto=format&fit=crop", label: "Apple MacBook" },
-        { img: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=500&q=70&auto=format&fit=crop", label: "Asus / Acer / MSI" },
+        { img: "/pexels-joshsorenson-11237834.jpg", label: "Apple MacBook" },
+        { img: "/pexels-ferarcosn-169484.jpg", label: "Asus / Acer / MSI" },
         { img: "https://images.unsplash.com/photo-1602080858428-57174f9431cf?w=500&q=70&auto=format&fit=crop", label: "Gaming Laptops" },
         { img: "https://images.unsplash.com/photo-1588200908342-23b585c03e26?w=500&q=70&auto=format&fit=crop", label: "Business Ultrabooks" },
         { img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=70&auto=format&fit=crop", label: "2-in-1 & Convertibles" },

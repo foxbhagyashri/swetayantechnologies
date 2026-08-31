@@ -257,12 +257,12 @@ function Intro() {
 
 function DrivesSupported() {
     const drives = [
-        { img: "/ChatGPT Image Aug 8, 2026, 12_52_06 PM.png", label: "M.2 NVMe SSDs" },
-        { img: "/ChatGPT Image Aug 8, 2026, 12_56_15 PM.png", label: "SATA 2.5\" SSDs" },
-        { img: "/ChatGPT Image Aug 8, 2026, 12_56_15 PM.png", label: "mSATA SSDs" },
-        { img: "/ChatGPT Image Aug 8, 2026, 12_58_05 PM.png", label: "Internal laptop SSDs" },
-        { img: "/ChatGPT Image Aug 10, 2026, 10_30_25 AM.png", label: "External USB SSDs" },
-        { img: "/ChatGPT Image Aug 10, 2026, 10_53_07 AM.png", label: "Enterprise / server SSDs" },
+        { img: "/pexels-zeleboba-28666524.jpg", label: "M.2 NVMe SSDs" },
+        { img: "/pexels-elias-gamez-2002621-10558598.jpg", label: "SATA 2.5\" SSDs" },
+        { img: "/pexels-zeleboba-35147150.jpg", label: "mSATA SSDs" },
+        { img: "/pexels-it-services-eu-9278798-7639374.jpg", label: "Internal laptop SSDs" },
+        { img: "/pexels-avinash-kumar-299518778-13595074.jpg", label: "External USB SSDs" },
+        { img: "/pexels-cookiecutter-17489153.jpg", label: "Enterprise / server SSDs" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">

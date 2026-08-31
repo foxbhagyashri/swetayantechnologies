@@ -258,12 +258,12 @@ function Intro() {
 
 function LaptopsSupported() {
     const items = [
-        { img: "/ChatGPT Image Aug 8, 2026, 12_14_44 PM.png", label: "Windows laptops" },
-        { img: "/ChatGPT Image Aug 8, 2026, 12_16_24 PM.png", label: "MacBook® laptops" },
-        { img: "/ChatGPT Image Aug 8, 2026, 12_20_35 PM.png", label: "Internal 2.5\" HDDs" },
-        { img: "/ChatGPT Image Aug 8, 2026, 12_22_13 PM.png", label: "M.2 / NVMe SSDs" },
-        { img: "/ChatGPT Image Aug 8, 2026, 12_23_43 PM.png", label: "Ultrabooks & 2-in-1s" },
-        { img: "/ChatGPT Image Aug 8, 2026, 12_25_25 PM.png", label: "Business & gaming laptops" },
+        { img: "/pexels-mikhail-nilov-6969658.jpg", label: "Windows laptops" },
+        { img: "/pexels-feel-and-live-8068269.jpg", label: "MacBook® laptops" },
+        { img: "/pexels-zeleboba-4526279.jpg", label: "Internal 2.5\" HDDs" },
+        { img: "/pexels-lesior-35984425.jpg", label: "M.2 / NVMe SSDs" },
+        { img: "/pexels-foysal-ahmed-2102283-6053293.jpg", label: "Ultrabooks & 2-in-1s" },
+        { img: "/pexels-startup-stock-photos-7082.jpg", label: "Business & gaming laptops" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">

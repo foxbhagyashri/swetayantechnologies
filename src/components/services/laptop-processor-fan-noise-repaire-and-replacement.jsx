@@ -234,7 +234,7 @@ function Intro() {
                 <Reveal delay={150}>
                     <div className="rounded-2xl overflow-hidden mb-6 border border-neutral-200">
                         <Img
-                            src="https://images.unsplash.com/photo-1587202372556-4bcb5f21b2b0?w=900&q=70&auto=format&fit=crop"
+                            src="/ChatGPT Image Aug 31, 2026, 11_43_05 AM.png"
                             alt="Technician replacing a laptop processor cooling fan"
                             className="w-full h-80 object-cover"
                         />
@@ -264,11 +264,11 @@ function Intro() {
 function BrandsSupported() {
     const items = [
         { img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500&q=70&auto=format&fit=crop", label: "Grinding / Rattling" },
-        { img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&q=70&auto=format&fit=crop", label: "High-Pitched Whine" },
-        { img: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=500&q=70&auto=format&fit=crop", label: "Fan Stuck at Full Speed" },
-        { img: "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=500&q=70&auto=format&fit=crop", label: "Clicking / Ticking" },
-        { img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=70&auto=format&fit=crop", label: "Fan Not Spinning" },
-        { img: "https://images.unsplash.com/photo-1588200908342-23b585c03e26?w=500&q=70&auto=format&fit=crop", label: "Intermittent Noise" },
+        { img: "/pexels-elias-gamez-2002621-10558599.jpg", label: "High-Pitched Whine" },
+        { img: "/pexels-zeleboba-19892557.jpg", label: "Fan Stuck at Full Speed" },
+        { img: "/pexels-alexakrain-6677499.jpg", label: "Clicking / Ticking" },
+        { img: "/pexels-it-services-eu-9278798-7639370 (1).jpg", label: "Fan Not Spinning" },
+        { img: "/pexels-ismaelcampos-16720101.jpg", label: "Intermittent Noise" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">
@@ -280,8 +280,8 @@ function BrandsSupported() {
                     {items.map((d, i) => (
                         <Reveal key={d.label} delay={i * 70}>
                             <div className="flex flex-col items-center text-center gap-3">
-                                <div className="w-full aspect-square rounded-xl overflow-hidden border border-neutral-200">
-                                    <Img src={d.img} alt={d.label} className="w-full h-full object-cover" />
+                                <div className="rounded-xl overflow-hidden border border-neutral-200">
+                                    <Img src={d.img} alt={d.label} className="w-full h-auto" />
                                 </div>
                                 <span className="font-body text-xs text-black">{d.label}</span>
                             </div>

@@ -259,12 +259,12 @@ function Intro() {
 
 function MediaSupported() {
     const media = [
-        { img: "/ChatGPT Image Aug 10, 2026, 11_06_55 AM.png", label: "USB flash / pen drives" },
-        { img: "/ChatGPT Image Aug 10, 2026, 11_08_26 AM.png", label: "SD & microSD cards" },
-        { img: "/ChatGPT Image Aug 10, 2026, 11_09_54 AM.png", label: "CompactFlash (CF) cards" },
-        { img: "/174df0ff-46ef-4ffb-a3e2-bebfe30bc739.png", label: "External flash drives" },
-        { img: "/ChatGPT Image Aug 10, 2026, 11_14_43 AM.png", label: "Camera & drone cards" },
-        { img: "/ChatGPT Image Aug 10, 2026, 11_21_09 AM.png", label: "Action-cam memory cards" },
+        { img: "/pexels-michaelgaultphotos-10336136.jpg", label: "USB flash / pen drives" },
+        { img: "/pexels-introspectivedsgn-7192243.jpg", label: "SD & microSD cards" },
+        { img: "/pexels-jaralol-30662603.jpg", label: "CompactFlash (CF) cards" },
+        { img: "/pexels-anete-lusina-4792736.jpg", label: "External flash drives" },
+        { img: "/pexels-dogukan-10525641.jpg", label: "Camera & drone cards" },
+        { img: "/pexels-jibarofoto-2147081.jpg", label: "Action-cam memory cards" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">
