@@ -262,12 +262,12 @@ function Intro() {
 
 function SymptomsGrid() {
     const items = [
-        { img: "https://images.unsplash.com/photo-1587614382346-4ec70e388b28?w=500&q=70&auto=format&fit=crop", label: "Black Screen on Power-Up" },
-        { img: "https://images.unsplash.com/photo-1600267175161-cfaa711b4a81?w=500&q=70&auto=format&fit=crop", label: "Stuck at Logo Screen" },
-        { img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=70&auto=format&fit=crop", label: "Boot Loop / Restarts Repeatedly" },
-        { img: "https://images.unsplash.com/photo-1550439062-609e1531270e?w=500&q=70&auto=format&fit=crop", label: "Blue / Black Error Screen" },
-        { img: "https://images.unsplash.com/photo-1591405351990-4726e331f141?w=500&q=70&auto=format&fit=crop", label: "'No Bootable Device' Message" },
-        { img: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=500&q=70&auto=format&fit=crop", label: "Fans Spin, Screen Stays Dark" },
+        { img: "/pexels-artempodrez-4884116.jpg", label: "Black Screen on Power-Up" },
+        { img: "/pexels-tima-miroshnichenko-6611937.jpg", label: "Stuck at Logo Screen" },
+        { img: "/computer-repeatedly-restarts-when-trying-to-boot-up-v0-73u4ex9tar1h1.png", label: "Boot Loop / Restarts Repeatedly" },
+        { img: "/pexels-thefullonmonet-28379999 (1).jpg", label: "Blue / Black Error Screen" },
+        { img: "/pexels-cup-of-couple-6633283.jpg", label: "'No Bootable Device' Message" },
+        { img: "/images (42).jfif", label: "Fans Spin, Screen Stays Dark" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">

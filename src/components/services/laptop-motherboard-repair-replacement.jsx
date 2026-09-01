@@ -264,10 +264,10 @@ function SymptomsGrid() {
     const items = [
         { img: "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=500&q=70&auto=format&fit=crop", label: "No Power / Dead Board" },
         { img: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=500&q=70&auto=format&fit=crop", label: "No Display / Black Screen" },
-        { img: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=500&q=70&auto=format&fit=crop", label: "Liquid Spill Damage" },
-        { img: "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?w=500&q=70&auto=format&fit=crop", label: "Random Shutdowns" },
-        { img: "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=500&q=70&auto=format&fit=crop", label: "Burning Smell / Short Circuit" },
-        { img: "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=500&q=70&auto=format&fit=crop", label: "USB / Ports Not Working" },
+        { img: "/images (43).jfif", label: "Liquid Spill Damage" },
+        { img: "/Top-Ways-to-Fix-Random-Shut-Downs-on-Windows-11.jpg", label: "Random Shutdowns" },
+        { img: "/laptop-short-circuit.webp", label: "Burning Smell / Short Circuit" },
+        { img: "/images (44).jfif", label: "USB / Ports Not Working" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">

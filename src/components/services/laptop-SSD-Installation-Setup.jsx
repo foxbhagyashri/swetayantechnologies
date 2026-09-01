@@ -263,11 +263,11 @@ function Intro() {
 function SymptomsGrid() {
     const items = [
         { img: "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=500&q=70&auto=format&fit=crop", label: "Slow Boot Times" },
-        { img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=70&auto=format&fit=crop", label: "Frequent Freezing" },
-        { img: "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=500&q=70&auto=format&fit=crop", label: "Old Hard Disk Drive (HDD)" },
-        { img: "https://images.unsplash.com/photo-1591405351990-4726e331f141?w=500&q=70&auto=format&fit=crop", label: "Full Storage / No Space" },
-        { img: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=500&q=70&auto=format&fit=crop", label: "Clicking / Grinding Drive" },
-        { img: "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?w=500&q=70&auto=format&fit=crop", label: "Apps Slow to Load" },
+        { img: "/Frozen_Dell_Laptop.webp", label: "Frequent Freezing" },
+        { img: "/pexels-nicolas-foster-65973708-38412989.jpg", label: "Old Hard Disk Drive (HDD)" },
+        { img: "/pexels-jakubzerdzicki-34239106.jpg", label: "Full Storage / No Space" },
+        { img: "/pexels-arina-krasnikova-5951759.jpg", label: "Clicking / Grinding Drive" },
+        { img: "/images (41).jfif", label: "Apps Slow to Load" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">
