@@ -368,52 +368,52 @@ function RecoveryCases() {
 
 /* ---------- inside the lab (image gallery) ---------- */
 
-function LabGallery() {
-    const shots = [
-        {
-            img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900&q=70&auto=format&fit=crop",
-            title: "Precision teardown",
-            desc: "MacBooks use proprietary screws and tightly packed internals — we open them with the right tools, not force.",
-        },
-        {
-            img: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=900&q=70&auto=format&fit=crop",
-            title: "Logic board diagnosis",
-            desc: "We trace faults on the board itself, since storage is often soldered rather than removable.",
-        },
-        {
-            img: "https://images.unsplash.com/photo-1591405351990-4726e331f141?w=900&q=70&auto=format&fit=crop",
-            title: "APFS-aware imaging",
-            desc: "A forensic image is taken with full awareness of APFS containers and FileVault, wherever possible.",
-        },
-    ];
-    return (
-        <section className="bg-neutral-950 py-20">
-            <div className="max-w-7xl mx-auto px-5">
-                <Reveal>
-                    <div className="max-w-2xl mb-14">
-                        <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
-                        <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
-                            What happens to your MacBook.
-                        </h2>
-                    </div>
-                </Reveal>
-                <div className="grid md:grid-cols-3 gap-6">
-                    {shots.map((s, i) => (
-                        <Reveal key={s.title} delay={i * 100}>
-                            <div className="rounded-xl overflow-hidden border border-neutral-800">
-                                <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
-                                <div className="p-5 bg-neutral-900">
-                                    <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
-                                    <p className="font-body text-xs text-white mt-2 leading-relaxed">{s.desc}</p>
-                                </div>
-                            </div>
-                        </Reveal>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-}
+// function LabGallery() {
+//     const shots = [
+//         {
+//             img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900&q=70&auto=format&fit=crop",
+//             title: "Precision teardown",
+//             desc: "MacBooks use proprietary screws and tightly packed internals — we open them with the right tools, not force.",
+//         },
+//         {
+//             img: "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=900&q=70&auto=format&fit=crop",
+//             title: "Logic board diagnosis",
+//             desc: "We trace faults on the board itself, since storage is often soldered rather than removable.",
+//         },
+//         {
+//             img: "https://images.unsplash.com/photo-1591405351990-4726e331f141?w=900&q=70&auto=format&fit=crop",
+//             title: "APFS-aware imaging",
+//             desc: "A forensic image is taken with full awareness of APFS containers and FileVault, wherever possible.",
+//         },
+//     ];
+//     return (
+//         <section className="bg-neutral-950 py-20">
+//             <div className="max-w-7xl mx-auto px-5">
+//                 <Reveal>
+//                     <div className="max-w-2xl mb-14">
+//                         <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
+//                         <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
+//                             What happens to your MacBook.
+//                         </h2>
+//                     </div>
+//                 </Reveal>
+//                 <div className="grid md:grid-cols-3 gap-6">
+//                     {shots.map((s, i) => (
+//                         <Reveal key={s.title} delay={i * 100}>
+//                             <div className="rounded-xl overflow-hidden border border-neutral-800">
+//                                 <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
+//                                 <div className="p-5 bg-neutral-900">
+//                                     <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
+//                                     <p className="font-body text-xs text-white mt-2 leading-relaxed">{s.desc}</p>
+//                                 </div>
+//                             </div>
+//                         </Reveal>
+//                     ))}
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// }
 
 /* ---------- process ---------- */
 
@@ -621,7 +621,7 @@ export default function MacBookDataRecoveryPage() {
             <Intro />
             <MacsSupported />
             <RecoveryCases />
-            <LabGallery />
+            {/* <LabGallery /> */}
             <Process />
             <DoDont />
             <Guarantees />

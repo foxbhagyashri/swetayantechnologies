@@ -185,40 +185,6 @@ function Breadcrumb({ trail, title, subtitle }) {
     );
 }
 
-/* ---------- quick contact cards ---------- */
-
-function QuickContact() {
-    const cards = [
-        { icon: Clock, title: "Working Hours", value: "Mon–Sat, 9. 30 am To 9.30 pm", href: null, cta: "Sunday: closed" },
-    ];
-    return (
-        <section className="bg-white py-20">
-            <div className="max-w-7xl mx-auto px-5">
-                <div className="grid sm:grid-cols-1 gap-6 max-w-sm">
-                    {cards.map((c, i) => (
-                        <Reveal key={c.title} delay={i * 90}>
-                            <div className="group h-full border border-neutral-200 hover:border-orange-300 hover:shadow-lg rounded-xl p-6 transition-all duration-300 hover:-translate-y-1">
-                                <div className="w-11 h-11 rounded-lg bg-orange-500 flex items-center justify-center mb-5">
-                                    <c.icon className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
-                                </div>
-                                <h3 className="font-display font-semibold text-base text-neutral-900">{c.title}</h3>
-                                {c.href ? (
-                                    <a href={c.href} className="font-body text-sm text-neutral-600 mt-2 block hover:text-orange-600 transition-colors">
-                                        {c.value}
-                                    </a>
-                                ) : (
-                                    <p className="font-body text-sm text-neutral-600 mt-2">{c.value}</p>
-                                )}
-                                <p className="font-mono text-[11px] text-orange-500 mt-3">{c.cta}</p>
-                            </div>
-                        </Reveal>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-}
-
 /* ---------- form + confidentiality note ---------- */
 
 function buildEnquiryText(form) {
@@ -267,8 +233,9 @@ function EnquiryForm() {
 
     return (
         <section id="contact" className="bg-neutral-50 py-20">
-            <div className="max-w-7xl mx-auto px-5 grid lg:grid-cols-5 gap-10">
-                <Reveal className="lg:col-span-3">
+            {/* centered single column: form on top, trust note below */}
+            <div className="max-w-2xl mx-auto px-5 flex flex-col items-center gap-10">
+                <Reveal className="w-full">
                     <div className="bg-white border border-neutral-200 rounded-2xl p-8">
                         <span className="font-mono text-xs tracking-[0.2em] text-orange-600">SEND AN ENQUIRY</span>
                         <h2 className="font-display font-bold text-2xl sm:text-3xl text-neutral-900 mt-3 tracking-tight">
@@ -285,9 +252,9 @@ function EnquiryForm() {
                                     <p className="font-display font-semibold text-neutral-900">
                                         {sentVia === "whatsapp" ? "Opening WhatsApp…" : "Opening your email app…"}
                                     </p>
-                                    <p className="font-body text-sm text-neutral-600 mt-1">
+                                    {/* <p className="font-body text-sm text-neutral-600 mt-1">
                                         Thanks, {form.name || "there"} — just hit send in {sentVia === "whatsapp" ? "WhatsApp" : "your email client"} to complete your enquiry. We'll reply shortly at {form.phone || form.email || "the contact you provided"}.
-                                    </p>
+                                    </p> */}
                                     <button
                                         onClick={() => setSubmitted(false)}
                                         className="font-mono text-[11px] text-orange-600 hover:text-orange-700 mt-3 underline"
@@ -394,7 +361,7 @@ function EnquiryForm() {
                                         Send via WhatsApp
                                     </button>
 
-                                    <button
+                                    {/* <button
                                         type="button"
                                         onClick={sendViaEmail}
                                         disabled={!isValid}
@@ -402,21 +369,19 @@ function EnquiryForm() {
                                     >
                                         <Send className="w-4 h-4" />
                                         Send via Email
-                                    </button>
+                                    </button> */}
                                 </div>
                             </form>
                         )}
                     </div>
                 </Reveal>
 
-                <Reveal delay={150} className="lg:col-span-2">
-                    <div className="flex flex-col gap-6 h-full">
-                        <div className="border border-neutral-200 rounded-2xl p-6 flex items-center gap-4">
-                            <ShieldCheck className="w-8 h-8 text-orange-500 shrink-0" />
-                            <p className="font-body text-sm text-neutral-600 leading-relaxed">
-                                Every device and drive we receive is logged, tracked, and handled confidentially from drop-off to delivery.
-                            </p>
-                        </div>
+                <Reveal delay={150} className="w-full">
+                    <div className="border border-neutral-200 rounded-2xl p-6 flex items-center gap-4">
+                        <ShieldCheck className="w-8 h-8 text-orange-500 shrink-0" />
+                        <p className="font-body text-sm text-neutral-600 leading-relaxed">
+                            Every device and drive we receive is logged, tracked, and handled confidentially from drop-off to delivery.
+                        </p>
                     </div>
                 </Reveal>
             </div>
@@ -426,39 +391,7 @@ function EnquiryForm() {
 
 /* ---------- social + closing strip ---------- */
 
-function SocialStrip() {
-    const links = [
-        { icon: InstagramIcon, label: "Instagram", href: "#" },
-        { icon: FacebookIcon, label: "Facebook", href: "#" },
-        { icon: LinkedinIcon, label: "LinkedIn", href: "#" },
-    ];
-    return (
-        <section className="bg-white py-16 border-t border-neutral-100">
-            <div className="max-w-7xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-6">
-                <Reveal>
-                    <div className="text-center md:text-left">
-                        <h3 className="font-display font-bold text-xl text-neutral-900">Follow the lab.</h3>
-                        <p className="font-body text-sm text-neutral-500 mt-1">Repair tips, recovery stories, and behind-the-scenes from the bench.</p>
-                    </div>
-                </Reveal>
-                <Reveal delay={100}>
-                    <div className="flex items-center gap-3">
-                        {links.map((l) => (
 
-                            <a key={l.label}
-                                href={l.href}
-                                aria-label={l.label}
-                                className="w-11 h-11 rounded-full border border-neutral-200 hover:border-orange-400 hover:bg-orange-50 flex items-center justify-center transition-colors"
-                            >
-                                <l.icon className="w-[18px] h-[18px] text-neutral-600" />
-                            </a>
-                        ))}
-                    </div>
-                </Reveal>
-            </div>
-        </section>
-    );
-}
 
 export default function EnquiryPage() {
     return (
@@ -473,9 +406,9 @@ export default function EnquiryPage() {
                     { label: "Enquiry", href: "#contact" },
                 ]}
             />
-            <QuickContact />
+            {/* <QuickContact /> */}
             <EnquiryForm />
-            <SocialStrip />
+            {/* <SocialStrip /> */}
 
             <FloatingContact />
         </div>

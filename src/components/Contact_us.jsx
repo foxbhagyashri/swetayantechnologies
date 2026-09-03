@@ -20,6 +20,10 @@ import {
    Reuses the exact design tokens, motion language and brand
    mark from the Home / About / Services pages (Space Grotesk +
    Inter + IBM Plex Mono, orange-500 accent, neutral-950 chrome).
+
+   Form no longer posts anywhere — it builds the enquiry text and
+   hands it off to WhatsApp (wa.me) or the user's email client
+   (mailto:), same as the Enquiry page.
 --------------------------------------------------------- */
 
 const FONT_STYLES = `
@@ -54,6 +58,10 @@ const FONT_STYLES = `
     box-shadow: 0 0 0 3px rgba(249,115,22,0.15);
   }
 `;
+
+/* 👉 update these with your real business number / inbox */
+const WHATSAPP_NUMBER = "919284562996"; // country code + number, no + or spaces
+const ENQUIRY_EMAIL = "swetayantechnologies@gmail.com";
 
 /* ---------- utility hooks ---------- */
 
@@ -225,16 +233,47 @@ function QuickContact() {
 
 /* ---------- form + map/details split ---------- */
 
+function buildEnquiryText(form) {
+  return [
+    `New Enquiry — Swetayan Technologies`,
+    ``,
+    `Name: ${form.name || "-"}`,
+    `Phone: ${form.phone || "-"}`,
+    `Email: ${form.email || "-"}`,
+    `Service needed: ${form.service}`,
+    `Message: ${form.message || "-"}`,
+  ].join("\n");
+}
+
 function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [sentVia, setSentVia] = useState(null); // "whatsapp" | "email"
   const [form, setForm] = useState({ name: "", phone: "", email: "", service: "Data Recovery", message: "" });
 
   const handleChange = (e) => {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const isValid = form.name.trim() && form.phone.trim();
+
+  const sendViaWhatsApp = (e) => {
     e.preventDefault();
+    if (!isValid) return;
+    const text = buildEnquiryText(form);
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+    setSentVia("whatsapp");
+    setSubmitted(true);
+  };
+
+  const sendViaEmail = (e) => {
+    e.preventDefault();
+    if (!isValid) return;
+    const subject = `Enquiry: ${form.service} — ${form.name}`;
+    const body = buildEnquiryText(form);
+    const url = `mailto:${ENQUIRY_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = url;
+    setSentVia("email");
     setSubmitted(true);
   };
 
@@ -248,21 +287,29 @@ function ContactForm() {
               Tell us what's going on with your device.
             </h2>
             <p className="font-body text-neutral-500 mt-3 leading-relaxed">
-              Share a few details and we'll get back to you with next steps — usually within the hour during working hours.
+              Fill in the details, then send it straight to us over WhatsApp or Email — whichever's easiest for you.
             </p>
 
             {submitted ? (
               <div className="mt-8 bg-orange-50 border border-orange-200 rounded-xl p-6 flex items-start gap-3">
                 <CheckCircle2 className="w-6 h-6 text-orange-500 shrink-0 mt-0.5" />
                 <div>
-                  <p className="font-display font-semibold text-neutral-900">Message received.</p>
-                  <p className="font-body text-sm text-neutral-600 mt-1">
-                    Thanks, {form.name || "there"} — we'll reach out shortly at {form.phone || form.email || "the contact you provided"}.
+                  <p className="font-display font-semibold text-neutral-900">
+                    {sentVia === "whatsapp" ? "Opening WhatsApp…" : "Opening your email app…"}
                   </p>
+                  <p className="font-body text-sm text-neutral-600 mt-1">
+                    Thanks, {form.name || "there"} — just hit send in {sentVia === "whatsapp" ? "WhatsApp" : "your email client"} to complete your enquiry. We'll reply shortly at {form.phone || form.email || "the contact you provided"}.
+                  </p>
+                  <button
+                    onClick={() => setSubmitted(false)}
+                    className="font-mono text-[11px] text-orange-600 hover:text-orange-700 mt-3 underline"
+                  >
+                    Send another enquiry
+                  </button>
                 </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="mt-8 space-y-5">
+              <form className="mt-8 space-y-5">
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
                     <label className="font-body text-sm font-medium text-neutral-700 block mb-1.5" htmlFor="name">
@@ -342,12 +389,33 @@ function ContactForm() {
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  className="bg-orange-500 hover:bg-orange-400 hover:scale-[1.02] text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2"
-                >
-                  Send Message <Send className="w-4 h-4" />
-                </button>
+                {!isValid && (
+                  <p className="font-mono text-[11px] text-neutral-400">
+                    Please add your name and phone number before sending.
+                  </p>
+                )}
+
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <button
+                    type="button"
+                    onClick={sendViaWhatsApp}
+                    disabled={!isValid}
+                    className="flex-1 bg-[#25D366] hover:bg-[#1fb855] disabled:opacity-40 disabled:cursor-not-allowed hover:scale-[1.02] disabled:hover:scale-100 text-white font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    Send via WhatsApp
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={sendViaEmail}
+                    disabled={!isValid}
+                    className="flex-1 bg-orange-500 hover:bg-orange-400 disabled:opacity-40 disabled:cursor-not-allowed hover:scale-[1.02] disabled:hover:scale-100 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center justify-center gap-2"
+                  >
+                    <Send className="w-4 h-4" />
+                    Send via Email
+                  </button>
+                </div>
               </form>
             )}
           </div>

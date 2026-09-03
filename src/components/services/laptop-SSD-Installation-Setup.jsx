@@ -372,52 +372,52 @@ function ServiceCases() {
 
 /* ---------- inside the lab (image gallery) ---------- */
 
-function LabGallery() {
-    const shots = [
-        {
-            img: "https://images.unsplash.com/photo-1591405351990-4726e331f141?w=900&q=70&auto=format&fit=crop",
-            title: "Full drive backup",
-            desc: "Before anything is touched, your current drive is imaged and verified so nothing is ever at risk during the upgrade.",
-        },
-        {
-            img: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=900&q=70&auto=format&fit=crop",
-            title: "SSD fitting",
-            desc: "The laptop is opened, the old drive removed, and the new SSD seated and secured in its slot or bay.",
-        },
-        {
-            img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=70&auto=format&fit=crop",
-            title: "Clone, boot & benchmark",
-            desc: "Your data is cloned across, the system is booted to confirm everything loads, and speeds are benchmarked before handover.",
-        },
-    ];
-    return (
-        <section className="bg-neutral-950 py-20">
-            <div className="max-w-7xl mx-auto px-5">
-                <Reveal>
-                    <div className="max-w-2xl mb-14">
-                        <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
-                        <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
-                            What happens to your laptop.
-                        </h2>
-                    </div>
-                </Reveal>
-                <div className="grid md:grid-cols-3 gap-6">
-                    {shots.map((s, i) => (
-                        <Reveal key={s.title} delay={i * 100}>
-                            <div className="rounded-xl overflow-hidden border border-neutral-800">
-                                <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
-                                <div className="p-5 bg-neutral-900">
-                                    <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
-                                    <p className="font-body text-xs text-neutral-400 mt-2 leading-relaxed">{s.desc}</p>
-                                </div>
-                            </div>
-                        </Reveal>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-}
+// function LabGallery() {
+//     const shots = [
+//         {
+//             img: "https://images.unsplash.com/photo-1591405351990-4726e331f141?w=900&q=70&auto=format&fit=crop",
+//             title: "Full drive backup",
+//             desc: "Before anything is touched, your current drive is imaged and verified so nothing is ever at risk during the upgrade.",
+//         },
+//         {
+//             img: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=900&q=70&auto=format&fit=crop",
+//             title: "SSD fitting",
+//             desc: "The laptop is opened, the old drive removed, and the new SSD seated and secured in its slot or bay.",
+//         },
+//         {
+//             img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=70&auto=format&fit=crop",
+//             title: "Clone, boot & benchmark",
+//             desc: "Your data is cloned across, the system is booted to confirm everything loads, and speeds are benchmarked before handover.",
+//         },
+//     ];
+//     return (
+//         <section className="bg-neutral-950 py-20">
+//             <div className="max-w-7xl mx-auto px-5">
+//                 <Reveal>
+//                     <div className="max-w-2xl mb-14">
+//                         <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
+//                         <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
+//                             What happens to your laptop.
+//                         </h2>
+//                     </div>
+//                 </Reveal>
+//                 <div className="grid md:grid-cols-3 gap-6">
+//                     {shots.map((s, i) => (
+//                         <Reveal key={s.title} delay={i * 100}>
+//                             <div className="rounded-xl overflow-hidden border border-neutral-800">
+//                                 <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
+//                                 <div className="p-5 bg-neutral-900">
+//                                     <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
+//                                     <p className="font-body text-xs text-neutral-400 mt-2 leading-relaxed">{s.desc}</p>
+//                                 </div>
+//                             </div>
+//                         </Reveal>
+//                     ))}
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// }
 
 /* ---------- process ---------- */
 
@@ -625,7 +625,7 @@ export default function LaptopSSDInstallationServicePage() {
             <Intro />
             <SymptomsGrid />
             <ServiceCases />
-            <LabGallery />
+            {/* <LabGallery /> */}
             <Process />
             <DoDont />
             <Guarantees />

@@ -269,8 +269,8 @@ function BrandsSupported() {
     const items = [
         { img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&q=70&auto=format&fit=crop", label: "Dell / HP / Lenovo" },
         { img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=70&auto=format&fit=crop", label: "Apple MacBook" },
-        { img: "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=500&q=70&auto=format&fit=crop", label: "Asus / Acer / MSI" },
-        { img: "https://images.unsplash.com/photo-1602080858428-57174f9431cf?w=500&q=70&auto=format&fit=crop", label: "Gaming Laptops" },
+        { img: "/images (54).jfif", label: "Asus / Acer / MSI" },
+        { img: "/images (55).jfif", label: "Gaming Laptops" },
         { img: "https://images.unsplash.com/photo-1588200908342-23b585c03e26?w=500&q=70&auto=format&fit=crop", label: "Business Ultrabooks" },
         { img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=70&auto=format&fit=crop", label: "2-in-1 & Convertibles" },
     ];
@@ -284,8 +284,8 @@ function BrandsSupported() {
                     {items.map((d, i) => (
                         <Reveal key={d.label} delay={i * 70}>
                             <div className="flex flex-col items-center text-center gap-3">
-                                <div className="w-full aspect-square rounded-xl overflow-hidden border border-neutral-200">
-                                    <Img src={d.img} alt={d.label} className="w-full h-full object-cover" />
+                                <div className="rounded-xl overflow-hidden border border-neutral-200">
+                                    <Img src={d.img} alt={d.label} className="w-full h-auto" />
                                 </div>
                                 <span className="font-body text-xs text-black">{d.label}</span>
                             </div>
@@ -377,52 +377,52 @@ function RepairCases() {
 
 /* ---------- inside the lab (image gallery) ---------- */
 
-function LabGallery() {
-    const shots = [
-        {
-            img: "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=900&q=70&auto=format&fit=crop",
-            title: "Full cooling teardown",
-            desc: "The fan and heatsink assembly is removed carefully, keeping the drive and data untouched.",
-        },
-        {
-            img: "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=900&q=70&auto=format&fit=crop",
-            title: "Deep dust & debris removal",
-            desc: "Heatsink fins, vents, and blades are cleaned of compacted dust that restricts airflow.",
-        },
-        {
-            img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=70&auto=format&fit=crop",
-            title: "Repaste & load testing",
-            desc: "Fresh thermal paste is applied and temperatures are verified under real load before it's returned.",
-        },
-    ];
-    return (
-        <section className="bg-neutral-950 py-20">
-            <div className="max-w-7xl mx-auto px-5">
-                <Reveal>
-                    <div className="max-w-2xl mb-14">
-                        <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
-                        <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
-                            What happens to your laptop.
-                        </h2>
-                    </div>
-                </Reveal>
-                <div className="grid md:grid-cols-3 gap-6">
-                    {shots.map((s, i) => (
-                        <Reveal key={s.title} delay={i * 100}>
-                            <div className="rounded-xl overflow-hidden border border-neutral-800">
-                                <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
-                                <div className="p-5 bg-neutral-900">
-                                    <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
-                                    <p className="font-body text-xs text-white mt-2 leading-relaxed">{s.desc}</p>
-                                </div>
-                            </div>
-                        </Reveal>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-}
+// function LabGallery() {
+//     const shots = [
+//         {
+//             img: "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=900&q=70&auto=format&fit=crop",
+//             title: "Full cooling teardown",
+//             desc: "The fan and heatsink assembly is removed carefully, keeping the drive and data untouched.",
+//         },
+//         {
+//             img: "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=900&q=70&auto=format&fit=crop",
+//             title: "Deep dust & debris removal",
+//             desc: "Heatsink fins, vents, and blades are cleaned of compacted dust that restricts airflow.",
+//         },
+//         {
+//             img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=70&auto=format&fit=crop",
+//             title: "Repaste & load testing",
+//             desc: "Fresh thermal paste is applied and temperatures are verified under real load before it's returned.",
+//         },
+//     ];
+//     return (
+//         <section className="bg-neutral-950 py-20">
+//             <div className="max-w-7xl mx-auto px-5">
+//                 <Reveal>
+//                     <div className="max-w-2xl mb-14">
+//                         <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
+//                         <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
+//                             What happens to your laptop.
+//                         </h2>
+//                     </div>
+//                 </Reveal>
+//                 <div className="grid md:grid-cols-3 gap-6">
+//                     {shots.map((s, i) => (
+//                         <Reveal key={s.title} delay={i * 100}>
+//                             <div className="rounded-xl overflow-hidden border border-neutral-800">
+//                                 <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
+//                                 <div className="p-5 bg-neutral-900">
+//                                     <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
+//                                     <p className="font-body text-xs text-white mt-2 leading-relaxed">{s.desc}</p>
+//                                 </div>
+//                             </div>
+//                         </Reveal>
+//                     ))}
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// }
 
 /* ---------- process ---------- */
 
@@ -630,7 +630,7 @@ export default function LaptopFanRepairServicePage() {
             <Intro />
             <BrandsSupported />
             <RepairCases />
-            <LabGallery />
+            {/* <LabGallery /> */}
             <Process />
             <DoDont />
             <Guarantees />

@@ -264,7 +264,7 @@ function SymptomsGrid() {
     const items = [
         { img: "/images (48).jfif", label: "No Light on Adapter" },
         { img: "/images (49).jfif", label: "Frayed / Damaged Cable" },
-        { img: "/pexels-steve-845239.jpg", label: "Adapter Runs Very Hot" },
+        { img: "/511j2WbciNL.jpg", label: "Adapter Runs Very Hot" },
         { img: "/01QrMgyTzeIkB5MzfJmQ3nT-16.fit_lim.size_1050x.webp", label: "Charging Cuts In and Out" },
         { img: "/hey-guys-is-it-normal-for-my-laptop-to-make-a-faint-buzzing-v0-t1bqcwbr6rfe1.webp", label: "Buzzing / Humming Noise" },
         { img: "/images (50).jfif", label: "Bent or Broken Pin/Tip" },
@@ -372,52 +372,52 @@ function ServiceCases() {
 
 /* ---------- inside the lab (image gallery) ---------- */
 
-function LabGallery() {
-    const shots = [
-        {
-            img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=70&auto=format&fit=crop",
-            title: "Output testing",
-            desc: "The adapter's voltage and current are measured under load and compared against your laptop's rated power draw.",
-        },
-        {
-            img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=70&auto=format&fit=crop",
-            title: "Cable & connector repair",
-            desc: "Frayed cables and loose connectors are repaired or re-terminated, or the unit is flagged for replacement if unsafe.",
-        },
-        {
-            img: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=900&q=70&auto=format&fit=crop",
-            title: "Cross-test on your laptop",
-            desc: "The repaired or replacement charger is tested directly on your laptop to confirm stable, consistent charging.",
-        },
-    ];
-    return (
-        <section className="bg-neutral-950 py-20">
-            <div className="max-w-7xl mx-auto px-5">
-                <Reveal>
-                    <div className="max-w-2xl mb-14">
-                        <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
-                        <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
-                            What happens to your charger.
-                        </h2>
-                    </div>
-                </Reveal>
-                <div className="grid md:grid-cols-3 gap-6">
-                    {shots.map((s, i) => (
-                        <Reveal key={s.title} delay={i * 100}>
-                            <div className="rounded-xl overflow-hidden border border-neutral-800">
-                                <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
-                                <div className="p-5 bg-neutral-900">
-                                    <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
-                                    <p className="font-body text-xs text-neutral-400 mt-2 leading-relaxed">{s.desc}</p>
-                                </div>
-                            </div>
-                        </Reveal>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-}
+// function LabGallery() {
+//     const shots = [
+//         {
+//             img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=70&auto=format&fit=crop",
+//             title: "Output testing",
+//             desc: "The adapter's voltage and current are measured under load and compared against your laptop's rated power draw.",
+//         },
+//         {
+//             img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=70&auto=format&fit=crop",
+//             title: "Cable & connector repair",
+//             desc: "Frayed cables and loose connectors are repaired or re-terminated, or the unit is flagged for replacement if unsafe.",
+//         },
+//         {
+//             img: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=900&q=70&auto=format&fit=crop",
+//             title: "Cross-test on your laptop",
+//             desc: "The repaired or replacement charger is tested directly on your laptop to confirm stable, consistent charging.",
+//         },
+//     ];
+//     return (
+//         <section className="bg-neutral-950 py-20">
+//             <div className="max-w-7xl mx-auto px-5">
+//                 <Reveal>
+//                     <div className="max-w-2xl mb-14">
+//                         <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
+//                         <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
+//                             What happens to your charger.
+//                         </h2>
+//                     </div>
+//                 </Reveal>
+//                 <div className="grid md:grid-cols-3 gap-6">
+//                     {shots.map((s, i) => (
+//                         <Reveal key={s.title} delay={i * 100}>
+//                             <div className="rounded-xl overflow-hidden border border-neutral-800">
+//                                 <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
+//                                 <div className="p-5 bg-neutral-900">
+//                                     <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
+//                                     <p className="font-body text-xs text-neutral-400 mt-2 leading-relaxed">{s.desc}</p>
+//                                 </div>
+//                             </div>
+//                         </Reveal>
+//                     ))}
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// }
 
 /* ---------- process ---------- */
 
@@ -625,7 +625,7 @@ export default function LaptopChargerRepairServicePage() {
             <Intro />
             <SymptomsGrid />
             <ServiceCases />
-            <LabGallery />
+            {/* <LabGallery /> */}
             <Process />
             <DoDont />
             <Guarantees />

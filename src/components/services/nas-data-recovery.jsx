@@ -262,9 +262,9 @@ function Intro() {
 function SystemsSupported() {
     const items = [
         { img: "/pexels-arturoaez225-18734809.jpg", label: "Synology NAS" },
-        { img: "/pexels-martabranco-32923533.jpg", label: "QNAP NAS" },
+        { img: "/unnamed (1).jpg", label: "QNAP NAS" },
         { img: "/pexels-nicolas-foster-65973708-38117143.jpg", label: "WD My Cloud" },
-        { img: "/pexels-brett-sayles-2881228.jpg", label: "Netgear ReadyNAS" },
+        { img: "/RN2120.jpg", label: "Netgear ReadyNAS" },
         { img: "/pexels-nicolas-foster-65973708-38412996.jpg", label: "RAID 0/1/5/6/10" },
         { img: "/pexels-soc-nang-d-ng-2150345854-35247357.jpg", label: "Btrfs / ext4 / ZFS" },
     ];
@@ -371,52 +371,52 @@ function RecoveryCases() {
 
 /* ---------- inside the lab (image gallery) ---------- */
 
-function LabGallery() {
-    const shots = [
-        {
-            img: "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=900&q=70&auto=format&fit=crop",
-            title: "Array mapping",
-            desc: "We map the RAID configuration and drive order exactly as it was before any rebuild is attempted.",
-        },
-        {
-            img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=70&auto=format&fit=crop",
-            title: "Disk-by-disk imaging",
-            desc: "Every member disk is imaged individually first, so the original array is never modified directly.",
-        },
-        {
-            img: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=900&q=70&auto=format&fit=crop",
-            title: "Virtual array reconstruction",
-            desc: "The array is rebuilt virtually from the disk images to extract shares, snapshots, and files intact.",
-        },
-    ];
-    return (
-        <section className="bg-neutral-950 py-20">
-            <div className="max-w-7xl mx-auto px-5">
-                <Reveal>
-                    <div className="max-w-2xl mb-14">
-                        <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
-                        <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
-                            What happens to your NAS.
-                        </h2>
-                    </div>
-                </Reveal>
-                <div className="grid md:grid-cols-3 gap-6">
-                    {shots.map((s, i) => (
-                        <Reveal key={s.title} delay={i * 100}>
-                            <div className="rounded-xl overflow-hidden border border-neutral-800">
-                                <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
-                                <div className="p-5 bg-neutral-900">
-                                    <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
-                                    <p className="font-body text-xs text-white mt-2 leading-relaxed">{s.desc}</p>
-                                </div>
-                            </div>
-                        </Reveal>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-}
+// function LabGallery() {
+//     const shots = [
+//         {
+//             img: "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=900&q=70&auto=format&fit=crop",
+//             title: "Array mapping",
+//             desc: "We map the RAID configuration and drive order exactly as it was before any rebuild is attempted.",
+//         },
+//         {
+//             img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=70&auto=format&fit=crop",
+//             title: "Disk-by-disk imaging",
+//             desc: "Every member disk is imaged individually first, so the original array is never modified directly.",
+//         },
+//         {
+//             img: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=900&q=70&auto=format&fit=crop",
+//             title: "Virtual array reconstruction",
+//             desc: "The array is rebuilt virtually from the disk images to extract shares, snapshots, and files intact.",
+//         },
+//     ];
+//     return (
+//         <section className="bg-neutral-950 py-20">
+//             <div className="max-w-7xl mx-auto px-5">
+//                 <Reveal>
+//                     <div className="max-w-2xl mb-14">
+//                         <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
+//                         <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
+//                             What happens to your NAS.
+//                         </h2>
+//                     </div>
+//                 </Reveal>
+//                 <div className="grid md:grid-cols-3 gap-6">
+//                     {shots.map((s, i) => (
+//                         <Reveal key={s.title} delay={i * 100}>
+//                             <div className="rounded-xl overflow-hidden border border-neutral-800">
+//                                 <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
+//                                 <div className="p-5 bg-neutral-900">
+//                                     <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
+//                                     <p className="font-body text-xs text-white mt-2 leading-relaxed">{s.desc}</p>
+//                                 </div>
+//                             </div>
+//                         </Reveal>
+//                     ))}
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// }
 
 /* ---------- process ---------- */
 
@@ -624,7 +624,7 @@ export default function NASDataRecoveryPage() {
             <Intro />
             <SystemsSupported />
             <RecoveryCases />
-            <LabGallery />
+            {/* <LabGallery /> */}
             <Process />
             <DoDont />
             <Guarantees />

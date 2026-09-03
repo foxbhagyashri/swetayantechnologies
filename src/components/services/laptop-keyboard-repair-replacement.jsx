@@ -268,9 +268,9 @@ function BrandsSupported() {
         { img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&q=70&auto=format&fit=crop", label: "Dell / HP / Lenovo" },
         { img: "/pexels-joshsorenson-11237834.jpg", label: "Apple MacBook" },
         { img: "/pexels-ferarcosn-169484.jpg", label: "Asus / Acer / MSI" },
-        { img: "https://images.unsplash.com/photo-1602080858428-57174f9431cf?w=500&q=70&auto=format&fit=crop", label: "Gaming Laptops" },
+        { img: "/lenovo-loq-15-2024-gaming-laptop-1024x661.jpg", label: "Gaming Laptops" },
         { img: "https://images.unsplash.com/photo-1588200908342-23b585c03e26?w=500&q=70&auto=format&fit=crop", label: "Business Ultrabooks" },
-        { img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=70&auto=format&fit=crop", label: "2-in-1 & Convertibles" },
+        { img: "/images (53).jfif", label: "2-in-1 & Convertibles" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">
@@ -282,8 +282,8 @@ function BrandsSupported() {
                     {items.map((d, i) => (
                         <Reveal key={d.label} delay={i * 70}>
                             <div className="flex flex-col items-center text-center gap-3">
-                                <div className="w-full aspect-square rounded-xl overflow-hidden border border-neutral-200">
-                                    <Img src={d.img} alt={d.label} className="w-full h-full object-cover" />
+                                <div className="rounded-xl overflow-hidden border border-neutral-200">
+                                    <Img src={d.img} alt={d.label} className="w-full h-auto" />
                                 </div>
                                 <span className="font-body text-xs text-black">{d.label}</span>
                             </div>
@@ -375,52 +375,52 @@ function RepairCases() {
 
 /* ---------- inside the lab (image gallery) ---------- */
 
-function LabGallery() {
-    const shots = [
-        {
-            img: "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=900&q=70&auto=format&fit=crop",
-            title: "Careful disassembly",
-            desc: "The keyboard is removed key by key or as a full assembly, without disturbing the drive underneath.",
-        },
-        {
-            img: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=900&q=70&auto=format&fit=crop",
-            title: "Key & switch level repair",
-            desc: "Individual switches, hinges, and keycaps are repaired where possible instead of a full swap.",
-        },
-        {
-            img: "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&q=70&auto=format&fit=crop",
-            title: "Genuine parts & testing",
-            desc: "Every key is tested for registration and travel before the laptop goes back to you.",
-        },
-    ];
-    return (
-        <section className="bg-neutral-950 py-20">
-            <div className="max-w-7xl mx-auto px-5">
-                <Reveal>
-                    <div className="max-w-2xl mb-14">
-                        <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
-                        <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
-                            What happens to your laptop.
-                        </h2>
-                    </div>
-                </Reveal>
-                <div className="grid md:grid-cols-3 gap-6">
-                    {shots.map((s, i) => (
-                        <Reveal key={s.title} delay={i * 100}>
-                            <div className="rounded-xl overflow-hidden border border-neutral-800">
-                                <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
-                                <div className="p-5 bg-neutral-900">
-                                    <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
-                                    <p className="font-body text-xs text-neutral-400 mt-2 leading-relaxed">{s.desc}</p>
-                                </div>
-                            </div>
-                        </Reveal>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-}
+// function LabGallery() {
+//     const shots = [
+//         {
+//             img: "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=900&q=70&auto=format&fit=crop",
+//             title: "Careful disassembly",
+//             desc: "The keyboard is removed key by key or as a full assembly, without disturbing the drive underneath.",
+//         },
+//         {
+//             img: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=900&q=70&auto=format&fit=crop",
+//             title: "Key & switch level repair",
+//             desc: "Individual switches, hinges, and keycaps are repaired where possible instead of a full swap.",
+//         },
+//         {
+//             img: "https://images.unsplash.com/photo-1547082299-de196ea013d6?w=900&q=70&auto=format&fit=crop",
+//             title: "Genuine parts & testing",
+//             desc: "Every key is tested for registration and travel before the laptop goes back to you.",
+//         },
+//     ];
+//     return (
+//         <section className="bg-neutral-950 py-20">
+//             <div className="max-w-7xl mx-auto px-5">
+//                 <Reveal>
+//                     <div className="max-w-2xl mb-14">
+//                         <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
+//                         <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
+//                             What happens to your laptop.
+//                         </h2>
+//                     </div>
+//                 </Reveal>
+//                 <div className="grid md:grid-cols-3 gap-6">
+//                     {shots.map((s, i) => (
+//                         <Reveal key={s.title} delay={i * 100}>
+//                             <div className="rounded-xl overflow-hidden border border-neutral-800">
+//                                 <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
+//                                 <div className="p-5 bg-neutral-900">
+//                                     <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
+//                                     <p className="font-body text-xs text-neutral-400 mt-2 leading-relaxed">{s.desc}</p>
+//                                 </div>
+//                             </div>
+//                         </Reveal>
+//                     ))}
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// }
 
 /* ---------- process ---------- */
 
@@ -628,7 +628,7 @@ export default function LaptopKeyboardRepairServicePage() {
             <Intro />
             <BrandsSupported />
             <RepairCases />
-            <LabGallery />
+            {/* <LabGallery /> */}
             <Process />
             <DoDont />
             <Guarantees />

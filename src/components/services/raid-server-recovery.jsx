@@ -372,52 +372,52 @@ function RecoveryCases() {
 
 /* ---------- inside the lab (image gallery) ---------- */
 
-function LabGallery() {
-    const shots = [
-        {
-            img: "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=900&q=70&auto=format&fit=crop",
-            title: "Controller & array mapping",
-            desc: "We document RAID level, stripe size, disk order, and controller metadata before touching anything.",
-        },
-        {
-            img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=70&auto=format&fit=crop",
-            title: "Disk-by-disk imaging",
-            desc: "Every member disk is imaged individually in our lab, so recovery work never runs against the originals.",
-        },
-        {
-            img: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=900&q=70&auto=format&fit=crop",
-            title: "Virtual RAID reconstruction",
-            desc: "The array, VMs, and databases are reconstructed virtually from the disk images to extract data intact.",
-        },
-    ];
-    return (
-        <section className="bg-neutral-950 py-20">
-            <div className="max-w-7xl mx-auto px-5">
-                <Reveal>
-                    <div className="max-w-2xl mb-14">
-                        <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
-                        <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
-                            What happens to your server.
-                        </h2>
-                    </div>
-                </Reveal>
-                <div className="grid md:grid-cols-3 gap-6">
-                    {shots.map((s, i) => (
-                        <Reveal key={s.title} delay={i * 100}>
-                            <div className="rounded-xl overflow-hidden border border-neutral-800">
-                                <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
-                                <div className="p-5 bg-neutral-900">
-                                    <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
-                                    <p className="font-body text-xs text-white mt-2 leading-relaxed">{s.desc}</p>
-                                </div>
-                            </div>
-                        </Reveal>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-}
+// function LabGallery() {
+//     const shots = [
+//         {
+//             img: "https://images.unsplash.com/photo-1591370874773-6702e8f12fd8?w=900&q=70&auto=format&fit=crop",
+//             title: "Controller & array mapping",
+//             desc: "We document RAID level, stripe size, disk order, and controller metadata before touching anything.",
+//         },
+//         {
+//             img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=70&auto=format&fit=crop",
+//             title: "Disk-by-disk imaging",
+//             desc: "Every member disk is imaged individually in our lab, so recovery work never runs against the originals.",
+//         },
+//         {
+//             img: "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=900&q=70&auto=format&fit=crop",
+//             title: "Virtual RAID reconstruction",
+//             desc: "The array, VMs, and databases are reconstructed virtually from the disk images to extract data intact.",
+//         },
+//     ];
+//     return (
+//         <section className="bg-neutral-950 py-20">
+//             <div className="max-w-7xl mx-auto px-5">
+//                 <Reveal>
+//                     <div className="max-w-2xl mb-14">
+//                         <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
+//                         <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
+//                             What happens to your server.
+//                         </h2>
+//                     </div>
+//                 </Reveal>
+//                 <div className="grid md:grid-cols-3 gap-6">
+//                     {shots.map((s, i) => (
+//                         <Reveal key={s.title} delay={i * 100}>
+//                             <div className="rounded-xl overflow-hidden border border-neutral-800">
+//                                 <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
+//                                 <div className="p-5 bg-neutral-900">
+//                                     <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
+//                                     <p className="font-body text-xs text-white mt-2 leading-relaxed">{s.desc}</p>
+//                                 </div>
+//                             </div>
+//                         </Reveal>
+//                     ))}
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// }
 
 /* ---------- process ---------- */
 
@@ -625,7 +625,7 @@ export default function RAIDServerRecoveryPage() {
             <Intro />
             <SystemsSupported />
             <RecoveryCases />
-            <LabGallery />
+            {/* <LabGallery /> */}
             <Process />
             <DoDont />
             <Guarantees />

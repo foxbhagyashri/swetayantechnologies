@@ -369,52 +369,7 @@ function RecoveryCases() {
 
 /* ---------- inside the lab (image gallery) ---------- */
 
-function LabGallery() {
-    const shots = [
-        {
-            img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=70&auto=format&fit=crop",
-            title: "Clean-room-standard bench",
-            desc: "Every disk is opened only when necessary, on a controlled, filtered-air workstation.",
-        },
-        {
-            img: "https://images.unsplash.com/photo-1531492746076-161ba9bcb065?w=900&q=70&auto=format&fit=crop",
-            title: "Platter & head inspection",
-            desc: "We inspect platter surfaces and read/write heads under magnification before deciding on a method.",
-        },
-        {
-            img: "https://images.unsplash.com/photo-1591405351990-4726e331f141?w=900&q=70&auto=format&fit=crop",
-            title: "Sector-by-sector imaging",
-            desc: "A forensic image is taken first wherever possible, so recovery work never touches your original disk twice.",
-        },
-    ];
-    return (
-        <section className="bg-neutral-950 py-20">
-            <div className="max-w-7xl mx-auto px-5">
-                <Reveal>
-                    <div className="max-w-2xl mb-14">
-                        <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
-                        <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
-                            What happens to your hard disk.
-                        </h2>
-                    </div>
-                </Reveal>
-                <div className="grid md:grid-cols-3 gap-6">
-                    {shots.map((s, i) => (
-                        <Reveal key={s.title} delay={i * 100}>
-                            <div className="rounded-xl overflow-hidden border border-neutral-800">
-                                <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
-                                <div className="p-5 bg-neutral-900">
-                                    <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
-                                    <p className="font-body text-xs text-neutral-400 mt-2 leading-relaxed">{s.desc}</p>
-                                </div>
-                            </div>
-                        </Reveal>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-}
+
 
 /* ---------- process ---------- */
 
@@ -622,7 +577,7 @@ export default function HardDiskDataRecoveryPage() {
             <Intro />
             <DrivesSupported />
             <RecoveryCases />
-            <LabGallery />
+            
             <Process />
             <DoDont />
             <Guarantees />

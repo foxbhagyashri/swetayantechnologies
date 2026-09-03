@@ -259,10 +259,10 @@ function DrivesSupported() {
     const drives = [
         { img: "/pexels-zeleboba-28666524.jpg", label: "M.2 NVMe SSDs" },
         { img: "/pexels-elias-gamez-2002621-10558598.jpg", label: "SATA 2.5\" SSDs" },
-        { img: "/pexels-zeleboba-35147150.jpg", label: "mSATA SSDs" },
-        { img: "/pexels-it-services-eu-9278798-7639374.jpg", label: "Internal laptop SSDs" },
+        { img: "/R2450098-01.webp", label: "mSATA SSDs" },
+        { img: "/images (57).jfif", label: "Internal laptop SSDs" },
         { img: "/pexels-avinash-kumar-299518778-13595074.jpg", label: "External USB SSDs" },
-        { img: "/pexels-cookiecutter-17489153.jpg", label: "Enterprise / server SSDs" },
+        { img: "/3481G-Dell.jpg", label: "Enterprise / server SSDs" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">
@@ -367,52 +367,52 @@ function RecoveryCases() {
 
 /* ---------- inside the lab (image gallery) ---------- */
 
-function LabGallery() {
-    const shots = [
-        {
-            img: "https://images.unsplash.com/photo-1531492746076-161ba9bcb065?w=900&q=70&auto=format&fit=crop",
-            title: "Controller-level diagnostics",
-            desc: "We start by talking to the SSD's controller directly to identify exactly what's failing.",
-        },
-        {
-            img: "https://images.unsplash.com/photo-1591405351990-4726e331f141?w=900&q=70&auto=format&fit=crop",
-            title: "Chip-off NAND extraction",
-            desc: "When the controller itself is beyond recovery, we read the NAND chips directly and rebuild the data.",
-        },
-        {
-            img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=70&auto=format&fit=crop",
-            title: "Sector-by-sector imaging",
-            desc: "A forensic image is taken first wherever possible, so recovery work never touches your original SSD twice.",
-        },
-    ];
-    return (
-        <section className="bg-neutral-950 py-20">
-            <div className="max-w-7xl mx-auto px-5">
-                <Reveal>
-                    <div className="max-w-2xl mb-14">
-                        <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
-                        <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
-                            What happens to your SSD.
-                        </h2>
-                    </div>
-                </Reveal>
-                <div className="grid md:grid-cols-3 gap-6">
-                    {shots.map((s, i) => (
-                        <Reveal key={s.title} delay={i * 100}>
-                            <div className="rounded-xl overflow-hidden border border-neutral-800">
-                                <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
-                                <div className="p-5 bg-neutral-900">
-                                    <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
-                                    <p className="font-body text-xs text-white mt-2 leading-relaxed">{s.desc}</p>
-                                </div>
-                            </div>
-                        </Reveal>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-}
+// function LabGallery() {
+//     const shots = [
+//         {
+//             img: "https://images.unsplash.com/photo-1531492746076-161ba9bcb065?w=900&q=70&auto=format&fit=crop",
+//             title: "Controller-level diagnostics",
+//             desc: "We start by talking to the SSD's controller directly to identify exactly what's failing.",
+//         },
+//         {
+//             img: "https://images.unsplash.com/photo-1591405351990-4726e331f141?w=900&q=70&auto=format&fit=crop",
+//             title: "Chip-off NAND extraction",
+//             desc: "When the controller itself is beyond recovery, we read the NAND chips directly and rebuild the data.",
+//         },
+//         {
+//             img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=70&auto=format&fit=crop",
+//             title: "Sector-by-sector imaging",
+//             desc: "A forensic image is taken first wherever possible, so recovery work never touches your original SSD twice.",
+//         },
+//     ];
+//     return (
+//         <section className="bg-neutral-950 py-20">
+//             <div className="max-w-7xl mx-auto px-5">
+//                 <Reveal>
+//                     <div className="max-w-2xl mb-14">
+//                         <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
+//                         <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
+//                             What happens to your SSD.
+//                         </h2>
+//                     </div>
+//                 </Reveal>
+//                 <div className="grid md:grid-cols-3 gap-6">
+//                     {shots.map((s, i) => (
+//                         <Reveal key={s.title} delay={i * 100}>
+//                             <div className="rounded-xl overflow-hidden border border-neutral-800">
+//                                 <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
+//                                 <div className="p-5 bg-neutral-900">
+//                                     <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
+//                                     <p className="font-body text-xs text-white mt-2 leading-relaxed">{s.desc}</p>
+//                                 </div>
+//                             </div>
+//                         </Reveal>
+//                     ))}
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// }
 
 /* ---------- process ---------- */
 
@@ -620,7 +620,7 @@ export default function SSDDataRecoveryPage() {
             <Intro />
             <DrivesSupported />
             <RecoveryCases />
-            <LabGallery />
+            {/* <LabGallery /> */}
             <Process />
             <DoDont />
             <Guarantees />

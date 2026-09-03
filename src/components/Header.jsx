@@ -210,52 +210,74 @@ export default function SiteHeader() {
                                         {link.name}
                                     </button>
 
-                                    <div className="absolute left-0 top-full mt-2 w-64 bg-white rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 py-2 max-h-[300px] overflow-y-auto custom-scrollbar">
+                                    <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[800px] bg-white rounded-lg shadow-xl border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-4 max-h-[420px] overflow-y-auto custom-scrollbar">
+                                        <div className="grid grid-cols-2 gap-x-6 gap-y-1">
+                                            {link.dropdown.map((item) =>
+                                                item.dropdown ? (
+                                                    <div key={item.name} className="relative group/inner">
+                                                        <button
+                                                            type="button"
+                                                            className="w-full flex items-start gap-3 px-2 py-2 rounded-md text-left hover:bg-orange-50 font-arial"
+                                                        >
+                                                            <span className="w-10 h-10 shrink-0 rounded-md bg-neutral-100 flex items-center justify-center">
+                                                                {item.icon ? (
+                                                                    <item.icon size={20} className="text-neutral-600" />
+                                                                ) : (
+                                                                    <span className="w-2 h-2 rounded-full bg-orange-500" />
+                                                                )}
+                                                            </span>
+                                                            <span className="flex-1">
+                                                                <span className="flex items-center justify-between">
+                                                                    <span className="text-sm font-semibold text-gray-900">{item.name}</span>
+                                                                    <ChevronRight size={16} className="text-gray-400" />
+                                                                </span>
+                                                                {item.description && (
+                                                                    <span className="block text-xs text-gray-500 mt-0.5 leading-snug">
+                                                                        {item.description}
+                                                                    </span>
+                                                                )}
+                                                            </span>
+                                                        </button>
 
-                                        {link.dropdown.map((item) =>
-
-                                            item.dropdown ? (
-
-                                                <div key={item.name} className="relative group/inner">
-
-                                                    <button
-                                                        type="button"
-                                                        className="w-full flex items-center justify-between px-5 py-3 text-gray-700 hover:bg-orange-50 hover:text-orange-500 font-arial"
-                                                    >
-                                                        {item.name}
-                                                        <ChevronRight size={16} />
-                                                    </button>
-
-                                                    <div className="absolute left-full top-0 -mt-2 ml-1 w-64 bg-white rounded-lg shadow-xl border opacity-0 invisible group-hover/inner:opacity-100 group-hover/inner:visible transition-all duration-300 z-50 py-2 max-h-[300px] overflow-y-auto custom-scrollbar">
-
-                                                        {item.dropdown.map((sub) => (
-                                                            <NavLink
-                                                                key={sub.name}
-                                                                to={sub.path}
-                                                                className="block px-0 py-0 text-gray-700 hover:bg-orange-50 hover:text-orange-500 font-arial"
-                                                            >
-                                                                {sub.name}
-                                                            </NavLink>
-                                                        ))}
-
+                                                        <div className="absolute left-full top-0 -mt-2 ml-1 w-64 bg-white rounded-lg shadow-xl border opacity-0 invisible group-hover/inner:opacity-100 group-hover/inner:visible transition-all duration-300 z-50 py-2 max-h-[300px] overflow-y-auto custom-scrollbar">
+                                                            {item.dropdown.map((sub) => (
+                                                                <NavLink
+                                                                    key={sub.name}
+                                                                    to={sub.path}
+                                                                    className="block px-5 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-500 font-arial text-sm"
+                                                                >
+                                                                    {sub.name}
+                                                                </NavLink>
+                                                            ))}
+                                                        </div>
                                                     </div>
-
-                                                </div>
-
-                                            ) : (
-
-                                                <NavLink
-                                                    key={item.name}
-                                                    to={item.path}
-                                                    className="block px-5 py-2 text-gray-700 hover:bg-orange-50 hover:text-orange-500 font-arial text-sm"
-                                                >
-                                                    {item.name}
-                                                </NavLink>
-
-                                            )
-
-                                        )}
-
+                                                ) : (
+                                                    <NavLink
+                                                        key={item.name}
+                                                        to={item.path}
+                                                        className="flex items-start gap-3 px-3 py-3 rounded-md hover:bg-orange-50 font-arial group/item"
+                                                    >
+                                                        <span className="w-10 h-10 shrink-0 rounded-md bg-neutral-100 flex items-center justify-center group-hover/item:bg-orange-100">
+                                                            {item.icon ? (
+                                                                <item.icon size={20} className="text-neutral-600 group-hover/item:text-orange-500" />
+                                                            ) : (
+                                                                <span className="w-2 h-2 rounded-full bg-orange-500" />
+                                                            )}
+                                                        </span>
+                                                        <span>
+                                                            <span className="block text-sm font-semibold text-gray-900 group-hover/item:text-orange-500">
+                                                                {item.name}
+                                                            </span>
+                                                            {item.description && (
+                                                                <span className="block text-xs text-gray-500 mt-0.5 leading-snug">
+                                                                    {item.description}
+                                                                </span>
+                                                            )}
+                                                        </span>
+                                                    </NavLink>
+                                                )
+                                            )}
+                                        </div>
                                     </div>
 
                                 </div>
@@ -318,7 +340,7 @@ export default function SiteHeader() {
                                             {link.name}
                                         </p>
 
-                                        <div className="ml-4 flex flex-col gap-2">
+                                        <div className="ml-4 flex flex-col gap-2 max-h-[200px] overflow-y-auto custom-scrollbar">
 
                                             {link.dropdown.map((item) =>
 

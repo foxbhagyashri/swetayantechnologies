@@ -264,10 +264,9 @@ function SymptomsGrid() {
     const items = [
         { img: "/pexels-karola-g-4195404.jpg", label: "Wobbly / Loose Port" },
         { img: "/pexels-enginakyurt-8422343.jpg", label: "Charges Only at an Angle" },
-        { img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=70&auto=format&fit=crop", label: "No Power at All" },
-        { img: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=500&q=70&auto=format&fit=crop", label: "Charger Cable Falls Out" },
-        { img: "/are-these-marks-on-the-cpu-burn-marks-couldnt-find-anything-v0-wjlnu9hyq91a1.webp", label: "Burnt / Discoloured Pins" },
-        { img: "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=500&q=70&auto=format&fit=crop", label: "Intermittent Charging" },
+        { img: "/images (51).jfif", label: "Charger Cable Falls Out" },
+        { img: "/01QrMgyTzeIkB5MzfJmQ3nT-16..v1569470692.webp", label: "Burnt / Discoloured Pins" },
+        { img: "/images (24).png", label: "Intermittent Charging" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">
@@ -372,52 +371,52 @@ function ServiceCases() {
 
 /* ---------- inside the lab (image gallery) ---------- */
 
-function LabGallery() {
-    const shots = [
-        {
-            img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=70&auto=format&fit=crop",
-            title: "Port & voltage inspection",
-            desc: "The port, internal cable, and charging circuit are tested with a multimeter to confirm exactly where power is being lost.",
-        },
-        {
-            img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=70&auto=format&fit=crop",
-            title: "Micro-soldering repair",
-            desc: "The damaged port or connector is de-soldered and a replacement is fitted and re-soldered under magnification.",
-        },
-        {
-            img: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=900&q=70&auto=format&fit=crop",
-            title: "Charge test & stress check",
-            desc: "The laptop is charged through multiple cable angles and a full charge cycle before it's handed back.",
-        },
-    ];
-    return (
-        <section className="bg-neutral-950 py-20">
-            <div className="max-w-7xl mx-auto px-5">
-                <Reveal>
-                    <div className="max-w-2xl mb-14">
-                        <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
-                        <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
-                            What happens to your laptop.
-                        </h2>
-                    </div>
-                </Reveal>
-                <div className="grid md:grid-cols-3 gap-6">
-                    {shots.map((s, i) => (
-                        <Reveal key={s.title} delay={i * 100}>
-                            <div className="rounded-xl overflow-hidden border border-neutral-800">
-                                <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
-                                <div className="p-5 bg-neutral-900">
-                                    <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
-                                    <p className="font-body text-xs text-neutral-400 mt-2 leading-relaxed">{s.desc}</p>
-                                </div>
-                            </div>
-                        </Reveal>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-}
+// function LabGallery() {
+//     const shots = [
+//         {
+//             img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=900&q=70&auto=format&fit=crop",
+//             title: "Port & voltage inspection",
+//             desc: "The port, internal cable, and charging circuit are tested with a multimeter to confirm exactly where power is being lost.",
+//         },
+//         {
+//             img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=70&auto=format&fit=crop",
+//             title: "Micro-soldering repair",
+//             desc: "The damaged port or connector is de-soldered and a replacement is fitted and re-soldered under magnification.",
+//         },
+//         {
+//             img: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=900&q=70&auto=format&fit=crop",
+//             title: "Charge test & stress check",
+//             desc: "The laptop is charged through multiple cable angles and a full charge cycle before it's handed back.",
+//         },
+//     ];
+//     return (
+//         <section className="bg-neutral-950 py-20">
+//             <div className="max-w-7xl mx-auto px-5">
+//                 <Reveal>
+//                     <div className="max-w-2xl mb-14">
+//                         <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
+//                         <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
+//                             What happens to your laptop.
+//                         </h2>
+//                     </div>
+//                 </Reveal>
+//                 <div className="grid md:grid-cols-3 gap-6">
+//                     {shots.map((s, i) => (
+//                         <Reveal key={s.title} delay={i * 100}>
+//                             <div className="rounded-xl overflow-hidden border border-neutral-800">
+//                                 <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
+//                                 <div className="p-5 bg-neutral-900">
+//                                     <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
+//                                     <p className="font-body text-xs text-neutral-400 mt-2 leading-relaxed">{s.desc}</p>
+//                                 </div>
+//                             </div>
+//                         </Reveal>
+//                     ))}
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// }
 
 /* ---------- process ---------- */
 
@@ -625,7 +624,7 @@ export default function LaptopChargingPointRepairServicePage() {
             <Intro />
             <SymptomsGrid />
             <ServiceCases />
-            <LabGallery />
+            {/* <LabGallery /> */}
             <Process />
             <DoDont />
             <Guarantees />

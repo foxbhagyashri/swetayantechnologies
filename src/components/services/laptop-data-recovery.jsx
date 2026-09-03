@@ -262,8 +262,8 @@ function LaptopsSupported() {
         { img: "/pexels-feel-and-live-8068269.jpg", label: "MacBook® laptops" },
         { img: "/pexels-zeleboba-4526279.jpg", label: "Internal 2.5\" HDDs" },
         { img: "/pexels-lesior-35984425.jpg", label: "M.2 / NVMe SSDs" },
-        { img: "/pexels-foysal-ahmed-2102283-6053293.jpg", label: "Ultrabooks & 2-in-1s" },
-        { img: "/pexels-startup-stock-photos-7082.jpg", label: "Business & gaming laptops" },
+        { img: "/images (56).jfif", label: "Ultrabooks & 2-in-1s" },
+        { img: "/lenovo-loq-15-2024-gaming-laptop-1024x661.jpg", label: "Business & gaming laptops data recovery" },
     ];
     return (
         <section className="bg-white py-14 border-y border-neutral-100">
@@ -368,52 +368,52 @@ function RecoveryCases() {
 
 /* ---------- inside the lab (image gallery) ---------- */
 
-function LabGallery() {
-    const shots = [
-        {
-            img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900&q=70&auto=format&fit=crop",
-            title: "Careful teardown",
-            desc: "We open the laptop chassis and extract the drive without disturbing connectors or data.",
-        },
-        {
-            img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=70&auto=format&fit=crop",
-            title: "Drive-level diagnosis",
-            desc: "Once the drive is out, we assess it independently of whatever damaged the laptop around it.",
-        },
-        {
-            img: "https://images.unsplash.com/photo-1591405351990-4726e331f141?w=900&q=70&auto=format&fit=crop",
-            title: "Sector-by-sector imaging",
-            desc: "A forensic image is taken first wherever possible, so recovery work never touches your original drive twice.",
-        },
-    ];
-    return (
-        <section className="bg-neutral-950 py-20">
-            <div className="max-w-7xl mx-auto px-5">
-                <Reveal>
-                    <div className="max-w-2xl mb-14">
-                        <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
-                        <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
-                            What happens to your laptop.
-                        </h2>
-                    </div>
-                </Reveal>
-                <div className="grid md:grid-cols-3 gap-6">
-                    {shots.map((s, i) => (
-                        <Reveal key={s.title} delay={i * 100}>
-                            <div className="rounded-xl overflow-hidden border border-neutral-800">
-                                <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
-                                <div className="p-5 bg-neutral-900">
-                                    <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
-                                    <p className="font-body text-xs text-white mt-2 leading-relaxed">{s.desc}</p>
-                                </div>
-                            </div>
-                        </Reveal>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-}
+// function LabGallery() {
+//     const shots = [
+//         {
+//             img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900&q=70&auto=format&fit=crop",
+//             title: "Careful teardown",
+//             desc: "We open the laptop chassis and extract the drive without disturbing connectors or data.",
+//         },
+//         {
+//             img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=70&auto=format&fit=crop",
+//             title: "Drive-level diagnosis",
+//             desc: "Once the drive is out, we assess it independently of whatever damaged the laptop around it.",
+//         },
+//         {
+//             img: "https://images.unsplash.com/photo-1591405351990-4726e331f141?w=900&q=70&auto=format&fit=crop",
+//             title: "Sector-by-sector imaging",
+//             desc: "A forensic image is taken first wherever possible, so recovery work never touches your original drive twice.",
+//         },
+//     ];
+//     return (
+//         <section className="bg-neutral-950 py-20">
+//             <div className="max-w-7xl mx-auto px-5">
+//                 <Reveal>
+//                     <div className="max-w-2xl mb-14">
+//                         <span className="font-mono text-xs tracking-[0.2em] text-orange-500">INSIDE THE LAB</span>
+//                         <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mt-3 tracking-tight">
+//                             What happens to your laptop.
+//                         </h2>
+//                     </div>
+//                 </Reveal>
+//                 <div className="grid md:grid-cols-3 gap-6">
+//                     {shots.map((s, i) => (
+//                         <Reveal key={s.title} delay={i * 100}>
+//                             <div className="rounded-xl overflow-hidden border border-neutral-800">
+//                                 <Img src={s.img} alt={s.title} className="w-full h-48 object-cover" />
+//                                 <div className="p-5 bg-neutral-900">
+//                                     <h3 className="font-display font-semibold text-white text-sm">{s.title}</h3>
+//                                     <p className="font-body text-xs text-white mt-2 leading-relaxed">{s.desc}</p>
+//                                 </div>
+//                             </div>
+//                         </Reveal>
+//                     ))}
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// }
 
 /* ---------- process ---------- */
 
@@ -621,7 +621,7 @@ export default function LaptopDataRecoveryPage() {
             <Intro />
             <LaptopsSupported />
             <RecoveryCases />
-            <LabGallery />
+            {/* <LabGallery /> */}
             <Process />
             <DoDont />
             <Guarantees />
