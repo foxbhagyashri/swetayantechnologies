@@ -226,7 +226,7 @@ function Intro() {
                         with your files and internals protected throughout.
                     </p>
                     <div className="flex flex-wrap gap-3 mt-8">
-                        <a href="#contact" className="bg-orange-500 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
+                        <a href="/EnquiryForm" className="bg-orange-500 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
                             Book a Free Body Inspection <ArrowRight className="w-4 h-4" />
                         </a>
                     </div>
@@ -618,8 +618,8 @@ export default function LaptopBackPanelBodyReplacementServicePage() {
                 title="Laptop Back Panel / Body Replacement"
                 subtitle="Cracked casing, broken clips, and warped chassis repaired or replaced with an exact-fit body, with your internals kept intact."
                 trail={[
-                    { label: "Home", href: "#" },
-                    { label: "Services", href: "#services" },
+                    { label: "Home", href: "/" },
+                    { label: "Services", href: "/" },
                     { label: "Back Panel / Body Replacement", href: "#laptop-back-panel-body-replacement-service" },
                 ]}
             />

@@ -225,7 +225,7 @@ function Intro() {
                         touch anything.
                     </p>
                     <div className="flex flex-wrap gap-3 mt-8">
-                        <a href="#contact" className="bg-orange-500 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
+                        <a href="/EnquiryForm" className="bg-orange-500 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
                             Book a Free SSD Consultation <ArrowRight className="w-4 h-4" />
                         </a>
                     </div>
@@ -617,8 +617,8 @@ export default function LaptopSSDInstallationServicePage() {
                 title="Laptop SSD Installation / Setup Service"
                 subtitle="Faster boot times, instant app loading, and zero data loss — HDD to SSD upgrades done right."
                 trail={[
-                    { label: "Home", href: "#" },
-                    { label: "Services", href: "#services" },
+                    { label: "Home", href: "/" },
+                    { label: "Services", href: "/" },
                     { label: "SSD Installation", href: "#laptop-ssd-installation-service" },
                 ]}
             />

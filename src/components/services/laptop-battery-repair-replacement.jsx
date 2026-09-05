@@ -226,7 +226,7 @@ function Intro() {
                         first, every job is done with your files protected.
                     </p>
                     <div className="flex flex-wrap gap-3 mt-8">
-                        <a href="#contact" className="bg-orange-500 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
+                        <a href="/EnquiryForm" className="bg-orange-500 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
                             Book a Free Battery Check <ArrowRight className="w-4 h-4" />
                         </a>
                     </div>
@@ -618,8 +618,8 @@ export default function LaptopBatteryRepairReplacementServicePage() {
                 title="Laptop Battery Repair & Replacement Service"
                 subtitle="Fast-draining, swollen, or non-charging batteries diagnosed and replaced with genuine-grade cells, with your data kept intact."
                 trail={[
-                    { label: "Home", href: "#" },
-                    { label: "Services", href: "#services" },
+                    { label: "Home", href: "/" },
+                    { label: "Services", href: "/" },
                     { label: "Battery Repair & Replacement", href: "#laptop-battery-repair-replacement-service" },
                 ]}
             />

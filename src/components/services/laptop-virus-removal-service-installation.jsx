@@ -226,7 +226,7 @@ function Intro() {
                         nothing is wiped unless you ask for a fresh start.
                     </p>
                     <div className="flex flex-wrap gap-3 mt-8">
-                        <a href="#contact" className="bg-orange-500 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
+                        <a href="/EnquiryForm" className="bg-orange-500 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
                             Book a Free Scan <ArrowRight className="w-4 h-4" />
                         </a>
                     </div>
@@ -618,8 +618,8 @@ export default function LaptopVirusRemovalServicePage() {
                 title="Laptop Virus Removal & Installation Service"
                 subtitle="Viruses, ransomware, adware, and pop-ups removed — plus OS, driver, and software installation, with your data kept intact."
                 trail={[
-                    { label: "Home", href: "#" },
-                    { label: "Services", href: "#services" },
+                    { label: "Home", href: "/" },
+                    { label: "Services", href: "/" },
                     { label: "Virus Removal & Installation", href: "#laptop-virus-removal-service" },
                 ]}
             />

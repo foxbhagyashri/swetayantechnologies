@@ -225,7 +225,7 @@ function Intro() {
                         broken so your laptop is charging reliably again.
                     </p>
                     <div className="flex flex-wrap gap-3 mt-8">
-                        <a href="#contact" className="bg-orange-500 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
+                        <a href="/EnquiryForm" className="bg-orange-500 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
                             Book a Free Port Diagnosis <ArrowRight className="w-4 h-4" />
                         </a>
                     </div>
@@ -616,8 +616,8 @@ export default function LaptopChargingPointRepairServicePage() {
                 title="Laptop Charging Point Repair & Replacement Service"
                 subtitle="Loose ports, dead DC jacks, and broken USB-C connectors fixed — reliable charging restored without a full board swap."
                 trail={[
-                    { label: "Home", href: "#" },
-                    { label: "Services", href: "#services" },
+                    { label: "Home", href: "/" },
+                    { label: "Services", href: "/" },
                     { label: "Charging Point Repair", href: "#laptop-charging-point-repair-service" },
                 ]}
             />

@@ -269,7 +269,7 @@ function Hero() {
             className={`flex flex-wrap gap-3 mt-8 transition-all duration-700 delay-300 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
           >
-            <a href="#contact" className="bg-orange-400 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
+            <a href="/EnquiryForm" className="bg-orange-400 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
               Start Free Diagnosis <ArrowRight className="w-4 h-4" />
             </a>
             <a href="#services" className="border border-neutral-700 hover:border-orange-400 hover:text-orange-400 font-body font-semibold px-6 py-3 rounded-md transition-colors">

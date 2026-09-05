@@ -123,8 +123,8 @@ function Img({ src, alt, className }) {
 
 function FloatingContact() {
     return (
-        
-           <a href="tel:+919876543210"
+
+        <a href="tel:+919876543210"
             className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-orange-500 hover:bg-orange-400 text-neutral-950 flex items-center justify-center shadow-2xl animate-ring transition-colors"
             aria-label="Call Swetayan Technologies"
         >
@@ -230,7 +230,7 @@ function Intro() {
                         before any work begins.
                     </p>
                     <div className="flex flex-wrap gap-3 mt-8">
-                        <a href="#contact" className="bg-orange-500 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
+                        <a href="/EnquiryForm" className="bg-orange-500 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
                             Book a Free Inspection <ArrowRight className="w-4 h-4" />
                         </a>
                     </div>
@@ -622,8 +622,8 @@ export default function LaptopFanRepairServicePage() {
                 title="Laptop CPU Fan Repair & Replacement"
                 subtitle="Loud fans, overheating, dust build-up, or a dead cooling fan — repaired properly, with your data kept intact."
                 trail={[
-                    { label: "Home", href: "#" },
-                    { label: "Services", href: "#services" },
+                    { label: "Home", href: "/" },
+                    { label: "Services", href: "/" },
                     { label: "CPU Fan Repair & Replacement", href: "#laptop-fan-repair-service" },
                 ]}
             />

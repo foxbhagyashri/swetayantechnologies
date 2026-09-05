@@ -36,11 +36,14 @@ import LaptopBiosSetupInstallationServicePage from "./components/services/laptop
 import ContactPage from "./components/Contact_us";
 import EnquiryPage from "./components/EnquiryForm"
 import BlogPage from "./components/Blog";
+import ScrollToTop from "./components/ScrollToTop";
 import "./App.css";
 
 function App() {
   return (
     <Router>
+
+      <ScrollToTop />
       <SiteHeader dark={true} />
 
       <Routes>
@@ -80,7 +83,7 @@ function App() {
         <Route path="/services/laptop-charger-repair-replacement" element={<LaptopChargerRepairServicePage />} />
         <Route path="/services/laptop-hard-disk-repair-replacement" element={<LaptopHardDiskRepairServicePage />} />
 
- <Route path="/services/laptop-BIOS-setup-and-Installation" element={<LaptopBiosSetupInstallationServicePage />} />
+        <Route path="/services/laptop-BIOS-setup-and-Installation" element={<LaptopBiosSetupInstallationServicePage />} />
 
 
 

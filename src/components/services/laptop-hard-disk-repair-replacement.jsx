@@ -226,7 +226,7 @@ function Intro() {
                         again.
                     </p>
                     <div className="flex flex-wrap gap-3 mt-8">
-                        <a href="#contact" className="bg-orange-500 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
+                        <a href="/EnquiryForm" className="bg-orange-500 hover:bg-orange-400 hover:scale-105 text-neutral-950 font-body font-semibold px-6 py-3 rounded-md transition-all flex items-center gap-2">
                             Book a Free Drive Diagnosis <ArrowRight className="w-4 h-4" />
                         </a>
                     </div>
@@ -618,8 +618,8 @@ export default function LaptopHardDiskRepairServicePage() {
                 title="Laptop Hard Disk Repair & Replacement Service"
                 subtitle="Clicking drives, bad sectors, and undetected disks diagnosed fast — your data recovered first, every time."
                 trail={[
-                    { label: "Home", href: "#" },
-                    { label: "Services", href: "#services" },
+                    { label: "Home", href: "/" },
+                    { label: "Services", href: "/" },
                     { label: "Hard Disk Repair", href: "#laptop-hard-disk-repair-service" },
                 ]}
             />
