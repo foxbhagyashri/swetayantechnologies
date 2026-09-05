@@ -377,7 +377,7 @@ function Process() {
     { icon: FileSearch, title: "Diagnose", desc: "Free evaluation of your drive or device — usually within 24 hours." },
     { icon: Search, title: "Quote", desc: "A fixed, itemised price before any work begins. No surprises later." },
     { icon: Wrench, title: "Recover / Repair", desc: "Work happens in our clean-room-standard lab under trained technicians." },
-    { icon: PackageCheck, title: "Verify & Deliver", desc: "You review recovered files or a tested repair before final handover." },
+    { icon: PackageCheck, title: "Verify, Pay & Deliver", desc: "Verify the recovered files or completed repair, make the payment, and receive your data or device safely." },
   ];
   return (
     <section id="process" className="bg-white py-20">
